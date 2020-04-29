@@ -1,4 +1,5 @@
 import fs from 'fs';
+import util from 'util';
 
 /**
  * Asynchronously tests whether or not the given path exists by checking with the file system.
@@ -14,6 +15,9 @@ export const exists = (path): Promise<boolean> =>
     });
   });
 
-export default {
-  exists,
-};
+/**
+ * Asynchronous read a directory.
+ * @param path A path to a file. If a URL is provided, it must use the file: protocol.
+ * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, 'utf8' is used
+ */
+export const readDir = util.promisify(fs.readdir);
