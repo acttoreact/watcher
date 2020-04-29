@@ -1,10 +1,15 @@
 {
   "cSpell.words": [
     "Interop",
+    "acttoreact",
     "binpar",
     "camelcase",
     "downlevel",
+    "jsdocs",
+    "lcov",
     "plusplus",
+    "promisify",
+    "recurse",
     "respawn",
     "sourcemap",
     "tslib"

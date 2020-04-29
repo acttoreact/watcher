@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "12"
+  - "13"
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm update
+install:
+  - npm install
+script: 
+  - npm run build
+  - npm run test
+  - npm run lint
+  - npm audit
+  - npm run coveralls
