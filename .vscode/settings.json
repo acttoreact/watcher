@@ -13,5 +13,9 @@
     "respawn",
     "sourcemap",
     "tslib"
-  ]
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/docs/jsdocs": true
+  }
 }

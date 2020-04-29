@@ -28,7 +28,7 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<chokidar.FSW
             resolve(watcher);
           });  
         } else {
-          reject(new Error(`Provided target path doesn't exist`));
+          reject(new Error(`Provided target path doesn't exist: ${normalizedTargetPath}`));
         }
       });
     },
