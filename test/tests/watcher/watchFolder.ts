@@ -5,8 +5,7 @@ import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-type WatcherOptionsWithoutPath = PartialBy<WatcherOptions, 'targetPath'>;
+type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
 const commonOptions: WatcherOptionsWithoutPath = {
   handler: (): void => {},
