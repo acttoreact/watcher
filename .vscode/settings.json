@@ -4,6 +4,7 @@
     "binpar",
     "camelcase",
     "downlevel",
+    "lcov",
     "plusplus",
     "promisify",
     "respawn",
