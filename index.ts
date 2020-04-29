@@ -1,6 +1,6 @@
+import path from 'path';
+
 import initWatchers from './utils/initWatchers';
 
-if (initWatchers('./test/mocks/server')) {
-  // eslint-disable-next-line no-console
-  console.log('Watchers ready and listening');
-}
+const serverPath = path.resolve(__dirname, './server');
+initWatchers(serverPath);
