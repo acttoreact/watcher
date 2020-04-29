@@ -6,6 +6,11 @@ module.exports = {
     '^.+\\.jsx?$': require.resolve('babel-jest'),
     '^.+\\.tsx?$': 'ts-jest',
   },
+  collectCoverageFrom: [
+    "**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!**/dist/**"
+  ],
   coverageReporters: ['text', 'lcov', 'json', 'html'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
