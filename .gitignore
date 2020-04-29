@@ -62,6 +62,3 @@ typings/
 
 # next.js build output
 .next
-
-# JSDOC
-docs/jsdocs
