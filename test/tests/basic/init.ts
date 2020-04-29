@@ -1,4 +1,4 @@
-import { start, stop } from '../../index';
+import { start, stop } from '../../../index';
 
 test('API Watcher starts without crashing', async (): Promise<void> => {
   const watchers = await start();

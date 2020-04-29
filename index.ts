@@ -24,7 +24,9 @@ const executeProcess = async (): Promise<void> => {
       console.log('Running process', type, activeWatchers.length);
       if (activeWatchers.length) {
         await Promise.all(
-          activeWatchers.map((watcher) => watcher.close),
+          activeWatchers.map(async (watcher) => {
+            await watcher.close();
+          }),
         );
         activeWatchers.splice(0, activeWatchers.length);
       }
