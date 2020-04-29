@@ -24,7 +24,7 @@ const executeProcess = async (): Promise<void> => {
       console.log('Running process', type, activeWatchers.length);
       if (activeWatchers.length) {
         await Promise.all(
-          activeWatchers.slice().map(async (watcher) => watcher.close),
+          activeWatchers.map((watcher) => watcher.close),
         );
         activeWatchers.splice(0, activeWatchers.length);
       }
@@ -37,7 +37,7 @@ const executeProcess = async (): Promise<void> => {
       }
       runningProcess = null;
       // eslint-disable-next-line no-console
-      console.log('Process ended', type);
+      console.log('Process ended', type, activeWatchers.length);
       executeProcess();
     }
   }
