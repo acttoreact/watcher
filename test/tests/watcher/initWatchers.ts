@@ -10,8 +10,7 @@ test('Unexisting server path will throw exception', (): Promise<void> => {
   );
 });
 
-test(`Existing server path won't throw exception`, (): Promise<void> => {
+test(`Existing server path won't throw exception`, async (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server');
-  expect.assertions(1);
-  return expect(initWatchers(rightPath)).resolves.toBe(undefined);
+  expect(await initWatchers(rightPath)).toBe(undefined);
 });
