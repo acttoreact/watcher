@@ -1,6 +1,6 @@
 {
   "name": "api-watcher",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "API Watcher",
   "engines": {
     "node": ">=12"
