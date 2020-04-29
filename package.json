@@ -7,9 +7,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./src/index.ts",
+    "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
     "start": "node ./dist/index.js",
-    "lint": "npx eslint --config ./.eslintrc src/**/*.ts",
+    "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
     "test-clear": "rm -rf test/tests/ui/__snapshots__;rm -rf coverage;rm -rf .next",
     "test-dev": "NODE_ENV=development npx jest --watch",
@@ -33,20 +33,21 @@
   "homepage": "https://a2r.com/",
   "dependencies": {
     "@types/jest": "^25.1.1",
+    "jsdoc": "^3.6.4",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
     "@types/node": "^13.13.4",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
-    "babel-jest": "^25.5.0",
+    "babel-jest": "^25.5.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "jest": "^25.5.0",
+    "jest": "^25.5.1",
     "ts-jest": "^25.4.0",
     "ts-node-dev": "^1.0.0-pre.40"
   }
