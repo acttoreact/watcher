@@ -32,7 +32,7 @@ export interface WatcherOptions {
      * Path stats (if requested)
      */
     stats?: fs.Stats | undefined,
-  ) => {};
+  ) => void;
   /**
    * Errors handler
    * @memberof WatcherOptions
@@ -44,6 +44,7 @@ export interface WatcherOptions {
    */
   onReady?: (
     targetPath: string,
+    watcher: chokidar.FSWatcher,
   ) => void | Promise<void>;
   /**
    * Internal watcher options:

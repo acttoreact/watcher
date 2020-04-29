@@ -11,25 +11,25 @@ import { WatcherOptions } from '../model/watcher';
  */
 const watchFolder = async (watcherOptions: WatcherOptions): Promise<void> =>
   new Promise(
-    (resolve): void => {
+    (resolve, reject): void => {
       const { targetPath, handler, onReady, onError, options } = watcherOptions;
       const normalizedTargetPath = path.normalize(targetPath);
       fs.exists(normalizedTargetPath).then((exists): void => {
-        if (!exists) {
-          throw new Error(`Provided target path doesn't exist`);
+        if (exists) {
+          const watcher = chokidar.watch(normalizedTargetPath, options);
+          watcher.on('all', (eventName, eventPath, stats): void => {
+            handler(normalizedTargetPath, eventName, eventPath, stats);
+          });
+          watcher.on('error', onError);
+          watcher.on('ready', (): void => {
+            if (onReady) {
+              onReady(normalizedTargetPath, watcher);
+            }
+            resolve();
+          });  
+        } else {
+          reject(new Error(`Provided target path doesn't exist`));
         }
-
-        const watcher = chokidar.watch(normalizedTargetPath, options);
-        watcher.on('all', (eventName, eventPath, stats): void => {
-          handler(normalizedTargetPath, eventName, eventPath, stats);
-        });
-        watcher.on('error', onError);
-        watcher.on('ready', (): void => {
-          if (onReady) {
-            onReady(normalizedTargetPath);
-          }
-          resolve();
-        });
       });
     },
   );
