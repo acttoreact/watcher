@@ -1,9 +1,9 @@
 {
-  "name": "ts-node-boilerplate",
-  "version": "0.3.19",
-  "description": "Node Boilerplate from BinPar TypeScript Projects",
+  "name": "api-watcher",
+  "version": "0.0.1",
+  "description": "API Watcher",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "build": "tsc",
@@ -15,17 +15,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BinPar/ts-node-boilerplate.git"
+    "url": "git+https://github.com/acttoreact/api-watcher.git"
   },
   "keywords": [
-    "ts-node-boilerplate",
-    "binpar",
-    "boilerplate",
-    "typescript"
+    "acttoreact",
+    "a2r",
+    "api",
+    "watcher"
   ],
-  "author": "Ignacio Ferro Picón <nacho@binpar.com> (https://binpar.com/)",
+  "author": "Act to React (https://a2r.com/)",
   "license": "ISC",
-  "homepage": "https://binpar.com",
+  "homepage": "https://a2r.com/",
   "dependencies": {
     "@types/jest": "^25.1.1",
     "typescript": "^3.5.3"
