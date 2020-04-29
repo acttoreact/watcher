@@ -1,5 +1,6 @@
-// import initWatchers from './utils/initWatchers';
+import initWatchers from './utils/initWatchers';
 
-// initWatchers().then((): void => {
-//   console.log('Watchers ready and listening');
-// });
+initWatchers('./test/mocks/server');
+
+// eslint-disable-next-line no-console
+console.log('Watchers ready and listening');;

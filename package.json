@@ -8,15 +8,18 @@
   "scripts": {
     "build": "tsc",
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
+    "docker-build": "rm -rf dist;npm run build;docker build --rm --pull -f \"./Dockerfile\" -t \"api-watcher:latest\" \".\"",
+    "docker-start": "docker run -it -v $INIT_CWD/server:/usr/src/app/server api-watcher:latest",
     "start": "node ./dist/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
-    "test-clear": "rm -rf test/tests/ui/__snapshots__;rm -rf coverage;rm -rf .next",
+    "test-clear": "rm -rf coverage;rm -rf dist",
     "test-dev": "NODE_ENV=development npx jest --watch",
     "test-coverage": "jest --coverage",
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test-full": "npm run test-clear;npm run build;npm run test;npm run test-coverage;npm run lint;npm audit;npm run docs"
+    "test-full": "npm run test-clear;npm run build;npm run test;npm run test-coverage;npm run lint;npm audit;npm run docs",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -32,24 +35,26 @@
   "license": "ISC",
   "homepage": "https://a2r.com/",
   "dependencies": {
-    "@types/jest": "^25.1.1",
-    "chokidar": "^3.4.0",
-    "jsdoc": "^3.6.4",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "chokidar": "^3.4.0"
   },
   "devDependencies": {
+    "@types/jest": "^25.1.1",
     "@types/node": "^13.13.4",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "babel-jest": "^25.5.1",
     "eslint": "^6.8.0",
+    "coveralls": "^3.0.11",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
     "jest": "^25.5.1",
+    "jsdoc": "^3.6.3",
     "ts-jest": "^25.4.0",
-    "ts-node-dev": "^1.0.0-pre.40"
+    "ts-node-dev": "^1.0.0-pre.40",
+    "better-docs": "^1.4.7"
   }
 }
