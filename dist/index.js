@@ -1,0 +1,10 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const initWatchers_1 = __importDefault(require("./utils/initWatchers"));
+initWatchers_1.default('./test/mocks/server').then(() => {
+    // console.log('Watchers ready and listening');
+});
+//# sourceMappingURL=index.js.map
