@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const initWatchers_1 = __importDefault(require("./utils/initWatchers"));
-initWatchers_1.default('./test/mocks/server').then(() => {
-    // console.log('Watchers ready and listening');
+initWatchers_1.default('./server').then(() => {
+    // console.log('ready and listening');
 });
 //# sourceMappingURL=index.js.map

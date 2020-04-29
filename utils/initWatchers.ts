@@ -11,6 +11,7 @@ const initWatchers = async (serverPath: string): Promise<void> => {
   if (!exists) {
     throw new Error(`Provided server path doesn't exist`);
   }
+  // eslint-disable-next-line no-console
   console.log('Starting watchers');
 
   // const apiPath = path.resolve(serverPath, 'api');

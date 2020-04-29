@@ -6,8 +6,10 @@
     "node": ">=12"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc",    
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
+    "docker-build": "rm -rf dist;npm run build;docker build --rm --pull -f \"./Dockerfile\" -t \"api-watcher:latest\" \".\"",
+    "docker-start": "docker run api-watcher:latest -v $INIT_CWD/server:/usr/src/app/server",
     "start": "node ./dist/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
