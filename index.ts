@@ -8,7 +8,7 @@ export const activeWatchers: chokidar.FSWatcher[] = [];
 const serverPath = path.resolve(__dirname, './server');
 interface Process {
   type: 'start' | 'stop';
-  callback?: (watchers: chokidar.FSWatcher[]) => void;
+  callback: (watchers: chokidar.FSWatcher[]) => void;
 }
 const pendingProcesses: Process[] = [];
 
@@ -34,9 +34,7 @@ const executeProcess = async (): Promise<void> => {
         const watchers = await initWatchers(serverPath);
         activeWatchers.push(...watchers);
       }
-      if (callback) {
-        callback(activeWatchers);
-      }
+      callback(activeWatchers);
       runningProcess = null;
       // eslint-disable-next-line no-console
       console.log('Process ended', type, activeWatchers.length);
