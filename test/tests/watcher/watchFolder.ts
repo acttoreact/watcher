@@ -1,4 +1,5 @@
 import path from 'path';
+import chokidar from 'chokidar';
 
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
@@ -20,9 +21,7 @@ test('Unexisting target path will throw exception', (): Promise<void> => {
     targetPath: wrongPath,
   };
   expect.assertions(1);
-  return expect(watchFolder(options)).rejects.toEqual(
-    new Error(`Provided target path doesn't exist`),
-  );
+  return expect(watchFolder(options)).rejects.toBeInstanceOf(Error);
 });
 
 test(`Existing target path won't throw exception`, (): Promise<void> => {
@@ -31,11 +30,27 @@ test(`Existing target path won't throw exception`, (): Promise<void> => {
     ...commonOptions,
     targetPath: rightPath,
     onReady: (targetPath, watcher): void => {
+      expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
       expect(watcher).toHaveProperty('close');
       expect(watcher.close()).resolves.toBe(undefined);
       expect(targetPath).toEqual(rightPath);
     },
   };
-  expect.assertions(4);
-  return expect(watchFolder(options)).resolves.toBe(undefined);
+  expect.assertions(5);
+  return expect(watchFolder(options)).resolves.toBeInstanceOf(chokidar.FSWatcher);
+});
+
+test(`onReady param is optional`, (): Promise<void> => {
+  const rightPath = path.resolve(__dirname, '../../mocks/server/api');
+  const options: WatcherOptions = {
+    ...commonOptions,
+    targetPath: rightPath,
+    onReady: null,
+  };
+  expect.assertions(3);
+  return watchFolder(options).then((watcher): void => {
+    expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
+    expect(watcher).toHaveProperty('close');
+    expect(watcher.close()).resolves.toBe(undefined);
+  });
 });

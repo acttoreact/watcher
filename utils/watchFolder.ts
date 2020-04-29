@@ -9,7 +9,7 @@ import { WatcherOptions } from '../model/watcher';
  *
  * @param {WatcherOptions} watcherOptions
  */
-const watchFolder = async (watcherOptions: WatcherOptions): Promise<void> =>
+const watchFolder = async (watcherOptions: WatcherOptions): Promise<chokidar.FSWatcher> =>
   new Promise(
     (resolve, reject): void => {
       const { targetPath, handler, onReady, onError, options } = watcherOptions;
@@ -25,7 +25,7 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<void> =>
             if (onReady) {
               onReady(normalizedTargetPath, watcher);
             }
-            resolve();
+            resolve(watcher);
           });  
         } else {
           reject(new Error(`Provided target path doesn't exist`));
