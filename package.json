@@ -1,0 +1,47 @@
+{
+  "name": "ts-node-boilerplate",
+  "version": "0.3.19",
+  "description": "Node Boilerplate from BinPar TypeScript Projects",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test-dev": "NODE_ENV=development npx jest --watchAll",
+    "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "lint": "npx eslint --config ./.eslintrc src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinPar/ts-node-boilerplate.git"
+  },
+  "keywords": [
+    "ts-node-boilerplate",
+    "binpar",
+    "boilerplate",
+    "typescript"
+  ],
+  "author": "Ignacio Ferro Picón <nacho@binpar.com> (https://binpar.com/)",
+  "license": "ISC",
+  "homepage": "https://binpar.com",
+  "dependencies": {
+    "@types/jest": "^25.1.1",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "jest": "^24",
+    "ts-jest": "^24",
+    "ts-node-dev": "^1.0.0-pre.40"
+  }
+}
