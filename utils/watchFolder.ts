@@ -7,7 +7,7 @@ import { WatcherOptions } from '../model/watcher';
 /**
  * Watch project API folder recursively for files changes
  *
- * @param {WatcherOptions} watcherOptions
+ * @param {WatcherOptions} watcherOptions watcher options
  */
 const watchFolder = async (watcherOptions: WatcherOptions): Promise<chokidar.FSWatcher> =>
   new Promise(

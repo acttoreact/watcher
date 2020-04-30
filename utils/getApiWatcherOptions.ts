@@ -5,6 +5,10 @@ import handler from './handler';
 import onError from './onError';
 import onReady from './onReady';
 
+/**
+ * Returns options for API watcher
+ * @param serverPath main path containing `api` folder
+ */
 const getApiWatcherOptions = (serverPath: string): WatcherOptions => {
   return {
     handler,

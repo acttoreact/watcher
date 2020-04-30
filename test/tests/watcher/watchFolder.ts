@@ -6,14 +6,27 @@ import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
 
+/**
+ * Type used to omit props from interface
+ */
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
+/**
+ * WathcerOptions without `targetPath` property for testing purposes
+ */
 type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
+/**
+ * Common watcher options
+ */
 const commonOptions: WatcherOptionsWithoutPath = {
   handler,
   onError,
 }
 
+/**
+ * Creating watcher for an unexisting folder will throw exception
+ */
 test('Unexisting target path will throw exception', (): Promise<void> => {
   const wrongPath = '/wrong/path/to/server/api';
   const options: WatcherOptions = {
@@ -24,6 +37,9 @@ test('Unexisting target path will throw exception', (): Promise<void> => {
   return expect(watchFolder(options)).rejects.toBeInstanceOf(Error);
 });
 
+/**
+ * Creating watcher for an existing folder will work as expected and return a watcher instance
+ */
 test(`Existing target path won't throw exception`, (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
@@ -40,6 +56,9 @@ test(`Existing target path won't throw exception`, (): Promise<void> => {
   return expect(watchFolder(options)).resolves.toBeInstanceOf(chokidar.FSWatcher);
 });
 
+/**
+ * Checking `onReady` option can be optional
+ */
 test(`onReady param is optional`, (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {

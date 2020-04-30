@@ -3,6 +3,9 @@ import chokidar from 'chokidar';
 
 import initWatchers from '../../../utils/initWatchers';
 
+/**
+ * Unexisting server path will throw exception
+ */
 test('Unexisting server path will throw exception', (): Promise<void> => {
   const wrongPath = '/wrong/path/to/server';
   expect.assertions(1);
@@ -11,6 +14,9 @@ test('Unexisting server path will throw exception', (): Promise<void> => {
   );
 });
 
+/**
+ * Server path must exist
+ */
 test(`Existing server path won't throw exception`, async (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server');
   const watchers = await initWatchers(rightPath);

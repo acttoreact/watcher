@@ -7,7 +7,7 @@ import getModelWatcherOptions from './getModelWatcherOptions';
 
 /**
  * Starts watchers
- * @param serverPath Server main path (containing api and model)
+ * @param serverPath server main path (containing api and model)
  */
 const initWatchers = async (serverPath: string): Promise<chokidar.FSWatcher[]> => {
   const pathExists = await exists(serverPath);
