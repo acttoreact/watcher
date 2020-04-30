@@ -1,5 +1,6 @@
 import path from 'path';
 import chokidar from 'chokidar';
+import waitForExpect from 'wait-for-expect';
 
 import { emptyFolder, writeFile } from '../../../utils/fs';
 import handler from '../../../utils/handler';
@@ -87,9 +88,11 @@ test(`Handler should be called when adding a file`, async (): Promise<void> => {
   };
   const watcher = await watchFolder(options);
   const newFilePath = path.resolve(rightPath, 'test.txt');
-  await writeFile(newFilePath, 'test');
+  await writeFile(newFilePath, 'test');  
+  await waitForExpect(() => {
+    expect(handlerFunction).toHaveBeenCalled();
+  });
   await watcher.close();
-  expect(handlerFunction).toHaveBeenCalled();
 });
 
 /**
