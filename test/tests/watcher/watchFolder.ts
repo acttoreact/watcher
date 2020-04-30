@@ -85,11 +85,13 @@ test(`Handler should be called when adding a file`, async (): Promise<void> => {
     ...commonOptions,
     targetPath: rightPath,
     handler: handlerFunction,
+    onReady: async (): Promise<void> => {
+      const newFilePath = path.resolve(rightPath, 'test.txt');
+      await writeFile(newFilePath, 'test');
+    }
   };
   const watcher = await watchFolder(options);
-  const newFilePath = path.resolve(rightPath, 'test.txt');
-  await writeFile(newFilePath, 'test');  
-  await waitForExpect(() => {
+  await waitForExpect(async (): Promise<void> => {
     expect(handlerFunction).toHaveBeenCalled();
   });
   await watcher.close();
