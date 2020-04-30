@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Home</title>
+  <title> utils/getApiWatcherOptions.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,38 +82,40 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Title</p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>utils/getApiWatcherOptions.ts</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>A2R API Watcher <a href="https://travis-ci.org/acttoreact/api-watcher"><img src="https://travis-ci.org/acttoreact/api-watcher.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/acttoreact/api-watcher"><img src="https://coveralls.io/repos/github/acttoreact/api-watcher/badge.svg?branch=master" alt="Coverage Status"></a> <img src="https://img.shields.io/docker/v/act2react/api-watcher?sort=date" alt="Docker Image Version (latest by date)"> <img src="https://img.shields.io/docker/image-size/act2react/api-watcher?sort=date" alt="Docker Image Size (latest by date)"></h1>
-<p>A2R Framework API Watcher</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import path from 'path';
+
+import { WatcherOptions } from '../model/watcher';
+import handler from './handler';
+import onError from './onError';
+import onReady from './onReady';
+
+/**
+ * Returns options for API watcher
+ * @param serverPath main path containing `api` folder
+ */
+const getApiWatcherOptions = (serverPath: string): WatcherOptions => {
+  return {
+    handler,
+    onError,
+    onReady,
+    targetPath: path.resolve(serverPath, 'api'),
+  };
+};
+
+export default getApiWatcherOptions;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
