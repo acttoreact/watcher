@@ -28,12 +28,12 @@ export type OnError = (
   /**
    * Chokidar watcher instance
    */
-  watcher: chokidar.FSWatcher,
+  watcher?: chokidar.FSWatcher,
   /**
    * Target path used to initialize watcher
    */
-  targetPath: string,
-) => void | Promise<void>;
+  targetPath?: string,
+) => void;
 
 export type OnReady = (
   /**

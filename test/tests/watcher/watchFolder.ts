@@ -27,20 +27,19 @@ const commonOptions: WatcherOptionsWithoutPath = {
 /**
  * Creating watcher for an unexisting folder will throw exception
  */
-test('Unexisting target path will throw exception', (): Promise<void> => {
+test('Unexisting target path will throw exception', (): void => {
   const wrongPath = '/wrong/path/to/server/api';
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: wrongPath,
   };
-  expect.assertions(1);
-  return expect(watchFolder(options)).rejects.toBeInstanceOf(Error);
+  expect(watchFolder(options)).rejects.toBeInstanceOf(Error);
 });
 
 /**
  * Creating watcher for an existing folder will work as expected and return a watcher instance
  */
-test(`Existing target path won't throw exception`, (): Promise<void> => {
+test(`Existing target path won't throw exception`, async (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
@@ -52,23 +51,31 @@ test(`Existing target path won't throw exception`, (): Promise<void> => {
       expect(targetPath).toEqual(rightPath);
     },
   };
-  expect.assertions(5);
-  return expect(watchFolder(options)).resolves.toBeInstanceOf(chokidar.FSWatcher);
+  const watcher = await watchFolder(options);
+  expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
 });
 
 /**
  * Checking `onReady` option can be optional
  */
-test(`onReady param is optional`, (): Promise<void> => {
+test(`onReady param is optional`, async (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
   };
-  expect.assertions(3);
-  return watchFolder(options).then((watcher): void => {
-    expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
-    expect(watcher).toHaveProperty('close');
-    expect(watcher.close()).resolves.toBe(undefined);
-  });
+  const watcher = await watchFolder(options);
+  expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
+  expect(watcher).toHaveProperty('close');
+  expect(watcher.close()).resolves.toBe(undefined);
+});
+
+/**
+ * Watcher error handler shouldn't throw error
+ */
+test(`onError doesn't throw error`, async (): Promise<void> => {
+  expect(onError).toBeInstanceOf(Function);
+  expect(() => {
+    onError(new Error('Test error'));
+  }).not.toThrowError();
 });

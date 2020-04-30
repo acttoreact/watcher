@@ -9,9 +9,7 @@ import initWatchers from '../../../utils/initWatchers';
 test('Unexisting server path will throw exception', (): Promise<void> => {
   const wrongPath = '/wrong/path/to/server';
   expect.assertions(1);
-  return expect(initWatchers(wrongPath)).rejects.toEqual(
-    new Error(`Provided server path doesn't exist`),
-  );
+  return expect(initWatchers(wrongPath)).rejects.toBeInstanceOf(Error);
 });
 
 /**
