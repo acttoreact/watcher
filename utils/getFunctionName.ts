@@ -1,5 +1,7 @@
 import ts from 'typescript';
-import chalk from 'chalk';
+
+import out from '../tools/out';
+import { method } from '../tools/colors';
 
 const getArrowFunctionName = (
   node: ts.FunctionDeclaration | ts.ArrowFunction,
@@ -9,10 +11,15 @@ const getArrowFunctionName = (
     if (parent && ts.isVariableDeclaration(parent) && parent.name) {
       return parent.name.getText();
     }
-  } else if (ts.isFunctionDeclaration(node) && node.name) {
-    return node.name.getText();
+  } else if (ts.isFunctionDeclaration(node)) {
+    if (node.name) {
+      return node.name.getText();;
+    }
+  } else {
+    out.error(`Node provided to ${method('getArrowFunctionName')} is not a function`);
+    return null;
   }
-  return chalk.italic('Anonymous function');
+  return 'Anonymous function';
 };
 
 export default getArrowFunctionName;

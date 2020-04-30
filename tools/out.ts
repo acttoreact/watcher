@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import winston, { format } from 'winston';
 
 interface TransformableInfo {
-  level: string;
+  level: 'info' | 'error' | 'warn' | 'alarm' | 'verbose';
   message: string;
 }
 
@@ -59,7 +59,7 @@ const prefix = ''.padStart(10, '\b');
 
 export default {
   info: (message: string, meta?: any): void => {
-    logger.info(`${prefix}${message}`, meta);
+    logger.info(`${prefix}${chalk.bold('[INFO]')} ${message}`, meta);
   },
   error: (message: string, meta?: any): void => {
     logger.error(`${prefix}${chalk.red.bold('[ERROR]')} ${message}`, meta);
@@ -73,7 +73,7 @@ export default {
   verbose: (message: string, meta?: any): void => {
     logger.verbose(`${prefix}${message}`, meta);
   },
-  setLevel: (level: string): void => {
+  setLevel: (level: 'info' | 'error' | 'warn' | 'alarm' | 'verbose'): void => {
     logger.level = level;
   },
 };

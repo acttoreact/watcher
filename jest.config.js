@@ -9,7 +9,8 @@ module.exports = {
   collectCoverageFrom: [
     "**/*.{ts,tsx}",
     "!**/node_modules/**",
-    "!**/dist/**"
+    "!**/dist/**",
+    "!**/test/mocks/**"
   ],
   coverageReporters: ['text', 'lcov', 'json', 'html'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
