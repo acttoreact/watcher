@@ -60,7 +60,6 @@ test(`Basic API Watcher flow`, async (): Promise<void> => {
     targetPath: apiPath,
     handler: handlerFunction,
     onReady: async (_watcher, targetPath): Promise<void> => {
-      console.log('onReady function called');
       setupFunction(targetPath, mainPath);
       await writeFile(destWorkingFile, fileContent);
     }

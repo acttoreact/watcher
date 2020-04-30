@@ -17,11 +17,10 @@ let filesToProcess: string[] = [];
 let processing = false;
 const failingFiles = new Map<string, boolean>();
 
-
-
 const checkAndCopy = async (): Promise<void> => {
   const runtimePathDest = path.resolve(appMainPath, runtimePath);
   if (!failingFiles.size) {
+    out.verbose('Copying contents');
     await copyContents(watcherTargetPath, runtimePathDest);
   }
 }
@@ -31,18 +30,24 @@ const processQueue = async (): Promise<void> => {
     processing = true;
     const filePath = filesToProcess.shift();
     if (filePath) {
-      if (!fileValidation(filePath)) {
+      const validation = await fileValidation(filePath);
+      if (validation) {
+        failingFiles.delete(filePath);
+        out.verbose(`Validation OK for file ${filePath}`);
+      } else {
         failingFiles.set(filePath, true);
+        out.verbose(`Validation KO for file ${filePath}`);
       }
-      processQueue();
+      processing = false;
+      await processQueue();
     } else {
+      processing = false;
       await checkAndCopy();
     }
-    processing = false;
   }
 };
 
-const addFileToQueue = (processInfo: ProcessInfo): void => {
+const addFileToQueue = async (processInfo: ProcessInfo): Promise<void> => {
   const { type, targetPath } = processInfo;
   let newFiles = filesToProcess.slice();
   if (type === 'unlink') {
@@ -58,7 +63,9 @@ const addFileToQueue = (processInfo: ProcessInfo): void => {
     newFiles.push(targetPath);
     filesToProcess = newFiles;
   }
-  processQueue();
+  if (type !== 'addDir') {
+    processQueue();
+  }
 };
 
 /**
