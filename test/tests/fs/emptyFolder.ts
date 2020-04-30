@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { emptyFolder, exists } from '../../../utils/fs';
+import { emptyFolder, exists } from '../../../tools/fs';
 
 const mocksPath = path.resolve(__dirname, '../../mocks/fs');
 

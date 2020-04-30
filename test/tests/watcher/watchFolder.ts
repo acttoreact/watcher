@@ -2,7 +2,7 @@ import path from 'path';
 import chokidar from 'chokidar';
 import waitForExpect from 'wait-for-expect';
 
-import { emptyFolder, writeFile } from '../../../utils/fs';
+import { emptyFolder, writeFile } from '../../../tools/fs';
 import handler from '../../../utils/handler';
 import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
@@ -26,7 +26,7 @@ const commonOptions: WatcherOptionsWithoutPath = {
   onError,
 }
 
-const rightPath = path.resolve(__dirname, '../../mocks/server/api');
+const rightPath = path.resolve(__dirname, '../../mocks/server/right');
 
 beforeAll(async (): Promise<void> => {
   await emptyFolder(rightPath);

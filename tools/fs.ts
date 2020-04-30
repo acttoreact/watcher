@@ -25,6 +25,13 @@ export const mkDir = util.promisify(fs.mkdir);
 export const writeFile = util.promisify(fs.writeFile);
 
 /**
+ * Reads the entire contents of a file.
+ * @param {string | number | Buffer | URL} path A path to a file. If a URL is provided, it must use the `file:` protocol. If a file descriptor is provided, the underlying file will not be closed automatically.
+ * @param {string | { encoding?: null; flag?: string; }} options An object that may contain an optional flag. If a flag is not provided, it defaults to `'r'`.
+ */
+export const readFile = util.promisify(fs.readFile);
+
+/**
  * Test whether or not the given path exists by checking with the file system.
  * @param {fs.PathLike} path A path to a file or directory. If a URL is provided, it must use the `file:` protocol. URL support is experimental.
  */
