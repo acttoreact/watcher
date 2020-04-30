@@ -18,17 +18,17 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<chokidar.FSW
         if (pathExists) {
           const watcher = chokidar.watch(normalizedTargetPath, options);
           watcher.on('all', (eventName, eventPath, stats): void => {
-            handler(normalizedTargetPath, eventName, eventPath, stats);
+            handler(eventName, eventPath, normalizedTargetPath, stats);
           });
           watcher.on('error', onError);
           watcher.on('ready', (): void => {
             if (onReady) {
-              onReady(normalizedTargetPath, watcher);
+              onReady(watcher, normalizedTargetPath);
             }
             resolve(watcher);
           });  
         } else {
-          reject(new Error(`Provided target path doesn't exist`));
+          reject(new Error(`Provided target path doesn't exist: ${normalizedTargetPath}`));
         }
       });
     },

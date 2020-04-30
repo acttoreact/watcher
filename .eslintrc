@@ -11,6 +11,9 @@
     "prettier/@typescript-eslint"
   ],
   "settings": {
+    "react": {
+      "version": "999.999.999"
+    },
     "import/extensions": [
       ".js",
       ".jsx",

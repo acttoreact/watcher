@@ -1,6 +1,8 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
+import handler from '../../../utils/handler';
+import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
 
@@ -8,9 +10,8 @@ type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
 const commonOptions: WatcherOptionsWithoutPath = {
-  handler: (): void => {},
-  onError: (): void => {},
-  onReady: (): void => {},
+  handler,
+  onError,
 }
 
 test('Unexisting target path will throw exception', (): Promise<void> => {
@@ -28,7 +29,7 @@ test(`Existing target path won't throw exception`, (): Promise<void> => {
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
-    onReady: (targetPath, watcher): void => {
+    onReady: (watcher, targetPath): void => {
       expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
       expect(watcher).toHaveProperty('close');
       expect(watcher.close()).resolves.toBe(undefined);
@@ -44,7 +45,6 @@ test(`onReady param is optional`, (): Promise<void> => {
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
-    onReady: null,
   };
   expect.assertions(3);
   return watchFolder(options).then((watcher): void => {

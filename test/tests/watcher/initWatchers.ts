@@ -1,4 +1,5 @@
 import path from 'path';
+import chokidar from 'chokidar';
 
 import initWatchers from '../../../utils/initWatchers';
 
@@ -12,5 +13,10 @@ test('Unexisting server path will throw exception', (): Promise<void> => {
 
 test(`Existing server path won't throw exception`, async (): Promise<void> => {
   const rightPath = path.resolve(__dirname, '../../mocks/server');
-  expect(await initWatchers(rightPath)).toBe(undefined);
+  const watchers = await initWatchers(rightPath);
+  watchers.map((res) => expect(res).toBeInstanceOf(chokidar.FSWatcher));
+  expect(watchers.length).toBe(2);
+  await Promise.all(watchers.map(async (watcher) => {
+    await watcher.close();
+  }));
 });
