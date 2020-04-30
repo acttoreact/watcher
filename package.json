@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
     "docker-build": "docker build --rm --pull -f \"./Dockerfile\" -t \"api-watcher:latest\" \".\"",
     "docker-start": "docker run -it -v $INIT_CWD/server:/usr/src/app/server api-watcher:latest",
+    "docker-start-from-hub": "IMAGE=act2react/api-watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "start": "node ./dist/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
