@@ -14,7 +14,7 @@ import { WatcherOptions } from '../../../model/watcher';
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 /**
- * WathcerOptions without `targetPath` property for testing purposes
+ * WatcherOptions without `targetPath` property for testing purposes
  */
 type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
