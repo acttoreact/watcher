@@ -1,17 +1,11 @@
 import path from 'path';
 import chokidar from 'chokidar';
-import waitForExpect from 'wait-for-expect';
 
-import { emptyFolder, writeFile } from '../../../tools/fs';
-import handler from '../../../utils/handler';
+import { Omit } from '../../../@types';
+import { emptyFolder } from '../../../tools/fs';
 import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
-
-/**
- * Type used to omit props from interface
- */
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 /**
  * WatcherOptions without `targetPath` property for testing purposes
@@ -22,7 +16,10 @@ type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
  * Common watcher options
  */
 const commonOptions: WatcherOptionsWithoutPath = {
-  handler,
+  handler: () => {
+    // Empty handler for testing purposes
+  },
+  mainPath: path.resolve(__dirname, '../../..'),
   onError,
 }
 
@@ -74,37 +71,6 @@ test(`onReady param is optional`, async (): Promise<void> => {
   expect(watcher).toBeInstanceOf(chokidar.FSWatcher);
   expect(watcher).toHaveProperty('close');
   expect(watcher.close()).resolves.toBe(undefined);
-});
-
-/**
- * Main handler shouldn't throw error
- */
-test(`Handler should be called when adding a file`, async (): Promise<void> => {
-  const handlerFunction = jest.fn(handler);
-  const options: WatcherOptions = {
-    ...commonOptions,
-    targetPath: rightPath,
-    handler: handlerFunction,
-    onReady: async (): Promise<void> => {
-      const newFilePath = path.resolve(rightPath, 'test.txt');
-      await writeFile(newFilePath, 'test');
-    }
-  };
-  const watcher = await watchFolder(options);
-  await waitForExpect(async (): Promise<void> => {
-    expect(handlerFunction).toHaveBeenCalled();
-  });
-  await watcher.close();
-});
-
-/**
- * Main handler shouldn't throw error
- */
-test(`handler doesn't throw error`, async (): Promise<void> => {
-  expect(handler).toBeInstanceOf(Function);
-  expect(() => {
-    handler('add', '/path/to/file', '/main/path/to/watch');
-  }).not.toThrowError();
 });
 
 /**

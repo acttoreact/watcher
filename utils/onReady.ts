@@ -9,7 +9,7 @@ import { fullPath } from '../tools/colors';
  * @param _watcher chokidar watcher instance
  * @param targetPath path that watcher was created for
  */
-const onReady: OnReady = (_watcher, targetPath) => {
+const onReady: OnReady = (_watcher, targetPath): void => {
   out.info(`Watcher ${chalk.green('ready')} at ${fullPath(targetPath)}`);
 };
 

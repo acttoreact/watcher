@@ -1,5 +1,6 @@
 import fs from 'fs';
 import util from 'util';
+import path from 'path';
 import originalRimraf from 'rimraf';
 
 /**
@@ -32,12 +33,19 @@ export const writeFile = util.promisify(fs.writeFile);
 export const readFile = util.promisify(fs.readFile);
 
 /**
- * Test whether or not the given path exists by checking with the file system.
- * @param {fs.PathLike} path A path to a file or directory. If a URL is provided, it must use the `file:` protocol. URL support is experimental.
+ * Copies `src` to `dest`. By default, dest is overwritten if it already exists. No arguments other than a possible exception are given to the callback function. Node.js makes no guarantees about the atomicity of the copy operation. If an error occurs after the destination file has been opened for writing, Node.js will attempt to remove the destination.
+ * @param {fs.PathLike} src A path to the source file.
+ * @param {fs.PathLike} dest A path to the destination file.
  */
-export const exists = (path: fs.PathLike): Promise<boolean> =>
+export const copyFile = util.promisify(fs.copyFile);
+
+/**
+ * Test whether or not the given path exists by checking with the file system.
+ * @param {fs.PathLike} pathToCheck A path to a file or directory. If a URL is provided, it must use the `file:` protocol. URL support is experimental.
+ */
+export const exists = (pathToCheck: fs.PathLike): Promise<boolean> =>
   new Promise((resolve): void => {
-    fs.access(path, fs.constants.F_OK, (err): void => {
+    fs.access(pathToCheck, fs.constants.F_OK, (err): void => {
       if (err) {
         return resolve(false);
       }
@@ -62,4 +70,66 @@ export const emptyFolder = async (folderPath: string): Promise<void> => {
     await rimraf(folderPath);
   }
   await mkDir(folderPath, { recursive: true });
+};
+
+/**
+ * Ensures that given dir path exists
+ * @param {string} folderPath Path to ensure
+ * @param {fs.MakeDirectoryOptions} options Options
+ */
+export const ensureDir = async (
+  folderPath: string,
+  options?: fs.MakeDirectoryOptions,
+  recursive = true,
+): Promise<void> => {
+  await new Promise((resolve, reject): void => {
+    fs.mkdir(
+      folderPath,
+      { ...(options || {}), recursive },
+      (err: NodeJS.ErrnoException | null): void => {
+        if (err && err.code !== 'EEXIST') {
+          reject(err);
+        } else {
+          resolve();
+        }
+      },
+    );
+  });
+};
+
+/**
+ * Copies contents recursively from `fromPath` to `destPath`
+ * @param {string} fromPath Source path
+ * @param {string} destPath Destination path
+ * @param {string} [relativePath=''] Relative path
+ */
+export const copyContents = async (
+  fromPath: string,
+  destPath: string,
+  hard = true,
+  relativePath = '',
+): Promise<void> => {
+  const contentsPath = path.resolve(fromPath, relativePath);
+  await ensureDir(destPath);
+  const contents = await readDir(contentsPath, { withFileTypes: true });
+  await Promise.all(
+    contents.map(
+      async (pathInfo: fs.Dirent): Promise<void> => {
+        const { name: relPath } = pathInfo;
+        const fullRelPath = path.join(relativePath, relPath);
+        const sourcePath = path.resolve(fromPath, fullRelPath);
+        const targetPath = path.resolve(destPath, fullRelPath);
+
+        if (pathInfo.isDirectory()) {
+          await ensureDir(targetPath);
+          await copyContents(fromPath, destPath, hard, fullRelPath);
+        } else {
+          const write = hard || !(await exists(targetPath));
+          if (write) {
+            await copyFile(sourcePath, targetPath);
+          }
+        }
+      },
+    ),
+  );
 };

@@ -30,7 +30,7 @@ const executeProcess = async (): Promise<void> => {
         activeWatchers.splice(0, activeWatchers.length);
       }
       if (type === 'start') {
-        const watchers = await initWatchers(serverPath);
+        const watchers = await initWatchers(serverPath, __dirname);
         activeWatchers.push(...watchers);
       }
       callback(activeWatchers);
