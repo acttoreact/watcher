@@ -116,3 +116,7 @@ test(`onError doesn't throw error`, async (): Promise<void> => {
     onError(new Error('Test error'));
   }).not.toThrowError();
 });
+
+afterAll(async (): Promise<void> => {
+  await emptyFolder(rightPath);
+});
