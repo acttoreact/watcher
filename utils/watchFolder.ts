@@ -1,7 +1,7 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
-import { exists } from './fs';
+import { exists } from '../tools/fs';
 import { WatcherOptions } from '../model/watcher';
 
 /**
@@ -17,14 +17,14 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<chokidar.FSW
       exists(normalizedTargetPath).then((pathExists): void => {
         if (pathExists) {
           const watcher = chokidar.watch(normalizedTargetPath, options);
-          watcher.on('all', (eventName, eventPath, stats): void => {
-            handler(eventName, eventPath, normalizedTargetPath, stats);
-          });
           watcher.on('error', onError);
           watcher.on('ready', (): void => {
             if (onReady) {
               onReady(watcher, normalizedTargetPath);
             }
+            watcher.on('all', (eventName, eventPath, stats): void => {
+              handler(eventName, eventPath, normalizedTargetPath, stats);
+            });
             resolve(watcher);
           });  
         } else {

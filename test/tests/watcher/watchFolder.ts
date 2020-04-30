@@ -1,6 +1,8 @@
 import path from 'path';
 import chokidar from 'chokidar';
+import waitForExpect from 'wait-for-expect';
 
+import { emptyFolder, writeFile } from '../../../tools/fs';
 import handler from '../../../utils/handler';
 import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
@@ -12,7 +14,7 @@ import { WatcherOptions } from '../../../model/watcher';
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 /**
- * WathcerOptions without `targetPath` property for testing purposes
+ * WatcherOptions without `targetPath` property for testing purposes
  */
 type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
@@ -23,6 +25,12 @@ const commonOptions: WatcherOptionsWithoutPath = {
   handler,
   onError,
 }
+
+const rightPath = path.resolve(__dirname, '../../mocks/server/right');
+
+beforeAll(async (): Promise<void> => {
+  await emptyFolder(rightPath);
+});
 
 /**
  * Creating watcher for an unexisting folder will throw exception
@@ -40,7 +48,6 @@ test('Unexisting target path will throw exception', (): void => {
  * Creating watcher for an existing folder will work as expected and return a watcher instance
  */
 test(`Existing target path won't throw exception`, async (): Promise<void> => {
-  const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
@@ -59,7 +66,6 @@ test(`Existing target path won't throw exception`, async (): Promise<void> => {
  * Checking `onReady` option can be optional
  */
 test(`onReady param is optional`, async (): Promise<void> => {
-  const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
@@ -71,6 +77,37 @@ test(`onReady param is optional`, async (): Promise<void> => {
 });
 
 /**
+ * Main handler shouldn't throw error
+ */
+test(`Handler should be called when adding a file`, async (): Promise<void> => {
+  const handlerFunction = jest.fn(handler);
+  const options: WatcherOptions = {
+    ...commonOptions,
+    targetPath: rightPath,
+    handler: handlerFunction,
+    onReady: async (): Promise<void> => {
+      const newFilePath = path.resolve(rightPath, 'test.txt');
+      await writeFile(newFilePath, 'test');
+    }
+  };
+  const watcher = await watchFolder(options);
+  await waitForExpect(async (): Promise<void> => {
+    expect(handlerFunction).toHaveBeenCalled();
+  });
+  await watcher.close();
+});
+
+/**
+ * Main handler shouldn't throw error
+ */
+test(`handler doesn't throw error`, async (): Promise<void> => {
+  expect(handler).toBeInstanceOf(Function);
+  expect(() => {
+    handler('add', '/path/to/file', '/main/path/to/watch');
+  }).not.toThrowError();
+});
+
+/**
  * Watcher error handler shouldn't throw error
  */
 test(`onError doesn't throw error`, async (): Promise<void> => {
@@ -78,4 +115,8 @@ test(`onError doesn't throw error`, async (): Promise<void> => {
   expect(() => {
     onError(new Error('Test error'));
   }).not.toThrowError();
+});
+
+afterAll(async (): Promise<void> => {
+  await emptyFolder(rightPath);
 });
