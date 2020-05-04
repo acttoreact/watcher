@@ -1,6 +1,6 @@
 import ts from 'typescript';
+import { out } from '@a2r/telemetry';
 
-import out from '../tools/out';
 import { method } from '../tools/colors';
 
 const getArrowFunctionName = (

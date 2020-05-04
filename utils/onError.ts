@@ -1,6 +1,6 @@
-import { OnError } from '../model/watcher';
+import { out } from '@a2r/telemetry';
 
-import out from '../tools/out';
+import { OnError } from '../model/watcher';
 
 /**
  * Watcher error handler

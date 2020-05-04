@@ -1,7 +1,7 @@
 import ts from 'typescript';
+import { out } from '@a2r/telemetry';
 
 import getFunctionName from './getFunctionName';
-import out from '../tools/out';
 
 const getMainMethodNode = (
   nodes: ts.Node[],
