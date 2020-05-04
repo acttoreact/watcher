@@ -9,8 +9,6 @@ import { copyContents } from '../tools/fs';
 import { fullPath } from '../tools/colors';
 import fileValidation from './fileValidation';
 
-// 'add' |  'addDir' |  'change' |  'unlink' |  'unlinkDir'
-
 let watcherTargetPath = '';
 let appMainPath = '';
 let filesToProcess: string[] = [];
@@ -53,18 +51,13 @@ const addFileToQueue = async (processInfo: ProcessInfo): Promise<void> => {
   if (type === 'unlink') {
     failingFiles.delete(targetPath);
   }
-  if (type === 'unlinkDir') {
-    Array.from(failingFiles.keys()).filter(k => k.indexOf(targetPath) === 0).forEach((k) => {
-      failingFiles.delete(k);
-    });
-  }
   if (type === 'add' || type === 'change') {
     newFiles = newFiles.filter(p => p !== targetPath);
     newFiles.push(targetPath);
     filesToProcess = newFiles;
   }
   if (type !== 'addDir') {
-    processQueue();
+    await processQueue();
   }
 };
 
@@ -74,9 +67,9 @@ const addFileToQueue = async (processInfo: ProcessInfo): Promise<void> => {
  * @param eventName event type
  * @param eventPath specific event path (absolute)
  */
-export const handler: Handler = (eventName, eventPath): void => {
+export const handler: Handler = async (eventName, eventPath): Promise<void> => {
   out.verbose(`Watcher handler. Event ${chalk.italic(eventName)} on file ${fullPath(eventPath)}`);
-  addFileToQueue({ targetPath: eventPath, type: eventName });
+  await addFileToQueue({ targetPath: eventPath, type: eventName });
 };
 
 export const setup = (targetPath: string, mainPath: string): void => {

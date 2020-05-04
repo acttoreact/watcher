@@ -18,6 +18,12 @@ export const rimraf = util.promisify(originalRimraf);
 export const mkDir = util.promisify(fs.mkdir);
 
 /**
+ * Delete a directory.
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ */
+export const rmDir = util.promisify(fs.rmdir);
+
+/**
  * Writes data to a file, replacing the file if it already exists.
  * @param {string | number | Buffer | URL} path A path to a file. If a URL is provided, it must use the `file:` protocol. URL support is experimental. If a file descriptor is provided, the underlying file will not be closed automatically.
  * @param {any} data The data to write. If something other than a Buffer or Uint8Array is provided, the value is coerced to a string.
@@ -38,6 +44,12 @@ export const readFile = util.promisify(fs.readFile);
  * @param {fs.PathLike} dest A path to the destination file.
  */
 export const copyFile = util.promisify(fs.copyFile);
+
+/**
+ * Deletes a name and possibly the file it refers to.
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ */
+export const unlink = util.promisify(fs.unlink);
 
 /**
  * Test whether or not the given path exists by checking with the file system.
