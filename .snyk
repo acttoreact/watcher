@@ -6,3 +6,5 @@ patch:
   SNYK-JS-LODASH-567746:
     - winston > async > lodash:
         patched: '2020-04-30T17:10:55.970Z'
+    - '@a2r/telemetry > winston > async > lodash':
+        patched: '2020-05-04T17:22:07.708Z'
