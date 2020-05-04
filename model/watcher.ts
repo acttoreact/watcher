@@ -56,16 +56,6 @@ export interface WatcherOptions {
    */
   targetPath: string;
   /**
-   * Main application path
-   * @memberof WatcherOptions
-   */
-  mainPath: string;
-  /**
-   * Detected changes handler
-   * @memberof WatcherOptions
-   */
-  handler: Handler;
-  /**
    * Errors handler
    * @memberof WatcherOptions
    */

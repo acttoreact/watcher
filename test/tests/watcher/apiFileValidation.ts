@@ -1,6 +1,6 @@
 import path from 'path';
 
-import fileValidation from '../../../utils/fileValidation';
+import apiFileValidation from '../../../utils/apiFileValidation';
 
 const apiPath = path.resolve(__dirname, '../../mocks/server/api');
 
@@ -9,7 +9,7 @@ const apiPath = path.resolve(__dirname, '../../mocks/server/api');
  */
 test(`Empty fail shouldn't pass validation`, async (): Promise<void> => {
   const emptyFile = path.resolve(apiPath, 'empty.ts');
-  const validate = await fileValidation(emptyFile);
+  const validate = await apiFileValidation(emptyFile);
   expect(validate).toBe(false);
 });
 
@@ -18,7 +18,7 @@ test(`Empty fail shouldn't pass validation`, async (): Promise<void> => {
  */
 test(`Undocumented method shouldn't pass validation`, async (): Promise<void> => {
   const emptyFile = path.resolve(apiPath, 'undocumented.ts');
-  const validate = await fileValidation(emptyFile);
+  const validate = await apiFileValidation(emptyFile);
   expect(validate).toBe(false);
 });
 
@@ -27,6 +27,6 @@ test(`Undocumented method shouldn't pass validation`, async (): Promise<void> =>
  */
 test(`Documented method should pass validation`, async (): Promise<void> => {
   const emptyFile = path.resolve(apiPath, 'documented.ts');
-  const validate = await fileValidation(emptyFile);
+  const validate = await apiFileValidation(emptyFile);
   expect(validate).toBe(true);
 });
