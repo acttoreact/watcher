@@ -52,15 +52,9 @@ export type OnReady = (
 export interface WatcherOptions {
   /**
    * Path that should be watched for changes
-   * @type {string}
    * @memberof WatcherOptions
    */
   targetPath: string;
-  /**
-   * Detected changes handler
-   * @memberof WatcherOptions
-   */
-  handler: Handler;
   /**
    * Errors handler
    * @memberof WatcherOptions
@@ -74,8 +68,22 @@ export interface WatcherOptions {
   /**
    * Internal watcher options:
    * WatchOptions from [chokidar](https://github.com/paulmillr/chokidar#api)
-   * @type {chokidar.WatchOptions}
    * @memberof WatcherOptions
    */
   options?: chokidar.WatchOptions;
+}
+
+/**
+ * Process info resulting from watcher event
+ */
+export interface ProcessInfo {
+  /**
+   * Event type
+   * @type
+   */
+  type: 'add' |  'addDir' |  'change' |  'unlink' |  'unlinkDir';
+  /**
+   * Target path
+   */
+  targetPath: string;
 }

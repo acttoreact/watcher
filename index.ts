@@ -1,27 +1,39 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
+import { targetPath, runtimePath } from './settings';
 import initWatchers from './utils/initWatchers';
+import { ensureDir } from './tools/fs';
+import isJest from './tools/isJest';
 
-export const activeWatchers: chokidar.FSWatcher[] = [];
-
-const serverPath = path.resolve(__dirname, './server');
+/**
+ * API Watcher process
+ */
 interface Process {
   type: 'start' | 'stop';
   callback: (watchers: chokidar.FSWatcher[]) => void;
 }
+
 const pendingProcesses: Process[] = [];
+const serverPath = path.resolve(__dirname, targetPath);
+const runtimeDestPath = path.resolve(__dirname, runtimePath);
 
 let runningProcess: 'start' | 'stop' = null;
 
+/**
+ * Current active watchers
+ */
+export const activeWatchers: chokidar.FSWatcher[] = [];
+
+/**
+ * Executes pending processes
+ */
 const executeProcess = async (): Promise<void> => {
   if (!runningProcess) {
     const pendingProcess = pendingProcesses.shift();
     if (pendingProcess) {
       const { type, callback } = pendingProcess;
       runningProcess = type;
-      // eslint-disable-next-line no-console
-      console.log('Running process', type, activeWatchers.length);
       if (activeWatchers.length) {
         await Promise.all(
           activeWatchers.map(async (watcher) => {
@@ -31,18 +43,19 @@ const executeProcess = async (): Promise<void> => {
         activeWatchers.splice(0, activeWatchers.length);
       }
       if (type === 'start') {
-        const watchers = await initWatchers(serverPath);
+        const watchers = await initWatchers(serverPath, __dirname);
         activeWatchers.push(...watchers);
       }
       callback(activeWatchers);
       runningProcess = null;
-      // eslint-disable-next-line no-console
-      console.log('Process ended', type, activeWatchers.length);
       executeProcess();
     }
   }
 };
 
+/**
+ * Adds a new process to queue
+ */
 const addProcessToQueue = (
   type: 'start' | 'stop',
   callback?: (watchers: chokidar.FSWatcher[]) => void,
@@ -51,6 +64,9 @@ const addProcessToQueue = (
   executeProcess();
 };
 
+/**
+ * Stops watchers
+ */
 export const stop = (): Promise<void> =>
   new Promise((resolve) => {
     addProcessToQueue('stop', () => {
@@ -58,6 +74,9 @@ export const stop = (): Promise<void> =>
     });
   });
 
+/**
+ * Starts watchers
+ */
 export const start = async (): Promise<chokidar.FSWatcher[]> =>
   new Promise((resolve) => {
     addProcessToQueue('start', (watchers) => {
@@ -65,6 +84,19 @@ export const start = async (): Promise<chokidar.FSWatcher[]> =>
     });
   });
 
-export const restart = async (): Promise<chokidar.FSWatcher[]> => start();
+/**
+ * Restarts watchers
+ */
+export const restart = start;
 
-start();
+/**
+ * Inits API Watcher by ensuring destination path and running start process
+ */
+const init = async (): Promise<void> => {
+  await ensureDir(runtimeDestPath);
+  await start();
+};
+
+if (!isJest()) {
+  init();
+}

@@ -1,6 +1,6 @@
 {
   "name": "api-watcher",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "API Watcher",
   "engines": {
     "node": ">=12"
@@ -20,7 +20,9 @@
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test-full": "npm run test-clear;npm run build;npm run test;npm run test-coverage;npm run lint;npm audit;npm run docs",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,16 +38,22 @@
   "license": "ISC",
   "homepage": "https://a2r.com/",
   "dependencies": {
+    "@a2r/telemetry": "^1.0.30",
+    "chalk": "^4.0.0",
+    "chokidar": "^3.4.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.5.3",
-    "chokidar": "^3.4.0"
+    "winston": "^3.2.1",
+    "winston-transport": "^4.3.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.1",
     "@types/node": "^13.13.4",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
+    "@types/rimraf": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "babel-jest": "^25.5.1",
-    "better-docs": "^2.0.0",
+    "better-docs": "^2.0.1",
     "coveralls": "^3.0.11",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -53,9 +61,12 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "jest": "^25.5.2",
+    "jest": "^25.5.4",
     "jsdoc": "^3.6.3",
+    "snyk": "^1.316.1",
     "ts-jest": "^25.4.0",
-    "ts-node-dev": "^1.0.0-pre.40"
-  }
+    "ts-node-dev": "^1.0.0-pre.40",
+    "wait-for-expect": "^3.0.2"
+  },
+  "snyk": true
 }

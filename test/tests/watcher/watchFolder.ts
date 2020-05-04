@@ -1,18 +1,14 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
-import handler from '../../../utils/handler';
+import { Omit } from '../../../@types';
+import { emptyFolder } from '../../../tools/fs';
 import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
 
 /**
- * Type used to omit props from interface
- */
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
-/**
- * WathcerOptions without `targetPath` property for testing purposes
+ * WatcherOptions without `targetPath` property for testing purposes
  */
 type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
 
@@ -20,9 +16,14 @@ type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
  * Common watcher options
  */
 const commonOptions: WatcherOptionsWithoutPath = {
-  handler,
   onError,
 }
+
+const rightPath = path.resolve(__dirname, '../../mocks/server/right');
+
+beforeAll(async (): Promise<void> => {
+  await emptyFolder(rightPath);
+});
 
 /**
  * Creating watcher for an unexisting folder will throw exception
@@ -40,7 +41,6 @@ test('Unexisting target path will throw exception', (): void => {
  * Creating watcher for an existing folder will work as expected and return a watcher instance
  */
 test(`Existing target path won't throw exception`, async (): Promise<void> => {
-  const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
@@ -59,7 +59,6 @@ test(`Existing target path won't throw exception`, async (): Promise<void> => {
  * Checking `onReady` option can be optional
  */
 test(`onReady param is optional`, async (): Promise<void> => {
-  const rightPath = path.resolve(__dirname, '../../mocks/server/api');
   const options: WatcherOptions = {
     ...commonOptions,
     targetPath: rightPath,
@@ -78,4 +77,8 @@ test(`onError doesn't throw error`, async (): Promise<void> => {
   expect(() => {
     onError(new Error('Test error'));
   }).not.toThrowError();
+});
+
+afterAll(async (): Promise<void> => {
+  await emptyFolder(rightPath);
 });

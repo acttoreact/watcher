@@ -1,3 +1,5 @@
+import { out } from '@a2r/telemetry';
+
 import { OnError } from '../model/watcher';
 
 /**
@@ -5,8 +7,7 @@ import { OnError } from '../model/watcher';
  * @param error error information
  */
 const onError: OnError = (error): void => {
-  // eslint-disable-next-line no-console
-  console.log('Watcher Error', error.toString());
+  out.error(`Watcher error: ${error.message}\n${error.stack}`, error);
 };
 
 export default onError;
