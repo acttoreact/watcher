@@ -1,7 +1,8 @@
+import { out } from '@a2r/telemetry';
+
 import { ProcessInfo } from '../model/watcher';
 
 import { getFilesRecursively } from '../tools/fs';
-import out from '../tools/out';
 
 /**
  * Will handle files changes and validate them before
