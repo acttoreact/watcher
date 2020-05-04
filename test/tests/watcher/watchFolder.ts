@@ -16,10 +16,6 @@ type WatcherOptionsWithoutPath = Omit<WatcherOptions, 'targetPath'>;
  * Common watcher options
  */
 const commonOptions: WatcherOptionsWithoutPath = {
-  handler: () => {
-    // Empty handler for testing purposes
-  },
-  mainPath: path.resolve(__dirname, '../../..'),
   onError,
 }
 
