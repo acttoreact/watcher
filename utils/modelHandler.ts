@@ -11,8 +11,10 @@ import { fullPath } from '../tools/colors';
  * @param eventName event type
  * @param eventPath specific event path (absolute)
  */
-const handler: Handler = async (_targetPath, eventName, eventPath): Promise<void> => {
+export const handler: Handler = async (eventName, eventPath): Promise<void> => {
   out.verbose(`Watcher handler. Event ${chalk.italic(eventName)} on file ${fullPath(eventPath)}`);
 };
 
-export default handler;
+export const setup = (): void => {
+  out.verbose('Setup ready');
+};

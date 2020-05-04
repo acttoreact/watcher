@@ -15,7 +15,7 @@
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
     "test-clear": "rm -rf coverage;rm -rf dist",
-    "test-dev": "NODE_ENV=development npx jest --watch",
+    "test-dev": "NODE_ENV=development npx jest --watch --runInBand --detectOpenHandles",
     "test-coverage": "jest --coverage",
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",

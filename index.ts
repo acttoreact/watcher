@@ -1,11 +1,12 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
+import { targetPath } from './settings';
 import initWatchers from './utils/initWatchers';
 
 export const activeWatchers: chokidar.FSWatcher[] = [];
 
-const serverPath = path.resolve(__dirname, './server');
+const serverPath = path.resolve(__dirname, targetPath);
 interface Process {
   type: 'start' | 'stop';
   callback: (watchers: chokidar.FSWatcher[]) => void;
@@ -29,7 +30,7 @@ const executeProcess = async (): Promise<void> => {
         activeWatchers.splice(0, activeWatchers.length);
       }
       if (type === 'start') {
-        const watchers = await initWatchers(serverPath);
+        const watchers = await initWatchers(serverPath, __dirname);
         activeWatchers.push(...watchers);
       }
       callback(activeWatchers);
