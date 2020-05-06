@@ -14,6 +14,6 @@ export const apiPath = 'api';
 export const modelPath = 'model';
 
 /**
- * Default runtime target path, where watcher will copy api files once validated
+ * Default proxy target path, where watcher will generate proxy for API and Model
  */
-export const runtimePath = './.a2r/runtime';
+export const proxyPath = './.a2r/proxy';

@@ -1,52 +1,70 @@
 import path from 'path';
 import waitForExpect from 'wait-for-expect';
 
-import { runtimePath, apiPath, modelPath } from '../../../settings';
+import { apiPath, modelPath } from '../../../settings';
+import { emptyFolder, ensureDir, writeFile, exists } from '../../../tools/fs';
 import initWatchers from '../../../utils/initWatchers';
-import { exists, rimraf } from '../../../tools/fs';
 
+const serverPath = path.resolve(__dirname, '../../mocks/server/init-ok');
+const serverApiPath = path.resolve(serverPath, apiPath);
+const serverModelPath = path.resolve(serverPath, modelPath);
 const mainPath = path.resolve(__dirname, '../../mocks');
+
+beforeAll(async () => {
+  await emptyFolder(serverPath);
+  await ensureDir(serverApiPath);
+  await ensureDir(serverModelPath);
+});
+
+const validatedContent = `/**
+ * Method documentation
+ */
+const method = (): void => {
+  // Do stuff
+};
+
+export default method;
+`;
 
 /**
  * Unexisting server path will throw exception
  */
-test('Unexisting server path will throw exception', (): Promise<void> => {
+test('Unexisting server path will throw exception', async (): Promise<void> => {
   const wrongPath = '/wrong/path/to/server';
-  expect.assertions(1);
-  return expect(initWatchers(wrongPath, wrongPath)).rejects.toBeInstanceOf(
-    Error,
-  );
+  await waitForExpect(async (): Promise<void> => {
+    expect(initWatchers(wrongPath, wrongPath)).rejects.toBeInstanceOf(Error);
+  });
 });
 
 /**
- * Server path must exist and watcher should process existing files
+ * Should work with existing server path and process files when added
  */
-test(`Watchers should work for existing server path and process existing files when starting`, async (): Promise<
-  void
-> => {
-  const workingPath = path.resolve(mainPath, 'working-server');
-  const runtimeDestPath = path.resolve(mainPath, runtimePath);
-  const expectedApiFilePath = path.resolve(
-    runtimeDestPath,
-    apiPath,
-    'documented.ts',
-  );
-  const expectedModelFilePath = path.resolve(
-    runtimeDestPath,
-    modelPath,
-    'documented.ts',
-  );
-  await rimraf(runtimeDestPath);
-  const watchers = await initWatchers(workingPath, mainPath);
-  await waitForExpect(
-    async (): Promise<void> => {
-      expect(await exists(expectedApiFilePath)).toBe(true);
-      expect(await exists(expectedModelFilePath)).toBe(true);
-    },
-  );
-  await Promise.all(
-    watchers.map(async watcher => {
-      await watcher.close();
-    }),
-  );
+test('Basic watchers flow', async (): Promise<void> => {
+  const watchers = await initWatchers(serverPath, mainPath);
+  const handler = jest.fn((eventName, eventPath): void => {
+    console.log(eventName, eventPath);
+    // Empty function to check event handler
+  });
+  watchers.forEach((watcher): void => {
+    watcher.on('all', handler);
+  });
+  const fileName = 'ok.ts';
+  const serverApiFilePath = path.resolve(serverApiPath, fileName);
+  const serverModelFilePath = path.resolve(serverModelPath, fileName);
+  await writeFile(serverApiFilePath, validatedContent);
+  await writeFile(serverModelFilePath, validatedContent);
+  await waitForExpect(async (): Promise<void> => {
+    expect(await exists(serverApiFilePath)).toBe(true);
+    expect(await exists(serverModelFilePath)).toBe(true);
+    expect(handler).toHaveBeenCalledWith(
+      'add',
+      serverApiFilePath,
+    );
+    expect(handler).toHaveBeenCalledWith(
+      'add',
+      serverModelFilePath,
+    );
+  });
+
+  await Promise.all(watchers.map(w => w.close()));
 });
