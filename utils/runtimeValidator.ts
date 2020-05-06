@@ -11,7 +11,7 @@ class RuntimeValidator {
   constructor(
     targetPath: string,
     fileValidator: (filePath: string) => Promise<boolean>,
-    onSuccess: () => Promise<void>,
+    onSuccess: () => void | Promise<void>,
   ) {
     this.filesToProcess = new Array<string>();
     this.failingFiles = new Map<string, boolean>();
@@ -34,7 +34,7 @@ class RuntimeValidator {
   /**
    * Function to be executed if there are no failing files after all files are processed
    */
-  private onSuccess: () => Promise<void>;
+  private onSuccess: () => void | Promise<void>;
 
   /**
    * Indicates whether the validator is processing a file or not
