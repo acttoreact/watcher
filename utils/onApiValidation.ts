@@ -1,6 +1,11 @@
+import { build } from './apiProxy';
+import { isJest } from '../tools/isJest';
+
 const onApiValidation = async (): Promise<void> => {
-  // TODO: Call to main A2R instance to restart API Runtime
-  // TODO: Generate API proxy
+  if (!isJest()) {
+    // TODO: Call to main A2R instance to restart API Runtime
+    await build();
+  }
 };
 
 export default onApiValidation;

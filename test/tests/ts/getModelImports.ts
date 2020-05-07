@@ -33,7 +33,7 @@ test('Get model imports', async (): Promise<void> => {
  */
 test('Group model imports from same path', async (): Promise<void> => {
   const apiPath = path.resolve(mainPath, 'api');
-  const files = await getFilesRecursively(apiPath);
+  const files = await getFilesRecursively(apiPath, ['.ts']);
   const fileImports = await Promise.all(files.map(async (filePath): Promise<ModelImport[]> => {
     const content = await readFile(filePath, 'utf8');
     const sourceFile = ts.createSourceFile(

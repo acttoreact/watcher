@@ -1,8 +1,4 @@
-/**
- * Method documentation
- */
-const method = (): void => {
-  // Do stuff
-};
 
-export default method;
+export interface Data {
+  info: string;
+}

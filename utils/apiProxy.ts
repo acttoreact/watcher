@@ -24,7 +24,7 @@ const apiSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
 const proxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);
 
 const getExternalImports = (): string =>
-  [`import generateId from 'shortid'`].join('\n');
+  [`import generateId from 'shortid';`].join('\n');
 
 const getInternalImports = (): string =>
   [`import socket, { MethodCall, SocketMessage } from './socket';`].join('\n');
@@ -48,7 +48,7 @@ const getDocs = (jsDoc: ts.JSDoc[]): string => {
 export const build = async (): Promise<void> => {
   const proxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
-  const files = await getFilesRecursively(apiSourcePath);
+  const files = await getFilesRecursively(apiSourcePath, ['.ts']);
 
   const proxySourceFile = ts.createSourceFile(
     proxyIndexPath,

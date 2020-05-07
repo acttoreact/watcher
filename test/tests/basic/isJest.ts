@@ -1,4 +1,4 @@
-import isJest, { setForceDisableJestDetection } from '../../../tools/isJest';
+import { isJest, setForceDisableJestDetection } from '../../../tools/isJest';
 
 /**
  * Method `isJest` should return true

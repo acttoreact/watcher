@@ -10,20 +10,30 @@ const serverApiPath = path.resolve(serverPath, apiPath);
 const serverModelPath = path.resolve(serverPath, modelPath);
 const mainPath = path.resolve(__dirname, '../../mocks');
 
-beforeAll(async () => {
+beforeAll(async (): Promise<void> => {
   await emptyFolder(serverPath);
   await ensureDir(serverApiPath);
   await ensureDir(serverModelPath);
 });
 
-const validatedContent = `/**
+const apiFileContent = `import { Data } from '../model/ok';
+
+/**
  * Method documentation
  */
-const method = (): void => {
-  // Do stuff
+const method = async (): Promise<Data> => {
+  return {
+    info: 'info',
+  };
 };
 
 export default method;
+`;
+
+const modeFileContent = `
+export interface Data {
+  info: string;
+}
 `;
 
 /**
@@ -51,8 +61,8 @@ test('Basic watchers flow', async (): Promise<void> => {
   const fileName = 'ok.ts';
   const serverApiFilePath = path.resolve(serverApiPath, fileName);
   const serverModelFilePath = path.resolve(serverModelPath, fileName);
-  await writeFile(serverApiFilePath, validatedContent);
-  await writeFile(serverModelFilePath, validatedContent);
+  await writeFile(serverApiFilePath, apiFileContent);
+  await writeFile(serverModelFilePath, modeFileContent);
   await waitForExpect(async (): Promise<void> => {
     expect(await exists(serverApiFilePath)).toBe(true);
     expect(await exists(serverModelFilePath)).toBe(true);

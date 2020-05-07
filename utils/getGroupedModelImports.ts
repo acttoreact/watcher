@@ -7,7 +7,7 @@ const getNamedImports = (nodes: ts.Node[], sourceFile?: ts.SourceFile): string[]
   for (let i = 0, l = nodes.length; i < l; i++) {
     const node = nodes[i];
     if (ts.isIdentifier(node)) {
-      res.push(node.getFullText(sourceFile));
+      res.push(node.getFullText(sourceFile).trim());
     } else {
       const children = node.getChildren(sourceFile);
       if (children.length) {

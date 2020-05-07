@@ -19,7 +19,7 @@ class RuntimeValidator {
     this.onSuccess = onSuccess;
 
     this.processing = true;
-    getFilesRecursively(targetPath).then((files) => {
+    getFilesRecursively(targetPath, ['.ts']).then((files) => {
       this.filesToProcess.push(...files);
       this.processing = false;
       this.processQueue();
@@ -70,10 +70,10 @@ class RuntimeValidator {
         this.processing = false;
         await this.processQueue();
       } else {
-        this.processing = false;
         if (!this.failingFiles.size) {
           await this.onSuccess();
         }
+        this.processing = false;
       }
     }
   }
