@@ -19,10 +19,6 @@ const getModuleInfo = async (filePath: string, apiSourcePath: string): Promise<M
     ts.ScriptTarget.Latest,
     true,
   );
-  console.log('#### File path', filePath);
-  console.log('#### START CONTENT');
-  console.log(content);
-  console.log('#### END CONTENT');
   const fileNodes = sourceFile.getChildren();
   const mainMethodName = getMainMethodName(fileNodes);
   const mainMethodNode = getMainMethodNode(fileNodes, mainMethodName);

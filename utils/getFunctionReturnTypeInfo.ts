@@ -1,5 +1,4 @@
 import ts from 'typescript';
-import { out } from '@a2r/telemetry';
 
 import { ReturnTypeInfo } from '../model/api';
 
@@ -12,8 +11,6 @@ const getTypeReference = (
     const child = children[i];
     if (ts.isTypeReferenceNode(child)) {
       typeReference = child;
-    } else {
-      typeReference = getTypeReference(child);
     }
   }
   return typeReference;
@@ -36,12 +33,6 @@ const getFunctionReturnTypeInfo = (
       } else if (child.kind === ts.SyntaxKind.SyntaxList) {
         typeNode = child.getChildAt(0) as ts.TypeNode;
         type = typeNode.getText().trim();
-      } else {
-        out.verbose(
-          `Skipping unknown node type looking for function return type ${
-            ts.SyntaxKind[child.kind]
-          }`,
-        );
       }
     }
     returnTypeInfo = {

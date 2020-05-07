@@ -116,24 +116,6 @@ export interface ModuleInfo {
 }
 
 /**
- * Function parameter info
- */
-export interface ParamInfo {
-  /**
-   * Parameter declaration original node
-   * @type {ts.ParameterDeclaration}
-   * @memberof ParamInfo
-   */
-  declarationNode: ts.ParameterDeclaration;
-  /**
-   * Parameter identifier original node
-   * @type {ts.Identifier}
-   * @memberof ParamInfo
-   */
-  identifier: ts.Identifier;
-}
-
-/**
  * API Method in Client API structure
  */
 export interface ApiMethod {

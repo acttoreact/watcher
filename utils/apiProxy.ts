@@ -20,8 +20,8 @@ import getSocketProvider from './getSocketProvider';
 
 export const api: APIStructure = {};
 
-const apiSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
-const proxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);
+const defaultApiSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
+const defaultProxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);
 
 const getExternalImports = (): string =>
   [`import generateId from 'shortid';`].join('\n');
@@ -45,19 +45,13 @@ const getDocs = (jsDoc: ts.JSDoc[]): string => {
   return jsDoc[0].getFullText();
 };
 
-export const build = async (): Promise<void> => {
+export const build = async (
+  apiSourcePath = defaultApiSourcePath,
+  proxyTargetPath = defaultProxyTargetPath,
+): Promise<void> => {
   const proxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
   const files = await getFilesRecursively(apiSourcePath, ['.ts']);
-
-  const proxySourceFile = ts.createSourceFile(
-    proxyIndexPath,
-    '',
-    ts.ScriptTarget.Latest,
-    false,
-    ts.ScriptKind.TS,
-  );
-  const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
     files.map(file => getModuleInfo(file, apiSourcePath)),
@@ -83,8 +77,6 @@ export const build = async (): Promise<void> => {
     } = modulesInfo[i];
     const doc = getDocs(mainMethodDocs.jsDoc as ts.JSDoc[]);
     const method = getProxyMethod(
-      printer,
-      proxySourceFile,
       keys.join('.'),
       mainMethodName,
       mainMethodParamNodes,
