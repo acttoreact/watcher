@@ -17,3 +17,13 @@ export const modelPath = 'model';
  * Default proxy target path, where watcher will generate proxy for API and Model
  */
 export const proxyPath = './.a2r/proxy';
+
+/**
+ * Default socket path
+ */
+export const socketPath = '/ws';
+
+/**
+ * Default socket port
+ */
+export const socketPort = 4000;
