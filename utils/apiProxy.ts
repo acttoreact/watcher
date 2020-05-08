@@ -23,12 +23,22 @@ export const api: APIStructure = {};
 const defaultApiSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
 const defaultProxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);
 
+/**
+ * Gets external needed imports
+ */
 const getExternalImports = (): string =>
   [`import generateId from 'shortid';`].join('\n');
 
+/**
+ * Gets internal needed imports
+ */
 const getInternalImports = (): string =>
   [`import socket, { MethodCall, SocketMessage } from './socket';`].join('\n');
 
+/**
+ * Gets model imports text
+ * @param groupedModelImports Grouped model imports (by path)
+ */
 const getInternalModelImports = (
   groupedModelImports: GroupedModelImports[],
 ): string =>
@@ -41,10 +51,19 @@ const getInternalModelImports = (
     )
     .join('\n');
 
+/**
+ * Gets docs text
+ * @param jsDoc `jsDoc` property from `JSDocContainer`
+ */
 const getDocs = (jsDoc: ts.JSDoc[]): string => {
   return jsDoc[0].getFullText();
 };
 
+/**
+ * Build API proxy and needed files
+ * @param apiSourcePath API source path
+ * @param proxyTargetPath Proxy target path, where generated files will be written
+ */
 export const build = async (
   apiSourcePath = defaultApiSourcePath,
   proxyTargetPath = defaultProxyTargetPath,

@@ -56,24 +56,24 @@ const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('model-imports-2', data, blas);
+const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('modelimports2', data, blas);
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (): Promise<Data3> => methodWrapper('model-imports-3');
+const getData = (): Promise<Data3> => methodWrapper('modelimports3');
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('model-imports', data, juan);
+const getData = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('modelimports', data, juan);
 
 const api = {
-  model-imports-2: getData,
-  model-imports-3: getData,
-  model-imports: getData,
+  modelimports2: getData,
+  modelimports3: getData,
+  modelimports: getData,
 };
 
 export default api;

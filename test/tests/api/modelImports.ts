@@ -22,4 +22,4 @@ test('API Proxy build covering different model imports types', async (): Promise
     expect(await exists(socketProxyPath)).toBe(true);
     expect(await exists(apiProxyIndexPath)).toBe(true);
   });
-});
+}, 10000);

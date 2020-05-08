@@ -22,4 +22,4 @@ test('API Proxy build', async (): Promise<void> => {
     expect(await exists(socketProxyPath)).toBe(true);
     expect(await exists(apiProxyIndexPath)).toBe(true);
   });
-});
+}, 10000);
