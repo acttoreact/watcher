@@ -13,7 +13,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "outDir": "./dist",
+    "outDir": "./bin",
     "rootDir": ".",
     "extendedDiagnostics": true,
     "typeRoots": [

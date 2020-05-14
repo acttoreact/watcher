@@ -18,6 +18,7 @@
     "tslib"
   ],
   "search.exclude": {
+    "**/bin": true,
     "**/node_modules": true,
     "**/docs/jsdocs": true
   }

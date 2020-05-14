@@ -8,12 +8,12 @@ RUN npm install --production --silent
 COPY . ./src
 RUN cd ./src;npm install --silent;npm run build
 # Copy de compiled version
-RUN cp -r ./src/dist ./dist
+RUN cp -r ./src/bin ./bin
 # Remove the sources
 RUN rm -rf ./src
 # Enviroment por production
 ENV NODE_ENV production
 # Vulumes for mapping
-VOLUME ["/usr/src/app/server"]
+VOLUME ["/usr/src/app/bin/server"]
 # Start command
 CMD npm start

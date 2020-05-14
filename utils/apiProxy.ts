@@ -84,10 +84,10 @@ export const build = async (
   apiSourcePath = defaultApiSourcePath,
   proxyTargetPath = defaultProxyTargetPath,
 ): Promise<void> => {
+  const files = await getFilesRecursively(apiSourcePath, ['.ts']);
   const proxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
   const isClientFilePath = path.resolve(proxyTargetPath, 'isClient.ts');
-  const files = await getFilesRecursively(apiSourcePath, ['.ts']);
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
     files.map(file => getModuleInfo(file, apiSourcePath)),
