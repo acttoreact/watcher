@@ -25,7 +25,9 @@ const initWatchers = async (
 ): Promise<chokidar.FSWatcher[]> => {
   const pathExists = await exists(serverPath);
   if (!pathExists) {
-    throw new Error(`Provided server path doesn't exist`);
+    const error = `Provided server path doesn't exist: ${fullPath(serverPath)}`;
+    out.error(error);
+    throw new Error(error);
   }
 
   const proxyTargetPath = path.resolve(mainPath, proxyPath);
