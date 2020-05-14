@@ -11,11 +11,9 @@ export const setForceDisableJestDetection = (value: boolean): void => {
 /**
  * Checks if the script is running using Jest test engine
  */
-const isJest = (): boolean => {
+export const isJest = (): boolean => {
   if (forceDisableJestDetection) {
     return false;
   }
   return typeof jest !== 'undefined';
 };
-
-export default isJest;

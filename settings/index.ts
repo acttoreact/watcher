@@ -1,7 +1,9 @@
+import path from 'path';
+
 /**
  * Default target path for watchers, should contain `api` and `model` folders
  */
-export const targetPath = './server';
+export const targetPath = 'server';
 
 /**
  * Default api path inside main target path
@@ -14,6 +16,31 @@ export const apiPath = 'api';
 export const modelPath = 'model';
 
 /**
- * Default runtime target path, where watcher will copy api files once validated
+ * Default proxy target path, where watcher will generate proxy for API and Model
  */
-export const runtimePath = './.a2r/runtime';
+export const proxyPath = '.a2r/proxy';
+
+/**
+ * Default socket path
+ */
+export const socketPath = '/ws';
+
+/**
+ * Default socket port
+ */
+export const socketPort = 4000;
+
+/**
+ * Default API source path
+ */
+export const defaultApiSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
+
+/**
+ * Default Model source path
+ */
+export const defaultModelSourcePath = path.resolve(process.cwd(), targetPath, apiPath);
+
+/**
+ * Default proxy target path
+ */
+export const defaultProxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);

@@ -1,6 +1,6 @@
 {
   "name": "api-watcher",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "API Watcher",
   "engines": {
     "node": ">=12"
@@ -38,21 +38,23 @@
   "license": "ISC",
   "homepage": "https://a2r.com/",
   "dependencies": {
-    "@a2r/telemetry": "^1.0.30",
+    "@a2r/telemetry": "^1.0.29",
     "chalk": "^4.0.0",
     "chokidar": "^3.4.0",
     "rimraf": "^3.0.2",
+    "snyk": "^1.319.0",
+    "socket.io": "^2.3.0",
     "typescript": "^3.5.3",
     "winston": "^3.2.1",
     "winston-transport": "^4.3.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.1",
-    "@types/node": "^13.13.4",
+    "@types/node": "^13.13.5",
     "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
-    "babel-jest": "^25.5.1",
+    "babel-jest": "^25.4.0",
     "better-docs": "^2.0.1",
     "coveralls": "^3.0.11",
     "eslint": "^6.8.0",
@@ -61,9 +63,8 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "jest": "^25.5.4",
+    "jest": "^25.4.0",
     "jsdoc": "^3.6.3",
-    "snyk": "^1.316.1",
     "ts-jest": "^25.4.0",
     "ts-node-dev": "^1.0.0-pre.40",
     "wait-for-expect": "^3.0.2"

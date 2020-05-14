@@ -1,13 +1,19 @@
 import path from 'path';
 import chokidar from 'chokidar';
+import { out } from '@a2r/telemetry';
 
-import { WatcherOptions } from '../model/watcher';
+import { WatcherOptions, OnReady } from '../model/watcher';
 
-import { apiPath, modelPath, runtimePath } from '../settings';
+import { apiPath, modelPath, proxyPath } from '../settings';
 import { exists, emptyFolder } from '../tools/fs';
+import { fullPath } from '../tools/colors';
 import watchFolder from './watchFolder';
 import onError from './onError';
-import getOnApiWatcherReady from './getOnApiWatcherReady';
+import Validator from './runtimeValidator';
+import apiFileValidation from './apiFileValidation';
+import onApiValidation from './onApiValidation';
+import modelFileValidation from './modelFileValidation';
+import onModelValidation from './onModelValidation';
 
 /**
  * Starts watchers
@@ -22,24 +28,54 @@ const initWatchers = async (
     throw new Error(`Provided server path doesn't exist`);
   }
 
-  const apiTargetPath = path.resolve(serverPath, apiPath);
-  const apiRuntimePath = path.resolve(mainPath, runtimePath, apiPath);
-  await emptyFolder(apiRuntimePath);
-  const onApiWatcherReady = getOnApiWatcherReady(apiRuntimePath);
+  const proxyTargetPath = path.resolve(mainPath, proxyPath);
+
+  const apiSourcePath = path.resolve(serverPath, apiPath);
+  const apiProxyPath = path.resolve(proxyTargetPath, apiPath);
+  await emptyFolder(apiProxyPath);
+  const onApiWatcherReady: OnReady = async (
+    watcher,
+    targetPath,
+  ): Promise<void> => {
+    out.verbose(`API proxy path: ${fullPath(apiProxyPath)}`);
+    const validator = new Validator(
+      apiFileValidation,
+      onApiValidation,
+      targetPath,
+      apiProxyPath,
+    );
+    watcher.on('all', (eventName, eventPath): void => {
+      validator.addFileToQueue({ targetPath: eventPath, type: eventName });
+    });
+  };
   const apiWatcherOptions: WatcherOptions = {
     onError,
-    targetPath: apiTargetPath,
+    targetPath: apiSourcePath,
     onReady: onApiWatcherReady,
   };
   const apiWatcher = await watchFolder(apiWatcherOptions);
 
-  const modelTargetPath = path.resolve(serverPath, modelPath);
-  const modelRuntimePath = path.resolve(mainPath, runtimePath, modelPath);
-  await emptyFolder(modelRuntimePath);
-  const onModelWatcherReady = getOnApiWatcherReady(modelRuntimePath);
+  const modelSourcePath = path.resolve(serverPath, modelPath);
+  const modelProxyPath = path.resolve(proxyTargetPath, modelPath);
+  await emptyFolder(modelProxyPath);
+  const onModelWatcherReady: OnReady = async (
+    watcher,
+    targetPath,
+  ): Promise<void> => {
+    out.verbose(`Model proxy path: ${fullPath(modelProxyPath)}`);
+    const validator = new Validator(
+      modelFileValidation,
+      onModelValidation,
+      targetPath,
+      modelProxyPath,
+    );
+    watcher.on('all', (eventName, eventPath): void => {
+      validator.addFileToQueue({ targetPath: eventPath, type: eventName });
+    });
+  };
   const modelWatcherOptions: WatcherOptions = {
     onError,
-    targetPath: modelTargetPath,
+    targetPath: modelSourcePath,
     onReady: onModelWatcherReady,
   };
   const modelWatcher = await watchFolder(modelWatcherOptions);

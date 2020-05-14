@@ -1,10 +1,10 @@
 import path from 'path';
 import chokidar from 'chokidar';
 
-import { targetPath, runtimePath } from './settings';
+import { targetPath, proxyPath } from './settings';
 import initWatchers from './utils/initWatchers';
 import { ensureDir } from './tools/fs';
-import isJest from './tools/isJest';
+import { isJest } from './tools/isJest';
 
 /**
  * API Watcher process
@@ -16,7 +16,7 @@ interface Process {
 
 const pendingProcesses: Process[] = [];
 const serverPath = path.resolve(__dirname, targetPath);
-const runtimeDestPath = path.resolve(__dirname, runtimePath);
+const proxyDestPath = path.resolve(__dirname, proxyPath);
 
 let runningProcess: 'start' | 'stop' = null;
 
@@ -93,7 +93,7 @@ export const restart = start;
  * Inits API Watcher by ensuring destination path and running start process
  */
 const init = async (): Promise<void> => {
-  await ensureDir(runtimeDestPath);
+  await ensureDir(proxyDestPath);
   await start();
 };
 
