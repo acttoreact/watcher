@@ -1,7 +1,7 @@
 {
-  "name": "api-watcher",
+  "name": "watcher",
   "version": "0.2.0",
-  "description": "API Watcher",
+  "description": "API and model watcher",
   "engines": {
     "node": ">=12"
   },
@@ -10,7 +10,7 @@
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
     "docker-build": "IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
     "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
-    "docker-start-from-hub": "IMAGE=act2react/api-watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
+    "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "start": "node ./bin/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acttoreact/api-watcher.git"
+    "url": "git+https://github.com/acttoreact/watcher.git"
   },
   "keywords": [
     "acttoreact",
