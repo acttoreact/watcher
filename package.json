@@ -1,7 +1,7 @@
 {
-  "name": "api-watcher",
-  "version": "0.2.0",
-  "description": "API Watcher",
+  "name": "watcher",
+  "version": "0.3.0",
+  "description": "API and model watcher",
   "engines": {
     "node": ">=12"
   },
@@ -10,7 +10,7 @@
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
     "docker-build": "IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
     "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
-    "docker-start-from-hub": "IMAGE=act2react/api-watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
+    "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "start": "node ./bin/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acttoreact/api-watcher.git"
+    "url": "git+https://github.com/acttoreact/watcher.git"
   },
   "keywords": [
     "acttoreact",
@@ -42,30 +42,30 @@
     "chalk": "^4.0.0",
     "chokidar": "^3.4.0",
     "rimraf": "^3.0.2",
-    "snyk": "^1.319.0",
+    "snyk": "^1.320.5",
     "socket.io": "^2.3.0",
-    "typescript": "^3.5.3",
+    "typescript": "^3.9.2",
     "winston": "^3.2.1",
     "winston-transport": "^4.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.1",
-    "@types/node": "^13.13.5",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
     "@types/rimraf": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "babel-jest": "^25.4.0",
     "better-docs": "^2.0.1",
     "coveralls": "^3.0.11",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react": "^7.20.0",
     "jest": "^25.4.0",
     "jsdoc": "^3.6.3",
-    "ts-jest": "^25.4.0",
+    "ts-jest": "^25.5.1",
     "ts-node-dev": "^1.0.0-pre.40",
     "wait-for-expect": "^3.0.2"
   },

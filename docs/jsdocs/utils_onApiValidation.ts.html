@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> WatcherOptions</title>
+  <title> utils/onApiValidation.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -83,421 +85,38 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Interface</p>
-                    <h1>WatcherOptions</h1>
+                    <p>Source</p>
+                    <h1>utils/onApiValidation.ts</h1>
                 </header>
                 
 
 
 
-
-<section>
-
-<header>
-    
-        <h2>WatcherOptions</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Watcher options</p></div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line14">line 14</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-        
-    
-    </div>
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class='vertical-section'>
-            <h1>Members</h1>
-            <div class="members">
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">OnError</span>
-
-
-    </span>
-
-<h4 class="name" id="onError">
-    <a class="href-link" href="#onError">#</a>
-    
-    <span class="code-name">
-        onError
-    </span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Errors handler</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line24">line 24</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">OnReady</span>
-
-
-    </span>
-
-<h4 class="name" id="onReady">
-    <a class="href-link" href="#onReady">#</a>
-    
-    <span class="code-name">
-        onReady
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Method called once internal watcher (chokidar) is ready</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line30">line 30</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">chokidar.WatchOptions</span>
-
-
-    </span>
-
-<h4 class="name" id="options">
-    <a class="href-link" href="#options">#</a>
-    
-    <span class="code-name">
-        options
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Internal watcher options:
-WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</a></p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line37">line 37</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">string</span>
-
-
-    </span>
-
-<h4 class="name" id="targetPath">
-    <a class="href-link" href="#targetPath">#</a>
-    
-    <span class="code-name">
-        targetPath
-    </span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Path that should be watched for changes</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line18">line 18</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-            </div>
-        </div>
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { build } from './apiProxy';
+import { isJest } from '../tools/isJest';
+
+import { OnValidation } from '../model/watcher';
+
+/**
+ * Method executed when API is validated after changes are processed
+ */
+const onApiValidation: OnValidation = async (
+  serverPath,
+  targetPath,
+): Promise&lt;void> => {
+  if (!isJest()) {
+    // TODO: Call to main A2R instance to restart API Runtime
+    await build(serverPath, targetPath);
+  }
+};
+
+export default onApiValidation;
+</code></pre>
+        </article>
+    </section>
 
 
 
