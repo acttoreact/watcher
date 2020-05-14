@@ -14,7 +14,7 @@
     "start": "node ./bin/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
-    "test-clear": "rm -rf coverage;rm -rf dist",
+    "test-clear": "rm -rf coverage;rm -rf bin",
     "test-dev": "NODE_ENV=development npx jest --watch",
     "test-coverage": "jest --coverage",
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
