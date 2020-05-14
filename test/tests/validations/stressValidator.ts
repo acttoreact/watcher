@@ -42,7 +42,7 @@ test('Stress validator by writing several files at once', async (): Promise<
     eventPath: string,
   ) => void = null;
   const onReady: OnReady = async (watcher, targetPath): Promise<void> => {
-    const validator = new Validator(targetPath, fileValidation, onValidation);
+    const validator = new Validator(fileValidation, onValidation, targetPath);
     onEvent = jest.fn((eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
     });

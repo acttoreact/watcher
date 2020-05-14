@@ -52,6 +52,5 @@ test('Group model imports from same path', async (): Promise<void> => {
   const imports = fileImports.reduce((t, i) => [...t, ...i], []);
   expect(imports.length).toBe(5);
   const groupedImports = getGroupedModelImports(imports);
-  console.log(groupedImports);
   expect(groupedImports.length).toBe(3);
 });

@@ -1,11 +1,30 @@
 import { ApiNamespace } from '../../../model/api';
 
 import updateApiObject from '../../../utils/updateApiObject';
+import getApiObject from '../../../utils/getApiObject';
+
+const expectedString = `const api = {
+  data: {
+    users: {
+      list,
+      add,
+    },
+    items: {
+      list: listItems,
+      add,
+    },
+  },
+  whatever: {
+    import,
+    export,
+  },
+  ping,
+};`
 
 /**
- * Method should build API object properly
+ * Method `updateApiObject` should build API object properly and `getApiObject` should return proper string representation
  */
-test('Update API object', () => {
+test('Update API object and get string representation', () => {
   let apiObject: ApiNamespace = {
     key: 'api',
     namespaces: [],
@@ -13,7 +32,7 @@ test('Update API object', () => {
   };
   apiObject = updateApiObject(apiObject, ['data', 'users', 'list'], 'list');
   apiObject = updateApiObject(apiObject, ['data', 'users', 'add'], 'add');
-  apiObject = updateApiObject(apiObject, ['data', 'items', 'list'], 'list');
+  apiObject = updateApiObject(apiObject, ['data', 'items', 'list'], 'listItems');
   apiObject = updateApiObject(apiObject, ['data', 'items', 'add'], 'add');
   apiObject = updateApiObject(apiObject, ['whatever', 'import'], 'import');
   apiObject = updateApiObject(apiObject, ['whatever', 'export'], 'export');
@@ -27,4 +46,6 @@ test('Update API object', () => {
   expect(usersNamespace).toBeTruthy();
   const addUserMethod = usersNamespace.methods.find(m => m.key === 'add');
   expect(addUserMethod).toBeTruthy();
+  const stringApiObject = getApiObject(apiObject);
+  expect(stringApiObject).toBe(expectedString);
 });

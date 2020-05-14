@@ -2,7 +2,7 @@ import getMethodWrapper from '../../../utils/getMethodWrapper';
 
 const expected = `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
-  if (!process.browser) {
+  if (!isClient()) {
     console.log('on server side, executing api method directly');
     // try {
     //   const apiModule = getModule(method);

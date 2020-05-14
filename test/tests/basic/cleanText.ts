@@ -13,7 +13,7 @@ test('Clean text', (): void => {
   expect(cleanText('Hello? Adiós', true, false, true)).toBe('hello?adios');
   expect(cleanText('Hello? Adiós', true, true, true)).toBe('helloadios');
   expect(cleanText('Hello? Adiós', false, true, true, true)).toBe('helloAdios');
-  expect(cleanText('Hello? Adiós', true, true, true, false, '-')).toBe('hello-adios');
+  expect(cleanText('Hello? Adiós', true, true, true, false, '', '-')).toBe('hello-adios');
   expect(cleanText('')).toBe('');
   expect(cleanText('€')).toBe('€');
 });

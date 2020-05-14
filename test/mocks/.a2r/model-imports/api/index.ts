@@ -1,6 +1,7 @@
 import generateId from 'shortid';
 
 import socket, { MethodCall, SocketMessage } from './socket';
+import isClient from './isClient';
 
 import { Data } from  '../model/data';
 import  Data2, { Blas, Juan } from  '../model/data2';
@@ -8,7 +9,7 @@ import  Data3 from  '../model/data3';
 
 const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
-  if (!process.browser) {
+  if (!isClient()) {
     console.log('on server side, executing api method directly');
     // try {
     //   const apiModule = getModule(method);
@@ -56,24 +57,24 @@ const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('modelimports2', data, blas);
+const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('modelImports2', data, blas);
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (): Promise<Data3> => methodWrapper('modelimports3');
+const getData2 = (): Promise<Data3> => methodWrapper('modelImports3');
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('modelimports', data, juan);
+const getData3 = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('modelImports', data, juan);
 
 const api = {
-  modelimports2: getData,
-  modelimports3: getData,
-  modelimports: getData,
+  modelImports2: getData,
+  modelImports3: getData2,
+  modelImports: getData3,
 };
 
 export default api;

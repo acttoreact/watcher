@@ -1,4 +1,5 @@
 import ts from 'typescript';
+import { out } from '@a2r/telemetry';
 
 import { ReturnTypeInfo } from '../model/api';
 
@@ -40,6 +41,8 @@ const getFunctionReturnTypeInfo = (
       type,
       typeNode,
     };
+  } else {
+    out.error(`No return type provided for method:\n${node.getFullText()}`);
   }
   return returnTypeInfo;
 };

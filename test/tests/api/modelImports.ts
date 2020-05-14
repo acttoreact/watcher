@@ -10,7 +10,7 @@ const apiProxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
 const socketProxyPath = path.resolve(proxyTargetPath, 'socket.ts');
 
 beforeAll(async (): Promise<void> => {
-  emptyFolder(proxyTargetPath);
+  await emptyFolder(proxyTargetPath);
 });
 
 /**
@@ -22,4 +22,4 @@ test('API Proxy build covering different model imports types', async (): Promise
     expect(await exists(socketProxyPath)).toBe(true);
     expect(await exists(apiProxyIndexPath)).toBe(true);
   });
-}, 10000);
+});

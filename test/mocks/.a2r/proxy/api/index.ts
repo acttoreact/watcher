@@ -1,5 +1,9 @@
-const getMethodWrapper = (): string => {
-  return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
+import generateId from 'shortid';
+
+import socket, { MethodCall, SocketMessage } from './socket';
+import isClient from './isClient';
+
+const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
   if (!isClient()) {
     console.log('on server side, executing api method directly');
@@ -43,7 +47,9 @@ const getMethodWrapper = (): string => {
       reject(new Error('No client socket available!'));
     }
   });
-};`;
 };
 
-export default getMethodWrapper;
+const api = {
+};
+
+export default api;

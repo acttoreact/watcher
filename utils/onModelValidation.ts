@@ -1,17 +1,19 @@
-import path from 'path';
+import { OnValidation } from '../model/watcher';
 
 import { copyContents, emptyFolder } from '../tools/fs';
 import { isJest } from '../tools/isJest';
 
-import { targetPath, proxyPath, modelPath } from '../settings';
-
-const modelSourcePath = path.resolve(process.cwd(), targetPath, modelPath);
-const proxyTargetPath = path.resolve(process.cwd(), proxyPath, modelPath);
-
-const onModelValidation = async (): Promise<void> => {
+/**
+ * Method executed when API is validated after changes are processed
+ */
+const onModelValidation: OnValidation = async (
+  serverPath: string,
+  targetPath: string,
+): Promise<void> => {
   if (!isJest()) {
-    await emptyFolder(proxyTargetPath);
-    await copyContents(modelSourcePath, proxyTargetPath);
+    // TODO: Call to main A2R instance to restart API Runtime
+    await emptyFolder(targetPath);
+    await copyContents(serverPath, targetPath);
   }
 };
 

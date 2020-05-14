@@ -260,6 +260,7 @@ for (let i = 0, l = defaultDiacriticsRemovalMap.length; i < l; i++) {
  * @param {boolean} removeNonAlphanumeric Remove any non-alphanumeric or non-space character
  * @param {boolean} removeSpaces Remove spaces
  * @param {boolean} turnToCamelCase Turn string to camel case
+ * @param {string} camelCaseSeparator Separator for camel case conversion
  * @param {string} spaceSubstitute If provided, will be used to replace spaces
  */
 const cleanText = (
@@ -268,6 +269,7 @@ const cleanText = (
   removeNonAlphanumeric = false,
   removeSpaces = false,
   turnToCamelCase = false,
+  camelCaseSeparator = ' ',
   spaceSubstitute = '',
 ): string => {
   let res = (str || '').trim();
@@ -289,19 +291,25 @@ const cleanText = (
     .replace(/[^\u0000-\u007E]/g, a => diacriticsMap[a] || a);
 
   if (removeNonAlphanumeric) {
-    res = res.replace(/[^0-9a-zA-Z\s]/g, '');
+    res = res.replace(/[^0-9a-zA-Z\-\s]/g, '');
   }
 
   res = res.replace(/\s{2,}/g, ' ');
 
   if (turnToCamelCase) {
-    res = res.split(' ').map((s, i) => i ? (s && capitalize(s)) : (s && s.toLowerCase())).join('');
+    res = res
+      .split(camelCaseSeparator)
+      .map((s, i) => (i ? s && capitalize(s) : s && s.toLowerCase()))
+      .join('');
   }
 
   if (removeSpaces) {
     res = res.replace(/\s/g, spaceSubstitute);
     if (spaceSubstitute) {
-      res = res.replace(new RegExp(`${spaceSubstitute}+`, 'g'), spaceSubstitute);
+      res = res.replace(
+        new RegExp(`${spaceSubstitute}+`, 'g'),
+        spaceSubstitute,
+      );
     }
   }
 

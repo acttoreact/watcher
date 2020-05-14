@@ -30,18 +30,19 @@ const initWatchers = async (
 
   const proxyTargetPath = path.resolve(mainPath, proxyPath);
 
-  const apiTargetPath = path.resolve(serverPath, apiPath);
+  const apiSourcePath = path.resolve(serverPath, apiPath);
   const apiProxyPath = path.resolve(proxyTargetPath, apiPath);
   await emptyFolder(apiProxyPath);
   const onApiWatcherReady: OnReady = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.verbose(`Model proxy path: ${fullPath(apiProxyPath)}`);
+    out.verbose(`API proxy path: ${fullPath(apiProxyPath)}`);
     const validator = new Validator(
-      targetPath,
       apiFileValidation,
       onApiValidation,
+      targetPath,
+      apiProxyPath,
     );
     watcher.on('all', (eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
@@ -49,12 +50,12 @@ const initWatchers = async (
   };
   const apiWatcherOptions: WatcherOptions = {
     onError,
-    targetPath: apiTargetPath,
+    targetPath: apiSourcePath,
     onReady: onApiWatcherReady,
   };
   const apiWatcher = await watchFolder(apiWatcherOptions);
 
-  const modelTargetPath = path.resolve(serverPath, modelPath);
+  const modelSourcePath = path.resolve(serverPath, modelPath);
   const modelProxyPath = path.resolve(proxyTargetPath, modelPath);
   await emptyFolder(modelProxyPath);
   const onModelWatcherReady: OnReady = async (
@@ -63,9 +64,10 @@ const initWatchers = async (
   ): Promise<void> => {
     out.verbose(`Model proxy path: ${fullPath(modelProxyPath)}`);
     const validator = new Validator(
-      targetPath,
       modelFileValidation,
       onModelValidation,
+      targetPath,
+      modelProxyPath,
     );
     watcher.on('all', (eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
@@ -73,7 +75,7 @@ const initWatchers = async (
   };
   const modelWatcherOptions: WatcherOptions = {
     onError,
-    targetPath: modelTargetPath,
+    targetPath: modelSourcePath,
     onReady: onModelWatcherReady,
   };
   const modelWatcher = await watchFolder(modelWatcherOptions);

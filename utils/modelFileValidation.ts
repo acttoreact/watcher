@@ -18,7 +18,7 @@ const fileValidation = async (filePath: string): Promise<boolean> => {
     for (let i = 0, l = identifiers.length; i < l && validated; i += 1) {
       const identifier = identifiers[i];
       const keyPath = modelKeys.get(identifier);
-      if (keyPath) {
+      if (keyPath && keyPath !== filePath) {
         validated = false;
         out.error(`There is already a type, interface or enum called ${chalk.bold(
           identifier,

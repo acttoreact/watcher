@@ -34,7 +34,7 @@ test('Basic validator flow', async (): Promise<void> => {
     eventPath: string,
   ) => void = null;
   const onReady: OnReady = async (watcher, targetPath): Promise<void> => {
-    const validator = new Validator(targetPath, fileValidation, onValidation);
+    const validator = new Validator(fileValidation, onValidation, targetPath);
     onEvent = jest.fn((eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
     });

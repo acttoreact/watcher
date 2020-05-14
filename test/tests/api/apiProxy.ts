@@ -10,7 +10,7 @@ const apiProxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
 const socketProxyPath = path.resolve(proxyTargetPath, 'socket.ts');
 
 beforeAll(async (): Promise<void> => {
-  emptyFolder(proxyTargetPath);
+  await emptyFolder(proxyTargetPath);
 });
 
 /**
@@ -22,4 +22,11 @@ test('API Proxy build', async (): Promise<void> => {
     expect(await exists(socketProxyPath)).toBe(true);
     expect(await exists(apiProxyIndexPath)).toBe(true);
   });
-}, 10000);
+});
+
+/**
+ * API Proxy should build from default paths when not specific paths are provided
+ */
+test('API Proxy build with default paths', async (): Promise<void> => {
+  await build();
+});

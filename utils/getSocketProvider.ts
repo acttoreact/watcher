@@ -5,6 +5,20 @@ const getSocketProvider = (port = socketPort): string => {
 
   return `import io from "socket.io-client";
 
+import isClient from './isClient';
+
+/**
+ * Socket basic call
+ */
+export interface SocketCall {
+  /**
+   * Unique ID for socket transmission
+   * @type {string}
+   * @memberof MethodCall
+   */
+  id: string;
+}
+
 /**
  * Socket method call
  */
@@ -47,9 +61,9 @@ export interface SocketMessage {
   d: any;
 };
 
-const socket = io(${url}, {
-  autoConnect: !!process.browser,
-  path: "${socketPath}",
+const socket = io('${url}', {
+  autoConnect: isClient(),
+  path: '${socketPath}',
 });
 
 export default socket;`;

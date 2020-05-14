@@ -1,5 +1,19 @@
 import io from "socket.io-client";
 
+import isClient from './isClient';
+
+/**
+ * Socket basic call
+ */
+export interface SocketCall {
+  /**
+   * Unique ID for socket transmission
+   * @type {string}
+   * @memberof MethodCall
+   */
+  id: string;
+}
+
 /**
  * Socket method call
  */
@@ -42,9 +56,9 @@ export interface SocketMessage {
   d: any;
 };
 
-const socket = io(http://localhost:4000, {
-  autoConnect: !!process.browser,
-  path: "/ws",
+const socket = io('http://localhost:4000', {
+  autoConnect: isClient(),
+  path: '/ws',
 });
 
 export default socket;

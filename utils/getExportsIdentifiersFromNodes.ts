@@ -25,9 +25,6 @@ const getExportsIdentifiersFromNodes = (
       ts.isTypeAliasDeclaration(node)
     ) {
       const identifier = getIdentifier(children);
-      if (!identifier) {
-        throw Error(`Couldn't find identifier for export declaration:\n${node.getText()}`);
-      }
       res.push(identifier);
     } else if (children.length) {
       res.push(...getExportsIdentifiersFromNodes(children));

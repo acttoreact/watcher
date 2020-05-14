@@ -7,7 +7,7 @@ const apiPath = path.resolve(__dirname, '../../mocks/server/api');
 /**
  * An empty file shouldn't pass validation
  */
-test(`Empty fail shouldn't pass validation`, async (): Promise<void> => {
+test(`Empty API file shouldn't pass validation`, async (): Promise<void> => {
   const emptyFile = path.resolve(apiPath, 'empty.ts');
   const validate = await apiFileValidation(emptyFile);
   expect(validate).toBe(false);

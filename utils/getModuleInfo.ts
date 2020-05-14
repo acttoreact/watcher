@@ -40,7 +40,7 @@ const getModuleInfo = async (filePath: string, apiSourcePath: string): Promise<M
     .relative(apiSourcePath, filePath)
     .replace(/\.ts$/, '')
     .split(path.sep)
-    .map(s => cleanText(s, false, true, true, true));
+    .map(s => cleanText(s, false, true, true, true, '-'));
   return {
     mainMethodDocs,
     mainMethodName,
