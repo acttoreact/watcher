@@ -1,6 +1,6 @@
 import { out } from '@a2r/telemetry';
 
-import { ProcessInfo } from '../model/watcher';
+import { ProcessInfo, OnValidation } from '../model/watcher';
 
 import { getFilesRecursively } from '../tools/fs';
 
@@ -9,17 +9,20 @@ import { getFilesRecursively } from '../tools/fs';
  */
 class RuntimeValidator {
   constructor(
-    targetPath: string,
     fileValidator: (filePath: string) => Promise<boolean>,
-    onSuccess: () => void | Promise<void>,
+    onValidation: OnValidation,
+    sourcePath: string,
+    targetPath?: string,
   ) {
     this.filesToProcess = new Array<string>();
     this.failingFiles = new Map<string, boolean>();
     this.validator = fileValidator;
-    this.onSuccess = onSuccess;
+    this.onValidation = onValidation;
+    this.sourcePath = sourcePath;
+    this.targetPath = targetPath;
 
     this.processing = true;
-    getFilesRecursively(targetPath).then((files) => {
+    getFilesRecursively(sourcePath, ['.ts']).then((files) => {
       this.filesToProcess.push(...files);
       this.processing = false;
       this.processQueue();
@@ -34,7 +37,7 @@ class RuntimeValidator {
   /**
    * Function to be executed if there are no failing files after all files are processed
    */
-  private onSuccess: () => void | Promise<void>;
+  private onValidation: OnValidation;
 
   /**
    * Indicates whether the validator is processing a file or not
@@ -49,7 +52,17 @@ class RuntimeValidator {
   /**
    * Files that didn't pass validation
    */
-  private failingFiles: Map<string, boolean>;
+  public failingFiles: Map<string, boolean>;
+
+  /**
+   * Source path
+   */
+  public sourcePath: string;
+
+  /**
+   * Target path
+   */
+  public targetPath?: string;
 
   /**
    * Processes pending files (from `filesToProcess`)
@@ -70,10 +83,10 @@ class RuntimeValidator {
         this.processing = false;
         await this.processQueue();
       } else {
-        this.processing = false;
         if (!this.failingFiles.size) {
-          await this.onSuccess();
+          await this.onValidation(this.sourcePath, this.targetPath);
         }
+        this.processing = false;
       }
     }
   }

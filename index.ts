@@ -4,7 +4,7 @@ import chokidar from 'chokidar';
 import { targetPath, proxyPath } from './settings';
 import initWatchers from './utils/initWatchers';
 import { ensureDir } from './tools/fs';
-import isJest from './tools/isJest';
+import { isJest } from './tools/isJest';
 
 /**
  * API Watcher process

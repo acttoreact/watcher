@@ -47,6 +47,11 @@ export type OnReady = (
 ) => void | Promise<void>;
 
 /**
+ * On Validation method
+ */
+export type OnValidation = (serverPath?: string, targetPath?: string) => Promise<void> | void;
+
+/**
  * Watcher options
  */
 export interface WatcherOptions {

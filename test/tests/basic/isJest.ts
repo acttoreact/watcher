@@ -1,16 +1,10 @@
-import isJest, { setForceDisableJestDetection } from '../../../tools/isJest';
+import { isJest, setForceDisableJestDetection } from '../../../tools/isJest';
 
 /**
- * Method `isJest` should return true
+ * Method `isJest` should return `true` at startup and then `false` after being forced
  */
-test('Method isJest should return true', async () => {
+test('Method isJest basic flow', (): void => {
   expect(isJest()).toBe(true);
-});
-
-/**
- * After using `setForceDisableJestDetection` method `isJset` should return `false`
- */
-test('Method isJest should return false after using setForceDisableJestDetection', async () => {
   setForceDisableJestDetection(true);
   expect(isJest()).toBe(false);
   setForceDisableJestDetection(false);
