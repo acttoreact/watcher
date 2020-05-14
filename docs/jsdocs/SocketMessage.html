@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> WatcherOptions</title>
+  <title> SocketMessage</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -84,7 +84,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Interface</p>
-                    <h1>WatcherOptions</h1>
+                    <h1>SocketMessage</h1>
                 </header>
                 
 
@@ -95,7 +95,7 @@
 
 <header>
     
-        <h2>WatcherOptions</h2>
+        <h2>SocketMessage</h2>
         
     
 </header>
@@ -104,7 +104,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>Watcher options</p></div>
+            <div class="description"><p>Socket standard response</p></div>
         
 
         
@@ -143,9 +143,9 @@
 
     
         <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
+            <a href="model_sockets.ts.html" class="button">View Source</a>
             <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line14">line 14</a>
+                <a href="model_sockets.ts.html">model/sockets.ts</a>, <a href="model_sockets.ts.html#line51">line 51</a>
             </span>
         </p>
     
@@ -178,16 +178,16 @@
     <span class="method-parameter is-pulled-right">
         <label>Type:</label>
         
-<span class="param-type">OnError</span>
+<span class="param-type">any</span>
 
 
     </span>
 
-<h4 class="name" id="onError">
-    <a class="href-link" href="#onError">#</a>
+<h4 class="name" id="d">
+    <a class="href-link" href="#d">#</a>
     
     <span class="code-name">
-        onError
+        d
     </span>
     
 </h4>
@@ -196,7 +196,7 @@
 
 
 <div class="description">
-    <p>Errors handler</p>
+    <p>Operation return data</p>
 </div>
 
 
@@ -236,168 +236,9 @@
 
     
         <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
+            <a href="model_sockets.ts.html" class="button">View Source</a>
             <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line24">line 24</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">OnReady</span>
-
-
-    </span>
-
-<h4 class="name" id="onReady">
-    <a class="href-link" href="#onReady">#</a>
-    
-    <span class="code-name">
-        onReady
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Method called once internal watcher (chokidar) is ready</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line30">line 30</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">chokidar.WatchOptions</span>
-
-
-    </span>
-
-<h4 class="name" id="options">
-    <a class="href-link" href="#options">#</a>
-    
-    <span class="code-name">
-        options
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Internal watcher options:
-WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</a></p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line37">line 37</a>
+                <a href="model_sockets.ts.html">model/sockets.ts</a>, <a href="model_sockets.ts.html#line75">line 75</a>
             </span>
         </p>
     
@@ -419,12 +260,14 @@ WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</
 
     </span>
 
-<h4 class="name" id="targetPath">
-    <a class="href-link" href="#targetPath">#</a>
+<h4 class="name" id="e">
+    <a class="href-link" href="#e">#</a>
     
     <span class="code-name">
-        targetPath
+        e
     </span>
+    
+        <span class='tag'>Optional</span>
     
 </h4>
 
@@ -432,7 +275,7 @@ WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</
 
 
 <div class="description">
-    <p>Path that should be watched for changes</p>
+    <p>Operation error (if any)</p>
 </div>
 
 
@@ -472,9 +315,165 @@ WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</
 
     
         <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
+            <a href="model_sockets.ts.html" class="button">View Source</a>
             <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line18">line 18</a>
+                <a href="model_sockets.ts.html">model/sockets.ts</a>, <a href="model_sockets.ts.html#line61">line 61</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">number</span>
+
+
+    </span>
+
+<h4 class="name" id="o">
+    <a class="href-link" href="#o">#</a>
+    
+    <span class="code-name">
+        o
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Operation was ok (0) or not (1)</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="model_sockets.ts.html" class="button">View Source</a>
+            <span>
+                <a href="model_sockets.ts.html">model/sockets.ts</a>, <a href="model_sockets.ts.html#line55">line 55</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">string</span>
+
+
+    </span>
+
+<h4 class="name" id="s">
+    <a class="href-link" href="#s">#</a>
+    
+    <span class="code-name">
+        s
+    </span>
+    
+        <span class='tag'>Optional</span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    <p>Operation stack (if error)</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="model_sockets.ts.html" class="button">View Source</a>
+            <span>
+                <a href="model_sockets.ts.html">model/sockets.ts</a>, <a href="model_sockets.ts.html#line68">line 68</a>
             </span>
         </p>
     

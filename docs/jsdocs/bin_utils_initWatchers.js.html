@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> WatcherOptions</title>
+  <title> bin/utils/initWatchers.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -83,421 +85,83 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Interface</p>
-                    <h1>WatcherOptions</h1>
+                    <p>Source</p>
+                    <h1>bin/utils/initWatchers.js</h1>
                 </header>
                 
 
 
 
-
-<section>
-
-<header>
     
-        <h2>WatcherOptions</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Watcher options</p></div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line14">line 14</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-        
-    
-    </div>
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class='vertical-section'>
-            <h1>Members</h1>
-            <div class="members">
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">OnError</span>
-
-
-    </span>
-
-<h4 class="name" id="onError">
-    <a class="href-link" href="#onError">#</a>
-    
-    <span class="code-name">
-        onError
-    </span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Errors handler</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line24">line 24</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">OnReady</span>
-
-
-    </span>
-
-<h4 class="name" id="onReady">
-    <a class="href-link" href="#onReady">#</a>
-    
-    <span class="code-name">
-        onReady
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Method called once internal watcher (chokidar) is ready</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line30">line 30</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">chokidar.WatchOptions</span>
-
-
-    </span>
-
-<h4 class="name" id="options">
-    <a class="href-link" href="#options">#</a>
-    
-    <span class="code-name">
-        options
-    </span>
-    
-        <span class='tag'>Optional</span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Internal watcher options:
-WatchOptions from <a href="https://github.com/paulmillr/chokidar#api">chokidar</a></p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line37">line 37</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-    <span class="method-parameter is-pulled-right">
-        <label>Type:</label>
-        
-<span class="param-type">string</span>
-
-
-    </span>
-
-<h4 class="name" id="targetPath">
-    <a class="href-link" href="#targetPath">#</a>
-    
-    <span class="code-name">
-        targetPath
-    </span>
-    
-</h4>
-
-
-
-
-<div class="description">
-    <p>Path that should be watched for changes</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="model_watcher.ts.html" class="button">View Source</a>
-            <span>
-                <a href="model_watcher.ts.html">model/watcher.ts</a>, <a href="model_watcher.ts.html#line18">line 18</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-</div>
-            
-            </div>
-        </div>
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const path_1 = __importDefault(require("path"));
+const telemetry_1 = require("@a2r/telemetry");
+const settings_1 = require("../settings");
+const fs_1 = require("../tools/fs");
+const colors_1 = require("../tools/colors");
+const watchFolder_1 = __importDefault(require("./watchFolder"));
+const onError_1 = __importDefault(require("./onError"));
+const runtimeValidator_1 = __importDefault(require("./runtimeValidator"));
+const apiFileValidation_1 = __importDefault(require("./apiFileValidation"));
+const onApiValidation_1 = __importDefault(require("./onApiValidation"));
+const modelFileValidation_1 = __importDefault(require("./modelFileValidation"));
+const onModelValidation_1 = __importDefault(require("./onModelValidation"));
+/**
+ * Starts watchers
+ * @param serverPath server main path (containing api and model)
+ */
+const initWatchers = async (serverPath, mainPath) => {
+    const pathExists = await fs_1.exists(serverPath);
+    if (!pathExists) {
+        const error = `Provided server path doesn't exist: ${colors_1.fullPath(serverPath)}`;
+        telemetry_1.out.error(error);
+        throw new Error(error);
+    }
+    const proxyTargetPath = path_1.default.resolve(mainPath, settings_1.proxyPath);
+    const apiSourcePath = path_1.default.resolve(serverPath, settings_1.apiPath);
+    const apiProxyPath = path_1.default.resolve(proxyTargetPath, settings_1.apiPath);
+    await fs_1.emptyFolder(apiProxyPath);
+    const onApiWatcherReady = async (watcher, targetPath) => {
+        telemetry_1.out.verbose(`API proxy path: ${colors_1.fullPath(apiProxyPath)}`);
+        const validator = new runtimeValidator_1.default(apiFileValidation_1.default, onApiValidation_1.default, targetPath, apiProxyPath);
+        watcher.on('all', (eventName, eventPath) => {
+            validator.addFileToQueue({ targetPath: eventPath, type: eventName });
+        });
+    };
+    const apiWatcherOptions = {
+        onError: onError_1.default,
+        targetPath: apiSourcePath,
+        onReady: onApiWatcherReady,
+    };
+    const apiWatcher = await watchFolder_1.default(apiWatcherOptions);
+    const modelSourcePath = path_1.default.resolve(serverPath, settings_1.modelPath);
+    const modelProxyPath = path_1.default.resolve(proxyTargetPath, settings_1.modelPath);
+    await fs_1.emptyFolder(modelProxyPath);
+    const onModelWatcherReady = async (watcher, targetPath) => {
+        telemetry_1.out.verbose(`Model proxy path: ${colors_1.fullPath(modelProxyPath)}`);
+        const validator = new runtimeValidator_1.default(modelFileValidation_1.default, onModelValidation_1.default, targetPath, modelProxyPath);
+        watcher.on('all', (eventName, eventPath) => {
+            validator.addFileToQueue({ targetPath: eventPath, type: eventName });
+        });
+    };
+    const modelWatcherOptions = {
+        onError: onError_1.default,
+        targetPath: modelSourcePath,
+        onReady: onModelWatcherReady,
+    };
+    const modelWatcher = await watchFolder_1.default(modelWatcherOptions);
+    return [apiWatcher, modelWatcher];
+};
+exports.default = initWatchers;
+//# sourceMappingURL=initWatchers.js.map</code></pre>
+        </article>
+    </section>
 
 
 

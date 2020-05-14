@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> utils/initWatchers.ts</title>
+  <title> bin/tools/fs.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -86,7 +86,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>utils/initWatchers.ts</h1>
+                    <h1>bin/tools/fs.js</h1>
                 </header>
                 
 
@@ -95,95 +95,152 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import path from 'path';
-import chokidar from 'chokidar';
-import { out } from '@a2r/telemetry';
-
-import { WatcherOptions, OnReady } from '../model/watcher';
-
-import { apiPath, modelPath, proxyPath } from '../settings';
-import { exists, emptyFolder } from '../tools/fs';
-import { fullPath } from '../tools/colors';
-import watchFolder from './watchFolder';
-import onError from './onError';
-import Validator from './runtimeValidator';
-import apiFileValidation from './apiFileValidation';
-import onApiValidation from './onApiValidation';
-import modelFileValidation from './modelFileValidation';
-import onModelValidation from './onModelValidation';
-
-/**
- * Starts watchers
- * @param serverPath server main path (containing api and model)
- */
-const initWatchers = async (
-  serverPath: string,
-  mainPath: string,
-): Promise&lt;chokidar.FSWatcher[]> => {
-  const pathExists = await exists(serverPath);
-  if (!pathExists) {
-    const error = `Provided server path doesn't exist: ${fullPath(serverPath)}`;
-    out.error(error);
-    throw new Error(error);
-  }
-
-  const proxyTargetPath = path.resolve(mainPath, proxyPath);
-
-  const apiSourcePath = path.resolve(serverPath, apiPath);
-  const apiProxyPath = path.resolve(proxyTargetPath, apiPath);
-  await emptyFolder(apiProxyPath);
-  const onApiWatcherReady: OnReady = async (
-    watcher,
-    targetPath,
-  ): Promise&lt;void> => {
-    out.verbose(`API proxy path: ${fullPath(apiProxyPath)}`);
-    const validator = new Validator(
-      apiFileValidation,
-      onApiValidation,
-      targetPath,
-      apiProxyPath,
-    );
-    watcher.on('all', (eventName, eventPath): void => {
-      validator.addFileToQueue({ targetPath: eventPath, type: eventName });
-    });
-  };
-  const apiWatcherOptions: WatcherOptions = {
-    onError,
-    targetPath: apiSourcePath,
-    onReady: onApiWatcherReady,
-  };
-  const apiWatcher = await watchFolder(apiWatcherOptions);
-
-  const modelSourcePath = path.resolve(serverPath, modelPath);
-  const modelProxyPath = path.resolve(proxyTargetPath, modelPath);
-  await emptyFolder(modelProxyPath);
-  const onModelWatcherReady: OnReady = async (
-    watcher,
-    targetPath,
-  ): Promise&lt;void> => {
-    out.verbose(`Model proxy path: ${fullPath(modelProxyPath)}`);
-    const validator = new Validator(
-      modelFileValidation,
-      onModelValidation,
-      targetPath,
-      modelProxyPath,
-    );
-    watcher.on('all', (eventName, eventPath): void => {
-      validator.addFileToQueue({ targetPath: eventPath, type: eventName });
-    });
-  };
-  const modelWatcherOptions: WatcherOptions = {
-    onError,
-    targetPath: modelSourcePath,
-    onReady: onModelWatcherReady,
-  };
-  const modelWatcher = await watchFolder(modelWatcherOptions);
-
-  return [apiWatcher, modelWatcher];
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
 };
-
-export default initWatchers;
-</code></pre>
+Object.defineProperty(exports, "__esModule", { value: true });
+const fs_1 = __importDefault(require("fs"));
+const util_1 = __importDefault(require("util"));
+const path_1 = __importDefault(require("path"));
+const rimraf_1 = __importDefault(require("rimraf"));
+/**
+ * Create a directory
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ * @param {fs.MakeDirectoryOptions &amp; { recursive: true }} options Either the file mode, or an object optionally specifying the file mode and whether parent folders should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
+ */
+exports.mkDir = util_1.default.promisify(fs_1.default.mkdir);
+/**
+ * Delete a directory.
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ */
+exports.rmDir = util_1.default.promisify(fs_1.default.rmdir);
+/**
+ * The [UNIX command](http://en.wikipedia.org/wiki/Rm_(Unix)) `rm -rf` for node
+ * @param {string} path Folder path to remove recursively
+ * @param {originalRimraf.Options} options [`rimraf`](https://github.com/isaacs/rimraf#options) options
+ */
+exports.rimraf = util_1.default.promisify(rimraf_1.default);
+/**
+ * Writes data to a file, replacing the file if it already exists.
+ * @param {string | number | Buffer | URL} path A path to a file. If a URL is provided, it must use the `file:` protocol. URL support is experimental. If a file descriptor is provided, the underlying file will not be closed automatically.
+ * @param {any} data The data to write. If something other than a Buffer or Uint8Array is provided, the value is coerced to a string.
+ * @param {fs.WriteFileOptions} options Either the encoding for the file, or an object optionally specifying the encoding, file mode, and flag. If `encoding` is not supplied, the default of `'utf8'` is used. If `mode` is not supplied, the default of `0o666` is used. If `mode` is a string, it is parsed as an octal integer. If `flag` is not supplied, the default of `'w'` is used.
+ */
+exports.writeFile = util_1.default.promisify(fs_1.default.writeFile);
+/**
+ * Read a directory.
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ * @param {{ encoding: BufferEncoding; withFileTypes?: false; } | "ascii" | "utf8" | "utf-8" | "utf16le" | "ucs2" | "ucs-2" | "base64" | "latin1" | "binary" | "hex"} options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, 'utf8' is used
+ */
+exports.readDir = util_1.default.promisify(fs_1.default.readdir);
+/**
+ * Reads the entire contents of a file.
+ * @param {string | number | Buffer | URL} path A path to a file. If a URL is provided, it must use the `file:` protocol. If a file descriptor is provided, the underlying file will not be closed automatically.
+ * @param {string | { encoding?: null; flag?: string; }} options An object that may contain an optional flag. If a flag is not provided, it defaults to `'r'`.
+ */
+exports.readFile = util_1.default.promisify(fs_1.default.readFile);
+/**
+ * Copies `src` to `dest`. By default, dest is overwritten if it already exists. No arguments other than a possible exception are given to the callback function. Node.js makes no guarantees about the atomicity of the copy operation. If an error occurs after the destination file has been opened for writing, Node.js will attempt to remove the destination.
+ * @param {fs.PathLike} src A path to the source file.
+ * @param {fs.PathLike} dest A path to the destination file.
+ */
+exports.copyFile = util_1.default.promisify(fs_1.default.copyFile);
+/**
+ * Deletes a name and possibly the file it refers to.
+ * @param {fs.PathLike} path A path to a file. If a URL is provided, it must use the `file:` protocol.
+ */
+exports.unlink = util_1.default.promisify(fs_1.default.unlink);
+/**
+ * Test whether or not the given path exists by checking with the file system.
+ * @param {fs.PathLike} pathToCheck A path to a file or directory. If a URL is provided, it must use the `file:` protocol. URL support is experimental.
+ */
+exports.exists = (pathToCheck) => new Promise((resolve) => {
+    fs_1.default.access(pathToCheck, fs_1.default.constants.F_OK, (err) => {
+        if (err) {
+            return resolve(false);
+        }
+        return resolve(true);
+    });
+});
+/**
+ * Empties given folder by removing it and creating it again
+ * @param {string} folderPath Folder path to be emptied
+ */
+exports.emptyFolder = async (folderPath) => {
+    const pathExists = await exports.exists(folderPath);
+    if (pathExists) {
+        await exports.rimraf(folderPath);
+    }
+    await exports.mkDir(folderPath, { recursive: true });
+};
+/**
+ * Ensures that given dir path exists
+ * @param {string} folderPath Path to ensure
+ * @param {fs.MakeDirectoryOptions} options Options
+ */
+exports.ensureDir = async (folderPath, options, recursive = true) => {
+    await new Promise((resolve, reject) => {
+        fs_1.default.mkdir(folderPath, Object.assign(Object.assign({}, (options || {})), { recursive }), (err) => {
+            if (err &amp;&amp; err.code !== 'EEXIST') {
+                reject(err);
+            }
+            else {
+                resolve();
+            }
+        });
+    });
+};
+/**
+ * Gets files recursively
+ * @param folderPath Path to get files from
+ */
+exports.getFilesRecursively = async (folderPath, extName) => {
+    const contents = await exports.readDir(folderPath, {
+        encoding: 'utf8',
+        withFileTypes: true,
+    });
+    const files = await Promise.all(contents.map(async (content) => {
+        if (content.isDirectory()) {
+            const folderFiles = await exports.getFilesRecursively(path_1.default.resolve(folderPath, content.name), extName);
+            return folderFiles;
+        }
+        const ext = path_1.default.extname(content.name);
+        if (!extName || !extName.length || extName.indexOf(ext) !== -1) {
+            return [path_1.default.resolve(folderPath, content.name)];
+        }
+        return [];
+    }));
+    return files.reduce((t, f) => [...t, ...f], []);
+};
+/**
+ * Copies contents recursively from `fromPath` to `destPath`
+ * @param {string} fromPath Source path
+ * @param {string} destPath Destination path
+ * @param {string} [relativePath=''] Relative path
+ */
+exports.copyContents = async (fromPath, destPath, hard = true, relativePath = '') => {
+    const contentsPath = path_1.default.resolve(fromPath, relativePath);
+    await exports.ensureDir(destPath);
+    const contents = await exports.readDir(contentsPath, { withFileTypes: true });
+    await Promise.all(contents.map(async (pathInfo) => {
+        const { name: relPath } = pathInfo;
+        const fullRelPath = path_1.default.join(relativePath, relPath);
+        const sourcePath = path_1.default.resolve(fromPath, fullRelPath);
+        const targetPath = path_1.default.resolve(destPath, fullRelPath);
+        if (pathInfo.isDirectory()) {
+            await exports.ensureDir(targetPath);
+            await exports.copyContents(fromPath, destPath, hard, fullRelPath);
+        }
+        else {
+            const write = hard || !(await exports.exists(targetPath));
+            if (write) {
+                await exports.copyFile(sourcePath, targetPath);
+            }
+        }
+    }));
+};
+//# sourceMappingURL=fs.js.map</code></pre>
         </article>
     </section>
 
