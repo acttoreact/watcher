@@ -10,7 +10,7 @@ import {
 } from '../model/api';
 
 import { defaultApiSourcePath, defaultProxyTargetPath } from '../settings';
-import { getFilesRecursively, writeFile, copyFile } from '../tools/fs';
+import { getFilesRecursively, writeFile } from '../tools/fs';
 import getModuleInfo from './getModuleInfo';
 import getGroupedModelImports from './getGroupedModelImports';
 import getProxyMethod from './getProxyMethod';
@@ -18,10 +18,9 @@ import updateApiObject from './updateApiObject';
 import getApiObjectText from './getApiObject';
 import getMethodWrapper from './getMethodWrapper';
 import getSocketProvider from './getSocketProvider';
+import getIsClientContent from './getIsClientContent';
 
 export const api: APIStructure = {};
-
-const isClientInternalPath = path.resolve(__dirname, '../tools/isClient.ts');
 
 /**
  * Gets external needed imports
@@ -129,7 +128,7 @@ export const build = async (
   const groupedImports = getGroupedModelImports(imports);
 
   await writeFile(socketFilePath, getSocketProvider());
-  await copyFile(isClientInternalPath, isClientFilePath);
+  await writeFile(isClientFilePath, getIsClientContent());
   await writeFile(
     proxyIndexPath,
     [
