@@ -23,7 +23,7 @@ const writeSeveralFiles = async (
   nFiles = 5,
 ): Promise<void> => {
   const files = new Array(nFiles)
-    .fill(null)
+    .fill(true)
     .map((_val, i) => path.resolve(filePath, `file-${i}.ts`));
   await Promise.all(files.map(file => writeFile(file, '// test file')));
 };
