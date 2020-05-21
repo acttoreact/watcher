@@ -5,12 +5,7 @@ LABEL Description="A2R API Watcher"
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent
 # Copy the source code and build the solution
-COPY . ./src
-RUN cd ./src;npm install --silent;npm run build
-# Copy de compiled version
-RUN cp -r ./src/bin ./bin
-# Remove the sources
-RUN rm -rf ./src
+COPY ./bin ./bin
 # Enviroment por production
 ENV NODE_ENV production
 # Vulumes for mapping
