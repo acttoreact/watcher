@@ -1,5 +1,7 @@
 import { ApiNamespace } from '../model/api';
 
+import cleanText from '../tools/cleanText';
+
 const updateApiObject = (
   structure: ApiNamespace,
   keys: string[],
@@ -9,17 +11,18 @@ const updateApiObject = (
   const lastIndex = keys.length - 1;
   return keys.reduce(
     (t: ApiNamespace, key: string, i: number): ApiNamespace => {
+      const cleanKey = cleanText(key, false, true, true, true, '-');
       if (i === lastIndex) {
         t.methods.push({
-          key,
+          key: cleanKey,
           methodName,
         });
         return newApiObject;
       }
-      let namespace = t.namespaces.find((n): boolean => n.key === key);
+      let namespace = t.namespaces.find((n): boolean => n.key === cleanKey);
       if (!namespace) {
         namespace = {
-          key,
+          key: cleanKey,
           namespaces: [],
           methods: [],
         };
