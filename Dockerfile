@@ -1,6 +1,6 @@
 FROM node:12-alpine
 WORKDIR /usr/src/app
-LABEL Description="A2R API Watcher"
+LABEL Description="A2R Watcher"
 # Production packages install
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent
