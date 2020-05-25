@@ -1,19 +1,10 @@
 FROM node:12-alpine
 WORKDIR /usr/src/app
-LABEL Description="A2R API Watcher"
-# Production packages install
+LABEL Description="A2R Watcher"
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent
-# Copy the source code and build the solution
 COPY . ./src
-RUN cd ./src;npm install --silent;npm run build
-# Copy de compiled version
-RUN cp -r ./src/bin ./bin
-# Remove the sources
-RUN rm -rf ./src
-# Enviroment por production
+RUN rm -rf ./src/server
+VOLUME ["/usr/src/app/src/server"]
 ENV NODE_ENV production
-# Vulumes for mapping
-VOLUME ["/usr/src/app/bin/server"]
-# Start command
-CMD npm start
+CMD cd ./src;npm install --silent;npm run build;cp -r ./bin ../bin;cd ..;rm -rf ./src;npm start

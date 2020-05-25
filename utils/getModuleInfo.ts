@@ -4,7 +4,6 @@ import path from 'path';
 import { ModuleInfo } from '../model/api';
 
 import { readFile } from '../tools/fs';
-import cleanText from '../tools/cleanText';
 import getMainMethodName from './getMainMethodName';
 import getMainMethodNode from './getMainMethodNode';
 import getFunctionDocContainer from './getFunctionDocContainer';
@@ -39,8 +38,7 @@ const getModuleInfo = async (filePath: string, apiSourcePath: string): Promise<M
   const keys = path
     .relative(apiSourcePath, filePath)
     .replace(/\.ts$/, '')
-    .split(path.sep)
-    .map(s => cleanText(s, false, true, true, true, '-'));
+    .split(path.sep);
   return {
     mainMethodDocs,
     mainMethodName,

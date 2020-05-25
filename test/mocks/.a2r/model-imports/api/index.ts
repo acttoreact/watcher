@@ -57,19 +57,19 @@ const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('modelImports2', data, blas);
+const getData = (data: Data2, blas: Blas): Promise<Data> => methodWrapper('model-imports-2', data, blas);
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData2 = (): Promise<Data3> => methodWrapper('modelImports3');
+const getData2 = (): Promise<Data3> => methodWrapper('model-imports-3');
 
 /**
  * Gets data from server
  * @returns {Promise<model.Data>}
  */
-const getData3 = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('modelImports', data, juan);
+const getData3 = (data: Data2, juan: Juan): Promise<Data> => methodWrapper('model-imports', data, juan);
 
 const api = {
   modelImports2: getData,

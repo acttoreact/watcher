@@ -1,6 +1,6 @@
 {
   "name": "watcher",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "API and model watcher",
   "engines": {
     "node": ">=12"
@@ -8,13 +8,13 @@
   "scripts": {
     "build": "tsc",
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
-    "docker-build": "IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
-    "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
-    "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
+    "docker-build": "npm run build;IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
+    "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
+    "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "start": "node ./bin/index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
-    "test-clear": "rm -rf coverage;rm -rf dist",
+    "test-clear": "rm -rf coverage;rm -rf bin",
     "test-dev": "NODE_ENV=development npx jest --watch",
     "test-coverage": "jest --coverage",
     "test-coverage-dev": "NODE_ENV=development jest --coverage --watchAll",
@@ -54,7 +54,7 @@
     "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "babel-jest": "^25.4.0",
+    "babel-jest": "^25.5.1",
     "better-docs": "^2.0.1",
     "coveralls": "^3.0.11",
     "eslint": "^7.0.0",
@@ -63,7 +63,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
-    "jest": "^25.4.0",
+    "jest": "^25.5.1",
     "jsdoc": "^3.6.3",
     "ts-jest": "^25.5.1",
     "ts-node-dev": "^1.0.0-pre.40",

@@ -12,7 +12,6 @@ test('Get exports identifiers', async (): Promise<void> => {
   const sourceFile = ts.createSourceFile(filePath, content, ts.ScriptTarget.Latest, true);
   const fileNodes = sourceFile.getChildren();
   const identifiers = getExportsIdentifiersFromNodes(fileNodes);
-  console.log(identifiers);
   expect(identifiers.length).toBe(1);
   expect(identifiers).toContain('Data');
 });
