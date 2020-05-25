@@ -11,7 +11,7 @@
     "docker-build": "npm run build;IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
     "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
-    "start": "node ./bin/index.js",
+    "start": "node index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
     "test-clear": "rm -rf coverage;rm -rf bin",
