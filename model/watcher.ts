@@ -1,6 +1,9 @@
 import fs from 'fs';
 import chokidar from 'chokidar';
 
+/**
+ * Watcher events handler
+ */
 export type Handler = (
   /**
    * Event name
@@ -20,6 +23,9 @@ export type Handler = (
   stats?: fs.Stats | undefined,
 ) => Promise<void> | void;
 
+/**
+ * Watcher error handler
+ */
 export type OnError = (
   /**
    * Watcher error
@@ -35,6 +41,9 @@ export type OnError = (
   targetPath?: string,
 ) => void;
 
+/**
+ * Watcher ready event handler
+ */
 export type OnReady = (
   /**
    * Chokidar watcher instance
@@ -49,7 +58,16 @@ export type OnReady = (
 /**
  * On Validation method
  */
-export type OnValidation = (serverPath?: string, targetPath?: string) => Promise<void> | void;
+export type OnValidation = (
+  /**
+   * Server path
+   */
+  serverPath?: string,
+  /**
+   * Target path
+   */
+  targetPath?: string,
+) => Promise<void> | void;
 
 /**
  * Watcher options
@@ -84,11 +102,12 @@ export interface WatcherOptions {
 export interface ProcessInfo {
   /**
    * Event type
-   * @type
+   * @memberof ProcessInfo
    */
   type: 'add' |  'addDir' |  'change' |  'unlink' |  'unlinkDir';
   /**
    * Target path
+   * @memberof ProcessInfo
    */
   targetPath: string;
 }
