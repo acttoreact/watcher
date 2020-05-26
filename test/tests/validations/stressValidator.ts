@@ -46,7 +46,9 @@ test('Stress validator by writing several files at once', async (): Promise<
     onEvent = jest.fn((eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
     });
-    watcher.on('all', onEvent);
+    watcher.on('all', (eventName, eventPath): void => {
+      onEvent(eventName, eventPath);
+    });
   };
   const jestOnReady = jest.fn(onReady);
   const watcherOptions: WatcherOptions = {

@@ -38,7 +38,9 @@ test('Basic validator flow', async (): Promise<void> => {
     onEvent = jest.fn((eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
     });
-    watcher.on('all', onEvent);
+    watcher.on('all', (eventName, eventPath): void => {
+      onEvent(eventName, eventPath);
+    });
   };
   const jestOnReady = jest.fn(onReady);
   const watcherOptions: WatcherOptions = {
