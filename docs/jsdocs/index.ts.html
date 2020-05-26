@@ -187,7 +187,7 @@ export const start = async (): Promise&lt;chokidar.FSWatcher[]> =>
 export const restart = start;
 
 /**
- * Inits API Watcher by ensuring destination path and running start process
+ * Inits watchers by ensuring destination path and running start process
  */
 const init = async (): Promise&lt;void> => {
   await ensureDir(proxyDestPath);
