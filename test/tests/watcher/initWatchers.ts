@@ -11,11 +11,13 @@ const serverApiPath = path.resolve(serverPath, apiPath);
 const serverModelPath = path.resolve(serverPath, modelPath);
 const mainPath = path.resolve(__dirname, '../../mocks');
 
-beforeEach(async (): Promise<void> => {
-  await emptyFolder(serverPath);
-  await ensureDir(serverApiPath);
-  await ensureDir(serverModelPath);
-});
+beforeEach(
+  async (): Promise<void> => {
+    await emptyFolder(serverPath);
+    await ensureDir(serverApiPath);
+    await ensureDir(serverModelPath);
+  },
+);
 
 const apiFileContent = `import { Data } from '../model/ok';
 
@@ -42,9 +44,11 @@ export interface Data {
  */
 test('Unexisting server path will throw exception', async (): Promise<void> => {
   const wrongPath = '/wrong/path/to/server';
-  await waitForExpect(async (): Promise<void> => {
-    expect(initWatchers(wrongPath, wrongPath)).rejects.toBeInstanceOf(Error);
-  });
+  await waitForExpect(
+    async (): Promise<void> => {
+      expect(initWatchers(wrongPath, wrongPath)).rejects.toBeInstanceOf(Error);
+    },
+  );
 });
 
 /**
@@ -52,10 +56,16 @@ test('Unexisting server path will throw exception', async (): Promise<void> => {
  */
 test('Basic watchers flow', async (): Promise<void> => {
   const watchers = await initWatchers(serverPath, mainPath);
-  const handler = jest.fn((): void => {
+  const handler: (
+    eventName: 'add' | 'addDir' | 'change' | 'unlink' | 'unlinkDir',
+    eventPath: string,
+  ) => void = jest.fn((): void => {
     // Empty function to check event handler
   });
   watchers.forEach((watcher): void => {
+    watcher.on('all', (eventName, eventPath): void => {
+      handler(eventName, eventPath);
+    });
     watcher.on('all', handler);
   });
   const fileName = 'ok.ts';
@@ -63,22 +73,17 @@ test('Basic watchers flow', async (): Promise<void> => {
   const serverModelFilePath = path.resolve(serverModelPath, fileName);
   await writeFile(serverApiFilePath, apiFileContent);
   await writeFile(serverModelFilePath, modeFileContent);
-  await waitForExpect(async (): Promise<void> => {
-    expect(await exists(serverApiFilePath)).toBe(true);
-    expect(await exists(serverModelFilePath)).toBe(true);
-    expect(handler).toHaveBeenCalledWith(
-      'add',
-      serverApiFilePath,
-    );
-    expect(handler).toHaveBeenCalledWith(
-      'add',
-      serverModelFilePath,
-    );
-  });
+  await waitForExpect(
+    async (): Promise<void> => {
+      expect(await exists(serverApiFilePath)).toBe(true);
+      expect(await exists(serverModelFilePath)).toBe(true);
+      expect(handler).toHaveBeenCalledWith('add', serverApiFilePath);
+      expect(handler).toHaveBeenCalledWith('add', serverModelFilePath);
+    },
+  );
 
-  await Promise.all(watchers.map(w => w.close()));
+  await Promise.all(watchers.map((w) => w.close()));
 });
-
 
 /**
  * When disabling jest, watchers should process files when added
@@ -91,19 +96,28 @@ test('Complete watchers flow', async (): Promise<void> => {
   const serverModelFilePath = path.resolve(serverModelPath, fileName);
   await writeFile(serverApiFilePath, apiFileContent);
   await writeFile(serverModelFilePath, modeFileContent);
-  await waitForExpect(async (): Promise<void> => {
-    expect(await exists(serverApiFilePath)).toBe(true);
-    expect(await exists(serverModelFilePath)).toBe(true);
-  });
+  await waitForExpect(
+    async (): Promise<void> => {
+      expect(await exists(serverApiFilePath)).toBe(true);
+      expect(await exists(serverModelFilePath)).toBe(true);
+    },
+  );
 
   const proxyIndexPath = path.resolve(mainPath, proxyPath, 'api', 'index.ts');
-  const modelResultingPath = path.resolve(mainPath, proxyPath, 'model', fileName);
+  const modelResultingPath = path.resolve(
+    mainPath,
+    proxyPath,
+    'model',
+    fileName,
+  );
 
-  await waitForExpect(async (): Promise<void> => {
-    expect(await exists(proxyIndexPath)).toBe(true);
-    expect(await exists(modelResultingPath)).toBe(true);
-  });
+  await waitForExpect(
+    async (): Promise<void> => {
+      expect(await exists(proxyIndexPath)).toBe(true);
+      expect(await exists(modelResultingPath)).toBe(true);
+    },
+  );
 
   setForceDisableJestDetection(false);
-  await Promise.all(watchers.map(w => w.close()));
+  await Promise.all(watchers.map((w) => w.close()));
 }, 10000);
