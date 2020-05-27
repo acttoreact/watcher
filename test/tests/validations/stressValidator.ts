@@ -1,5 +1,6 @@
 import path from 'path';
 import waitForExpect from 'wait-for-expect';
+import { mkDir, emptyFolder, exists, writeFile } from '@a2r/fs';
 
 import { WatcherOptions, OnReady } from '../../../model/watcher';
 
@@ -7,7 +8,6 @@ import onError from '../../../utils/onError';
 import Validator from '../../../utils/runtimeValidator';
 import watchFolder from '../../../utils/watchFolder';
 import fileValidation from '../../../utils/modelFileValidation';
-import { mkDir, emptyFolder, exists, writeFile } from '../../../tools/fs';
 
 const serverPath = path.resolve(
   __dirname,

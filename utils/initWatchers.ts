@@ -1,11 +1,11 @@
 import path from 'path';
 import chokidar from 'chokidar';
 import { out } from '@a2r/telemetry';
+import { exists, emptyFolder } from '@a2r/fs';
 
 import { WatcherOptions, OnReady } from '../model/watcher';
 
 import { apiPath, modelPath, proxyPath } from '../settings';
-import { exists, emptyFolder } from '../tools/fs';
 import { fullPath } from '../tools/colors';
 import watchFolder from './watchFolder';
 import onError from './onError';

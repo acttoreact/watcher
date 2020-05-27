@@ -1,9 +1,9 @@
 import path from 'path';
 import chokidar from 'chokidar';
+import { ensureDir } from '@a2r/fs';
 
 import { targetPath, proxyPath } from './settings';
 import initWatchers from './utils/initWatchers';
-import { ensureDir } from './tools/fs';
 import { isJest } from './tools/isJest';
 
 /**

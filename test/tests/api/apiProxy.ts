@@ -1,8 +1,8 @@
 import path from 'path';
 import waitForExpect from 'wait-for-expect';
+import { emptyFolder, exists } from '@a2r/fs';
 
 import { build } from '../../../utils/apiProxy';
-import { emptyFolder, exists } from '../../../tools/fs';
 
 const apiSourcePath = path.resolve(__dirname, '../../mocks/server/module-info/api');
 const proxyTargetPath = path.resolve(__dirname, '../../mocks/.a2r/api-proxy/api');

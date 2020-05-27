@@ -1,8 +1,8 @@
 import ts from 'typescript';
 import path from 'path';
+import { readFile } from '@a2r/fs';
 
 import getExportsIdentifiersFromNodes from '../../../utils/getExportsIdentifiersFromNodes';
-import { readFile } from '../../../tools/fs';
 
 const modelSourcePath = path.resolve(__dirname, '../../mocks/server/model-imports/model');
 

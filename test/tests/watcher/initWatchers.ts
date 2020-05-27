@@ -1,8 +1,8 @@
 import path from 'path';
 import waitForExpect from 'wait-for-expect';
+import { emptyFolder, ensureDir, writeFile, exists } from '@a2r/fs';
 
 import { apiPath, modelPath, proxyPath } from '../../../settings';
-import { emptyFolder, ensureDir, writeFile, exists } from '../../../tools/fs';
 import initWatchers from '../../../utils/initWatchers';
 import { setForceDisableJestDetection } from '../../../tools/isJest';
 

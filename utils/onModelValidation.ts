@@ -1,6 +1,7 @@
+import { copyContents, emptyFolder } from '@a2r/fs';
+
 import { OnValidation } from '../model/watcher';
 
-import { copyContents, emptyFolder } from '../tools/fs';
 import { isJest } from '../tools/isJest';
 
 /**

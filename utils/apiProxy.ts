@@ -1,6 +1,7 @@
 import ts from 'typescript';
 import path from 'path';
 import { out } from '@a2r/telemetry';
+import { getFilesRecursively, writeFile } from '@a2r/fs';
 
 import {
   APIStructure,
@@ -10,7 +11,6 @@ import {
 } from '../model/api';
 
 import { defaultApiSourcePath, defaultProxyTargetPath } from '../settings';
-import { getFilesRecursively, writeFile } from '../tools/fs';
 import getModuleInfo from './getModuleInfo';
 import getGroupedModelImports from './getGroupedModelImports';
 import getProxyMethod from './getProxyMethod';

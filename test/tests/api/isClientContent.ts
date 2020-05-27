@@ -1,6 +1,6 @@
 import path from 'path';
+import { readFile } from '@a2r/fs';
 
-import { readFile } from '../../../tools/fs';
 import getIsClientContent from '../../../utils/getIsClientContent';
 
 const isClientPath = path.resolve(__dirname, '../../../tools/isClient.ts');

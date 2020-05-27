@@ -1,6 +1,6 @@
 {
   "name": "watcher",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "API and model watcher",
   "engines": {
     "node": ">=12"
@@ -38,11 +38,11 @@
   "license": "ISC",
   "homepage": "https://a2r.com/",
   "dependencies": {
+    "@a2r/fs": "^1.1.4",
     "@a2r/telemetry": "^1.0.30",
     "chalk": "^4.0.0",
     "chokidar": "^3.4.0",
-    "rimraf": "^3.0.2",
-    "snyk": "^1.328.0",
+    "snyk": "^1.329.0",
     "socket.io": "^2.3.0",
     "typescript": "^3.9.3",
     "winston": "^3.2.1",

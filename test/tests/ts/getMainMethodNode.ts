@@ -1,7 +1,7 @@
 import ts from 'typescript';
 import path from 'path';
+import { readFile } from '@a2r/fs';
 
-import { readFile } from '../../../tools/fs';
 import getMainMethodNode from '../../../utils/getMainMethodNode';
 
 const apiPath = path.resolve(__dirname, '../../mocks/server/api');

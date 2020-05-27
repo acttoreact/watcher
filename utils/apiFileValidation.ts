@@ -1,7 +1,7 @@
 import ts from 'typescript';
 import { out } from '@a2r/telemetry';
+import { readFile } from '@a2r/fs';
 
-import { readFile } from '../tools/fs';
 import { fullPath, method } from '../tools/colors';
 import getMainMethodName from './getMainMethodName';
 import getMainMethodNode from './getMainMethodNode';
