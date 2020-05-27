@@ -1,7 +1,7 @@
 import path from 'path';
 import chokidar from 'chokidar';
+import { exists } from '@a2r/fs';
 
-import { exists } from '../tools/fs';
 import { WatcherOptions } from '../model/watcher';
 
 /**

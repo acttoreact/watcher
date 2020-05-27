@@ -1,12 +1,5 @@
 import path from 'path';
 import waitForExpect from 'wait-for-expect';
-
-import { WatcherOptions, OnReady } from '../../../model/watcher';
-
-import onError from '../../../utils/onError';
-import Validator from '../../../utils/runtimeValidator';
-import watchFolder from '../../../utils/watchFolder';
-import fileValidation from '../../../utils/modelFileValidation';
 import {
   mkDir,
   emptyFolder,
@@ -14,8 +7,14 @@ import {
   writeFile,
   unlink,
   rmDir,
-} from '../../../tools/fs';
+} from '@a2r/fs';
 
+import { WatcherOptions, OnReady } from '../../../model/watcher';
+
+import onError from '../../../utils/onError';
+import Validator from '../../../utils/runtimeValidator';
+import watchFolder from '../../../utils/watchFolder';
+import fileValidation from '../../../utils/modelFileValidation';
 const serverPath = path.resolve(__dirname, '../../mocks/server/validator');
 
 beforeAll(async () => {

@@ -1,10 +1,10 @@
 import ts from 'typescript';
 import path from 'path';
+import { readFile } from '@a2r/fs';
 
 import getFunctionReturnTypeInfo from '../../../utils/getFunctionReturnTypeInfo';
 import getMainMethodName from '../../../utils/getMainMethodName';
 import getMainMethodNode from '../../../utils/getMainMethodNode';
-import { readFile } from '../../../tools/fs';
 
 const filePath = path.resolve(__dirname, '../../mocks/server/no-return/no-return.ts');
 

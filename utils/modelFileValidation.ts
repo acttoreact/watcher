@@ -1,8 +1,8 @@
 import ts from 'typescript';
-import { out } from '@a2r/telemetry';
 import chalk from 'chalk';
+import { out } from '@a2r/telemetry';
+import { readFile } from '@a2r/fs';
 
-import { readFile } from '../tools/fs';
 import { fullPath } from '../tools/colors';
 import getExportsIdentifiersFromNodes from './getExportsIdentifiersFromNodes';
 

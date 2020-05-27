@@ -1,7 +1,7 @@
 import ts from 'typescript';
 import path from 'path';
+import { readFile } from '@a2r/fs';
 
-import { readFile } from '../../../tools/fs';
 import getMainMethodName from '../../../utils/getMainMethodName';
 import getMainMethodNode from '../../../utils/getMainMethodNode';
 import getFunctionDocContainer from '../../../utils/getFunctionDocContainer';
