@@ -44,7 +44,7 @@
     "chokidar": "^3.4.0",
     "snyk": "^1.329.0",
     "socket.io": "^2.3.0",
-    "typescript": "^3.9.3",
+    "typescript": "^3.9.5",
     "winston": "^3.2.1",
     "winston-transport": "^4.3.0"
   },
