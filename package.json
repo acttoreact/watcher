@@ -42,7 +42,7 @@
     "@a2r/telemetry": "^1.0.30",
     "chalk": "^4.0.0",
     "chokidar": "^3.4.0",
-    "snyk": "^1.329.0",
+    "snyk": "^1.345.1",
     "socket.io": "^2.3.0",
     "typescript": "^3.9.3",
     "winston": "^3.2.1",
