@@ -46,7 +46,7 @@
     "socket.io": "^2.3.0",
     "typescript": "^3.9.3",
     "winston": "^3.2.1",
-    "winston-transport": "^4.3.0"
+    "winston-transport": "^4.4.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
