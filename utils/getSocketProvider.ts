@@ -1,6 +1,6 @@
-import { socketPath, socketPort } from '../settings';
+import { socketPath, defaultPort } from '../settings';
 
-const getSocketProvider = (port = socketPort): string => {
+const getSocketProvider = (port = defaultPort): string => {
   const url = `http://localhost:${port}`;
 
   return `import io from "socket.io-client";
@@ -61,12 +61,19 @@ export interface SocketMessage {
   d: any;
 };
 
+/**
+ * A2R Socket
+ */
+export interface A2RSocket extends io.Socket {
+  sessionId: string;
+};
+
 const socket = io('${url}', {
   autoConnect: isClient(),
   path: '${socketPath}',
 });
 
-export default socket;`;
+export default socket as A2RSocket;`;
 };
 
 export default getSocketProvider;

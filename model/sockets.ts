@@ -70,7 +70,3 @@ export interface SocketMessage {
    */
   d: any;
 };
-
-export interface A2RSocket extends io.Socket {
-  sessionId: string;
-};
