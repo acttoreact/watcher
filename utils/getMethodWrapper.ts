@@ -1,14 +1,16 @@
-const getMethodWrapper = (): string => {
+import { defaultPort } from '../settings';
+
+const getMethodWrapper = (port = defaultPort): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
   if (!isClient()) {
-    console.log('on server side, executing api method directly');
-    // try {
-    //   const apiModule = getModule(method);
-    //   return apiModule.default(...args);
-    // } catch (ex) {
-    //   console.log('Error loading API module at server', ex.message, ex.stack);
-    // }
+    const apiPath = method.split('.').join('/');
+    console.log('on server side, calling REST API method', apiPath);
+    return new Promise<any>((resolve, reject): void => {
+      axios.post('http://localhost:${port}/api/\${apiPath}, { params: args })
+        .then(resolve)
+        .catch(reject);
+    });
   }
   return new Promise<any>((resolve, reject): void => {
     console.log('socket connected?', socket && socket.connected);

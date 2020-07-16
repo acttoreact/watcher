@@ -26,7 +26,9 @@ export const api: APIStructure = {};
  * Gets external needed imports
  */
 const getExternalImports = (): string =>
-  [`import generateId from 'shortid';`].join('\n');
+  [`import generateId from 'shortid';`, `import axios from 'axios';`].join(
+    '\n',
+  );
 
 /**
  * Gets internal needed imports
@@ -89,7 +91,7 @@ export const build = async (
   const isClientFilePath = path.resolve(proxyTargetPath, 'isClient.ts');
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
-    files.map(file => getModuleInfo(file, apiSourcePath)),
+    files.map((file) => getModuleInfo(file, apiSourcePath)),
   );
 
   let apiObject: ApiNamespace = {
@@ -139,7 +141,9 @@ export const build = async (
       ...methods,
       getApiObjectText(apiObject),
       'export default api;\n',
-    ].filter(s => !!s).join('\n\n'),
+    ]
+      .filter((s) => !!s)
+      .join('\n\n'),
   );
   out.verbose('API Proxy built');
 };

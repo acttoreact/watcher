@@ -28,7 +28,7 @@ export const socketPath = '/ws';
 /**
  * Default socket port
  */
-export const socketPort = 4000;
+export const defaultPort = 4000;
 
 /**
  * Default API source path
