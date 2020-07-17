@@ -5,7 +5,7 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent
 COPY . ./src
 RUN rm -rf ./src/server
-RUN cd ./src;npm install --silent;npm run build;cp -r ./bin ../;cd ..;rm -rf ./src;rm -rf ./bin
+RUN cd ./src;npm install --silent;npm run build;mv ./bin/* ../;cd ..;rm -rf ./src
 VOLUME ["/usr/src/app/server"]
 ENV NODE_ENV production
 CMD npm start

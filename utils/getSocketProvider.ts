@@ -61,19 +61,12 @@ export interface SocketMessage {
   d: any;
 };
 
-/**
- * A2R Socket
- */
-export interface A2RSocket extends io.Socket {
-  sessionId: string;
-};
-
 const socket = io('${url}', {
   autoConnect: isClient(),
   path: '${socketPath}',
 });
 
-export default socket as A2RSocket;`;
+export default socket;`;
 };
 
 export default getSocketProvider;
