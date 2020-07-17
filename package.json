@@ -1,6 +1,6 @@
 {
   "name": "watcher",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "API and model watcher",
   "engines": {
     "node": ">=12"
@@ -8,10 +8,10 @@
   "scripts": {
     "build": "tsc",
     "dev": "NODE_ENV=development ts-node-dev --debug --respawn --transpileOnly ./index.ts",
-    "docker-build": "npm run build;IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
+    "docker-build": "IMAGE=$npm_package_name:latest;docker build --rm --pull -f \"./Dockerfile\" -t $IMAGE \".\"",
     "docker-start": "IMAGE=$npm_package_name:latest;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
     "docker-start-from-hub": "IMAGE=act2react/watcher:version-$npm_package_version;docker run -it -d -v $INIT_CWD/server:/usr/src/app/server $IMAGE",
-    "start": "node index.js",
+    "start": "ls;node index.js",
     "lint": "npx eslint --config ./.eslintrc ./**/*.ts",
     "test": "jest",
     "test-clear": "rm -rf coverage;rm -rf bin",
@@ -42,9 +42,9 @@
     "@a2r/telemetry": "^1.0.30",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.1",
-    "snyk": "^1.362.0",
+    "snyk": "^1.362.1",
     "socket.io": "^2.3.0",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "winston": "^3.3.3",
     "winston-transport": "^4.4.0"
   },
@@ -65,7 +65,7 @@
     "eslint-plugin-react": "^7.20.3",
     "jest": "^26.1.0",
     "jsdoc": "^3.6.3",
-    "ts-jest": "^26.1.2",
+    "ts-jest": "^26.1.3",
     "ts-node-dev": "^1.0.0-pre.52",
     "wait-for-expect": "^3.0.2"
   },

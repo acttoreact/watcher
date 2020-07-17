@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import io from 'socket.io';
 import { ParsedUrlQuery } from 'querystring';
 
 /**
