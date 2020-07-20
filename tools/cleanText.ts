@@ -299,7 +299,7 @@ const cleanText = (
   if (turnToCamelCase) {
     res = res
       .split(camelCaseSeparator)
-      .map((s, i) => (i ? s && capitalize(s) : s && s.toLowerCase()))
+      .map((s, i) => (i ? s && capitalize(s) : s && `${s.charAt(0).toLowerCase()}${s.slice(1)}`))
       .join('');
   }
 
