@@ -2,7 +2,7 @@ import path from 'path';
 import chokidar from 'chokidar';
 import { ensureDir } from '@a2r/fs';
 
-import { targetPath, proxyPath } from './settings';
+import { targetPath, proxyPath, proxies } from './settings';
 import initWatchers from './utils/initWatchers';
 import { isJest } from './tools/isJest';
 
@@ -94,6 +94,9 @@ export const restart = start;
  */
 const init = async (): Promise<void> => {
   await ensureDir(proxyDestPath);
+  await Promise.all(
+    proxies.map((proxy) => ensureDir(path.resolve(proxyDestPath, proxy))),
+  );
   await start();
 };
 
