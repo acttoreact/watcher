@@ -4,6 +4,7 @@ import getModuleInfo from '../../../utils/getModuleInfo';
 
 const apiSourcePath = path.resolve(__dirname, '../../mocks/server/module-info/api');
 const filePath = path.resolve(apiSourcePath, 'basic.ts');
+const camelCaseFilePath = path.resolve(apiSourcePath, 'camelCase.ts');
 
 /**
  * Module info should contain expected data
@@ -20,4 +21,15 @@ test('Module info', async (): Promise<void> => {
   expect(moduleInfo.mainMethodReturnTypeInfo).not.toBe(undefined);
   expect(moduleInfo.mainMethodReturnTypeInfo.identifier).toBe('Promise');
   expect(moduleInfo.mainMethodReturnTypeInfo.type).toBe('Info');
+});
+
+
+/**
+ * Module info should keep camelCase
+ */
+test('Module info', async (): Promise<void> => {
+  const moduleInfo = await getModuleInfo(camelCaseFilePath, apiSourcePath);
+  expect(moduleInfo).not.toBe(undefined);
+  expect(moduleInfo.mainMethodName).toBe('camelCase');
+  expect(moduleInfo.keys).toEqual(['camelCase']);
 });

@@ -1,7 +1,10 @@
+import path from 'path';
 import { build } from './apiProxy';
 import { isJest } from '../tools/isJest';
 
 import { OnValidation } from '../model/watcher';
+
+import { proxies, apiPath } from '../settings';
 
 /**
  * Method executed when API is validated after changes are processed
@@ -11,8 +14,11 @@ const onApiValidation: OnValidation = async (
   targetPath,
 ): Promise<void> => {
   if (!isJest()) {
-    // TODO: Call to main A2R instance to restart API Runtime
-    await build(serverPath, targetPath);
+    await Promise.all(
+      proxies.map((proxy) =>
+        build(serverPath, path.resolve(targetPath, proxy, apiPath)),
+      ),
+    );
   }
 };
 

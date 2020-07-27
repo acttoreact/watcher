@@ -5,7 +5,7 @@ import { exists, emptyFolder } from '@a2r/fs';
 
 import { WatcherOptions, OnReady } from '../model/watcher';
 
-import { apiPath, modelPath, proxyPath } from '../settings';
+import { apiPath, modelPath, proxyPath, proxies } from '../settings';
 import { fullPath } from '../tools/colors';
 import watchFolder from './watchFolder';
 import onError from './onError';
@@ -33,18 +33,21 @@ const initWatchers = async (
   const proxyTargetPath = path.resolve(mainPath, proxyPath);
 
   const apiSourcePath = path.resolve(serverPath, apiPath);
-  const apiProxyPath = path.resolve(proxyTargetPath, apiPath);
-  await emptyFolder(apiProxyPath);
+  await Promise.all(
+    proxies.map((proxy) =>
+      emptyFolder(path.resolve(proxyTargetPath, proxy, apiPath)),
+    ),
+  );
   const onApiWatcherReady: OnReady = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.verbose(`API proxy path: ${fullPath(apiProxyPath)}`);
+    out.verbose(`API proxy path: ${fullPath(apiSourcePath)}`);
     const validator = new Validator(
       apiFileValidation,
       onApiValidation,
       targetPath,
-      apiProxyPath,
+      proxyTargetPath,
     );
     watcher.on('all', (eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });
@@ -58,18 +61,21 @@ const initWatchers = async (
   const apiWatcher = await watchFolder(apiWatcherOptions);
 
   const modelSourcePath = path.resolve(serverPath, modelPath);
-  const modelProxyPath = path.resolve(proxyTargetPath, modelPath);
-  await emptyFolder(modelProxyPath);
+  await Promise.all(
+    proxies.map((proxy) =>
+      emptyFolder(path.resolve(proxyTargetPath, proxy, modelPath)),
+    ),
+  );
   const onModelWatcherReady: OnReady = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.verbose(`Model proxy path: ${fullPath(modelProxyPath)}`);
+    out.verbose(`Model proxy path: ${fullPath(proxyTargetPath)}`);
     const validator = new Validator(
       modelFileValidation,
       onModelValidation,
       targetPath,
-      modelProxyPath,
+      proxyTargetPath,
     );
     watcher.on('all', (eventName, eventPath): void => {
       validator.addFileToQueue({ targetPath: eventPath, type: eventName });

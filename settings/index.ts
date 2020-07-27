@@ -18,7 +18,12 @@ export const modelPath = 'model';
 /**
  * Default proxy target path, where watcher will generate proxy for API and Model
  */
-export const proxyPath = '.a2r/proxy';
+export const proxyPath = '.a2r';
+
+/**
+ * Needed proxies (one for each project in solution)
+ */
+export const proxies = process.env.PROXIES.split(',');
 
 /**
  * Default socket path
@@ -43,4 +48,4 @@ export const defaultModelSourcePath = path.resolve(process.cwd(), targetPath, ap
 /**
  * Default proxy target path
  */
-export const defaultProxyTargetPath = path.resolve(process.cwd(), proxyPath, apiPath);
+export const defaultProxyTargetPath = path.resolve(process.cwd(), proxyPath);

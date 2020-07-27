@@ -2,7 +2,6 @@ import path from 'path';
 import chokidar from 'chokidar';
 import { emptyFolder } from '@a2r/fs';
 
-import { Omit } from '../../../@types';
 import onError from '../../../utils/onError';
 import watchFolder from '../../../utils/watchFolder';
 import { WatcherOptions } from '../../../model/watcher';
