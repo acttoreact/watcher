@@ -42,7 +42,7 @@ const initWatchers = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.verbose(`API proxy path: ${fullPath(apiSourcePath)}`);
+    out.info(`API watcher running at path: ${fullPath(apiSourcePath)}`);
     const validator = new Validator(
       apiFileValidation,
       onApiValidation,
@@ -70,7 +70,7 @@ const initWatchers = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.verbose(`Model proxy path: ${fullPath(proxyTargetPath)}`);
+    out.info(`Model watcher running at path: ${fullPath(proxyTargetPath)}`);
     const validator = new Validator(
       modelFileValidation,
       onModelValidation,

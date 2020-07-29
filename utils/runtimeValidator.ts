@@ -77,7 +77,7 @@ class RuntimeValidator {
           out.verbose(`Validation OK for file ${filePath}`);
         } else {
           this.failingFiles.set(filePath, true);
-          out.verbose(`Validation KO for file ${filePath}`);
+          out.warn(`Validation KO for file ${filePath}`);
         }
         this.processing = false;
         await this.processQueue();
