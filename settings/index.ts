@@ -1,4 +1,7 @@
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * Default target path for watchers, should contain `api` and `model` folders
