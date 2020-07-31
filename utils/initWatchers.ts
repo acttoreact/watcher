@@ -70,7 +70,7 @@ const initWatchers = async (
     watcher,
     targetPath,
   ): Promise<void> => {
-    out.info(`Model watcher running at path: ${fullPath(proxyTargetPath)}`);
+    out.info(`Model watcher running at path: ${fullPath(modelSourcePath)}`);
     const validator = new Validator(
       modelFileValidation,
       onModelValidation,
