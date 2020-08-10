@@ -7,7 +7,7 @@ import {
   APIStructure,
   ModuleInfo,
   ApiNamespace,
-  GroupedModelImports,
+  GroupedImports,
 } from '../model/api';
 
 import { defaultApiSourcePath, defaultProxyTargetPath } from '../settings';
@@ -25,26 +25,25 @@ export const api: APIStructure = {};
 /**
  * Gets external needed imports
  */
-const getExternalImports = (): string =>
-  [`import generateId from 'shortid';`, `import axios from 'axios';`].join(
-    '\n',
-  );
+const getExternalImports = (): GroupedImports[] => [
+  { path: `'axios'`, def: 'axios' },
+  { path: `'shortid'`, def: 'generateId' },
+];
 
 /**
  * Gets internal needed imports
  */
-const getInternalImports = (): string =>
-  [
-    `import socket, { MethodCall, SocketMessage } from './socket';`,
-    `import isClient from './isClient';`,
-  ].join('\n');
+const getInternalImports = (): GroupedImports[] => [
+  { path: `'./socket'`, def: 'socket', named: ['MethodCall', 'SocketMessage'] },
+  { path: `'./isClient'`, def: 'isClient' },
+];
 
 /**
  * Gets model imports text
  * @param groupedModelImports Grouped model imports (by path)
  */
-const getInternalModelImports = (
-  groupedModelImports: GroupedModelImports[],
+const getImports = (
+  groupedModelImports: GroupedImports[],
 ): string =>
   groupedModelImports
     .map(
@@ -127,16 +126,18 @@ export const build = async (
     apiObject = updateApiObject(apiObject, keys, methodName);
   }
 
-  const groupedImports = getGroupedModelImports(imports);
+  const initialImports: GroupedImports[] = [
+    ...getExternalImports(),
+    ...getInternalImports(),
+  ];
+  const groupedImports = getGroupedModelImports(initialImports, imports);
 
   await writeFile(socketFilePath, getSocketProvider());
   await writeFile(isClientFilePath, getIsClientContent());
   await writeFile(
     proxyIndexPath,
     [
-      getExternalImports(),
-      getInternalImports(),
-      getInternalModelImports(groupedImports),
+      getImports(groupedImports),
       getMethodWrapper(),
       ...methods,
       getApiObjectText(apiObject),

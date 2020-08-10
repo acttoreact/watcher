@@ -1,6 +1,6 @@
 import ts from 'typescript';
 
-import { ModelImport, GroupedModelImports } from '../model/api';
+import { ImportClause, GroupedImports } from '../model/api';
 
 const getNamedImports = (nodes: ts.Node[], sourceFile?: ts.SourceFile): string[] => {
   const res: string[] = [];
@@ -18,8 +18,8 @@ const getNamedImports = (nodes: ts.Node[], sourceFile?: ts.SourceFile): string[]
   return res;
 };
 
-const getGroupedModelImports = (imports: ModelImport[]): GroupedModelImports[] => {
-  const res: GroupedModelImports[] = [];
+const getGroupedModelImports = (initialImports: GroupedImports[], imports: ImportClause[]): GroupedImports[] => {
+  const res: GroupedImports[] = initialImports.slice();
   for (let i = 0, l = imports.length; i < l; i++) {
     const { clause, path, sourceFile } = imports[i];
     const pathForProxy = path.replace(/([./]+)\/model/, '../model');
@@ -34,7 +34,7 @@ const getGroupedModelImports = (imports: ModelImport[]): GroupedModelImports[] =
     for (let j = 0, k = children.length; j < k; j++) {
       const child = children[j];
       if (ts.isIdentifier(child)) {
-        grouped.def = child.getFullText(sourceFile);
+        grouped.def = child.getFullText(sourceFile).trim();
       }
       if (ts.isNamedImports(child)) {
         grouped.named = Array.from(

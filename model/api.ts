@@ -40,7 +40,7 @@ export interface ReturnTypeInfo {
 /**
  * Model imports information
  */
-export interface ModelImport {
+export interface ImportClause {
   /**
    * Import clause
    */
@@ -58,7 +58,7 @@ export interface ModelImport {
 /**
  * Model imports information
  */
-export interface GroupedModelImports {
+export interface GroupedImports {
   /**
    * Default import
    */
@@ -108,7 +108,7 @@ export interface ModuleInfo {
   /**
    * Module model imports
    */
-  modelImports: ModelImport[];
+  modelImports: ImportClause[];
   /**
    * Keys based on file path (for proxy API object)
    */
