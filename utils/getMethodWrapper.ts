@@ -16,7 +16,6 @@ const getMethodWrapper = (port = defaultPort): string => {
         },
       })
         .then((response) => {
-          console.log(response);
           resolve(response.data);
         })
         .catch(reject);
