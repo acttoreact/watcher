@@ -5,9 +5,16 @@ const getMethodWrapper = (port = defaultPort): string => {
   console.log('methodWrapper', method, [...args]);
   if (!isClient()) {
     const apiPath = method.split('.').join('/');
-    console.log('on server side, calling REST API method', apiPath);
+    const url = \`http://localhost:${port}/api/\${apiPath}\`;
+    console.log('on server side, calling REST API method', url);
     return new Promise<any>((resolve, reject): void => {
-      axios.post('http://localhost:${port}/api/\${apiPath}', { params: args })
+      axios({
+        method: 'post',
+        url,
+        data: {
+          params: args,
+        },
+      })
         .then((response) => {
           console.log(response);
           resolve(response.data);
