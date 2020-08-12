@@ -19,6 +19,7 @@ import getApiObjectText from './getApiObject';
 import getMethodWrapper from './getMethodWrapper';
 import getSocketProvider from './getSocketProvider';
 import getIsClientContent from './getIsClientContent';
+import getLoginHandler from './getLoginHandler';
 
 export const api: APIStructure = {};
 
@@ -87,6 +88,7 @@ export const build = async (
   const files = await getFilesRecursively(apiSourcePath, ['.ts']);
   const proxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
+  const loginFilePath = path.resolve(proxyTargetPath, 'login.ts');
   const isClientFilePath = path.resolve(proxyTargetPath, 'isClient.ts');
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
@@ -146,5 +148,6 @@ export const build = async (
       .filter((s) => !!s)
       .join('\n\n'),
   );
+  await writeFile(loginFilePath, getLoginHandler());
   out.verbose('API Proxy built');
 };
