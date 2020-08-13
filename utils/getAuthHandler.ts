@@ -1,6 +1,6 @@
 import { userTokenKey } from '../settings';
 
-const getLoginHandler = (): string => `import Cookies from 'universal-cookie';
+const getAuthHandler = (): string => `import Cookies from 'universal-cookie';
 import generateId from 'shortid';
 
 import api from './index';
@@ -19,11 +19,11 @@ interface LoginResponse {
  * @param email User email
  * @param password User password (non encrypted)
  */
-const login = async (email: string, password: string): Promise<LoginResponse> => {
+export const login = async (email: string, password: string): Promise<LoginResponse> => {
   const response = await api.user.login(email, password);
   const { ok, error, userTokenInfo } = response;
   if (!ok) {
-    return Promise.resolve({ ok, error });
+    return { ok, error };
   }
 
   return new Promise((resolve) => {
@@ -39,7 +39,22 @@ const login = async (email: string, password: string): Promise<LoginResponse> =>
   });
 };
 
-export default login;
+/**
+ * Logout method
+ */
+export const logout = async (): Promise<void> =>
+  new Promise((resolve) => {
+    const cookies = new Cookies();
+    const id = generateId();
+    socket.on(id, (userToken: string): void => {
+      socket.off(id);
+      cookies.remove('${userTokenKey}', { path: '/' });
+      resolve();
+    });
+
+    const token = cookies.get('${userTokenKey}');
+    socket.emit('a2r_logout', id, token);
+  });
 `;
 
-export default getLoginHandler;
+export default getAuthHandler;
