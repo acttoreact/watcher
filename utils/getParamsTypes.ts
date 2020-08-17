@@ -1,0 +1,30 @@
+import ts from 'typescript';
+
+const getParamsTypes = (
+  nodes: ts.Node[],
+  sourceFile?: ts.SourceFile,
+): string[] => {
+  const res: string[] = [];
+  for (let i = 0, l = nodes.length; i < l; i++) {
+    const node = nodes[i];
+    if (ts.isTypeReferenceNode(node)) {
+      const children = node.getChildren(sourceFile);
+      for (let j = 0, k = children.length; j < k; j += 1) {
+        const child = children[j];
+        if (ts.isIdentifier(child) || ts.isQualifiedName(child)) {
+          res.push(child.getText().trim());
+        } else if (child.kind === ts.SyntaxKind.SyntaxList) {
+          const typeNode = child.getChildAt(0) as ts.TypeNode;
+          res.push(typeNode.getText().trim());
+          const typeChildren = typeNode.getChildren(sourceFile);
+          if (typeChildren.length) {
+            res.push(...getParamsTypes(typeChildren, sourceFile));
+          }
+        }
+      }
+    }
+  }
+  return res;
+};
+
+export default getParamsTypes;

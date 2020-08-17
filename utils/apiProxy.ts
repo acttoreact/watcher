@@ -8,6 +8,7 @@ import {
   ModuleInfo,
   ApiNamespace,
   GroupedImports,
+  ImportClause,
 } from '../model/api';
 
 import { defaultApiSourcePath, defaultProxyTargetPath } from '../settings';
@@ -101,8 +102,9 @@ export const build = async (
     methods: [],
   };
 
-  const imports = [];
-  const methods = [];
+  const imports: ImportClause[] = [];
+  const allUsedTypes: string[] = [];
+  const methods: string[] = [];
   const methodsNames: { [key: string]: boolean } = {};
 
   for (let i = 0, l = modulesInfo.length; i < l; i++) {
@@ -112,6 +114,7 @@ export const build = async (
       mainMethodParamNodes,
       mainMethodReturnTypeInfo,
       modelImports,
+      usedTypes,
       keys,
     } = modulesInfo[i];
     const doc = getDocs(mainMethodDocs.jsDoc as ts.JSDoc[]);
@@ -124,6 +127,7 @@ export const build = async (
       mainMethodReturnTypeInfo,
     );
     imports.push(...modelImports);
+    allUsedTypes.push(...usedTypes);
     methods.push([doc, method].join('\n'));
     apiObject = updateApiObject(apiObject, keys, methodName);
   }
@@ -132,7 +136,7 @@ export const build = async (
     ...getExternalImports(),
     ...getInternalImports(),
   ];
-  const groupedImports = getGroupedModelImports(initialImports, imports);
+  const groupedImports = getGroupedModelImports(initialImports, imports, allUsedTypes);
 
   await writeFile(socketFilePath, getSocketProvider());
   await writeFile(isClientFilePath, getIsClientContent());
