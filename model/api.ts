@@ -71,10 +71,6 @@ export interface GroupedImports {
    * Path to import from
    */
   path: string;
-  /**
-   * Absolute path (for avoiding duplicates)
-   */
-  relativeModelPath?: string;
 }
 
 /**

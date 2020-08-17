@@ -2,11 +2,6 @@ import ts from 'typescript';
 
 import { ImportClause, GroupedImports } from '../model/api';
 
-const relativePathRegEx = /^\./;
-
-const isRelativeImport = (str: string): boolean =>
-  !!str.match(relativePathRegEx);
-
 const getNamedImports = (
   nodes: ts.Node[],
   usedTypes: string[],
@@ -39,19 +34,12 @@ const getGroupedModelImports = (
   for (let i = 0, l = imports.length; i < l; i++) {
     const { clause, path, sourceFile } = imports[i];
     const pathForProxy = path.replace(/([./]+)\/model/, '../model');
-    const relativeModelPath =
-      isRelativeImport(path) && path.indexOf('/model') !== -1
-        ? path.split('/model').pop()
-        : '';
     let grouped: GroupedImports | undefined = res.find(
-      (g) =>
-        (relativeModelPath && g.relativeModelPath === relativeModelPath) ||
-        (!relativeModelPath && g.path === pathForProxy),
+      (g) => g.path === pathForProxy,
     );
     if (!grouped) {
       grouped = {
         path: pathForProxy,
-        relativeModelPath,
       };
       res.push(grouped);
     }
