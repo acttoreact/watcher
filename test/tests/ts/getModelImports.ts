@@ -2,7 +2,7 @@ import ts from 'typescript';
 import path from 'path';
 import { readFile } from '@a2r/fs';
 
-import getModelImports from '../../../utils/getModelImports';
+// import getModelImports from '../../../utils/getModelImports';
 import getMainMethodName from '../../../utils/getMainMethodName';
 import getMainMethodNode from '../../../utils/getMainMethodNode';
 import getFunctionReturnTypeInfo from '../../../utils/getFunctionReturnTypeInfo';
@@ -13,22 +13,22 @@ const mainPath = path.resolve(__dirname, '../../mocks/server/model-imports');
 /**
  * Method should return proper information about model imports on file
  */
-test('Get model imports', async (): Promise<void> => {
-  const filePath = path.resolve(mainPath, 'api', 'model-imports.ts');
-  const content = await readFile(filePath, 'utf8');
-  const sourceFile = ts.createSourceFile(
-    filePath,
-    content,
-    ts.ScriptTarget.Latest,
-    false,
-    ts.ScriptKind.TS,
-  );
+// test('Get model imports', async (): Promise<void> => {
+//   const filePath = path.resolve(mainPath, 'api', 'model-imports.ts');
+//   const content = await readFile(filePath, 'utf8');
+//   const sourceFile = ts.createSourceFile(
+//     filePath,
+//     content,
+//     ts.ScriptTarget.Latest,
+//     false,
+//     ts.ScriptKind.TS,
+//   );
 
-  const children = sourceFile.getChildren(sourceFile);
+//   const children = sourceFile.getChildren(sourceFile);
 
-  const imports = getModelImports(children, sourceFile);
-  expect(imports.length).toBe(2);
-});
+//   const imports = getModelImports(children, sourceFile);
+//   expect(imports.length).toBe(2);
+// });
 
 /**
  * Needed imports are only the ones used on method params and method return type
@@ -59,6 +59,8 @@ test('Filter needed imports', async (): Promise<void> => {
   paramsTypeInfo.push(...getParamsTypes([mainMethodReturnTypeInfo.typeNode]));
   expect(paramsTypeInfo).toContain('Data');
   expect(paramsTypeInfo).toContain('Data2');
+  expect(paramsTypeInfo).toContain('Data3');
+  expect(paramsTypeInfo).toContain('Data4');
   expect(paramsTypeInfo).toContain('WithOptional');
   expect(paramsTypeInfo).toContain('ComplexData');
   expect(paramsTypeInfo).toContain('ts.TransformationResult');

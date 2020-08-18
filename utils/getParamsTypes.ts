@@ -7,7 +7,7 @@ const getParamsTypes = (
   const res: string[] = [];
   for (let i = 0, l = nodes.length; i < l; i++) {
     const node = nodes[i];
-    if (ts.isTypeReferenceNode(node)) {
+    if (ts.isTypeReferenceNode(node) || ts.isUnionTypeNode(node)) {
       const children = node.getChildren(sourceFile);
       for (let j = 0, k = children.length; j < k; j += 1) {
         const child = children[j];
@@ -22,6 +22,8 @@ const getParamsTypes = (
           }
         }
       }
+    } else if (ts.isArrayTypeNode(node)) {
+      res.push(...getParamsTypes(node.getChildren(sourceFile), sourceFile));
     }
   }
   return res;
