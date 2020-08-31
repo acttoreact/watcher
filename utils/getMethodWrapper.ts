@@ -2,17 +2,20 @@ import { defaultPort } from '../settings';
 
 const getMethodWrapper = (port = defaultPort): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
-  console.log('methodWrapper', method, [...args]);
+  // console.log('methodWrapper', method, [...args]);
   if (!isClient()) {
     const apiPath = method.split('.').join('/');
+    const params = args.slice();
+    const ctx = params.pop();
     const url = \`http://localhost:${port}/api/\${apiPath}\`;
-    console.log('on server side, calling REST API method', url);
+    // console.log('on server side, calling REST API method', url);
     return new Promise<any>((resolve, reject): void => {
       axios({
         method: 'post',
         url,
+        headers: getHeaders(ctx),
         data: {
-          params: args,
+          params,
         },
       })
         .then((response) => {
@@ -22,14 +25,14 @@ const getMethodWrapper = (port = defaultPort): string => {
     });
   }
   return new Promise<any>((resolve, reject): void => {
-    console.log('socket connected?', socket && socket.connected);
+    // console.log('socket connected?', socket && socket.connected);
     if (socket) {
       if (socket.disconnected) {
-        console.log('socket disconnected, connecting');
+        // console.log('socket disconnected, connecting');
         socket.connect();
       }
       const id = generateId();
-      console.log('id', id);
+      // console.log('id', id);
       socket.on(id, (res: SocketMessage): void => {
         socket.off(id);
         if (res.o) {
@@ -47,7 +50,7 @@ const getMethodWrapper = (port = defaultPort): string => {
         params: args,
       };
       
-      console.log('before emit, call:', call);
+      // console.log('before emit, call:', call);
       socket.emit('*', call);
     } else {
       console.error('No client socket available!');

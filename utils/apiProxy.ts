@@ -21,6 +21,7 @@ import getMethodWrapper from './getMethodWrapper';
 import getSocketProvider from './getSocketProvider';
 import getIsClientContent from './getIsClientContent';
 import getAuthHandler from './getAuthHandler';
+import getHeadersProvider from './getHeadersProvider';
 
 export const api: APIStructure = {};
 
@@ -30,6 +31,7 @@ export const api: APIStructure = {};
 const getExternalImports = (): GroupedImports[] => [
   { path: `'axios'`, def: 'axios' },
   { path: `'shortid'`, def: 'generateId' },
+  { path: `'next'`, named: ['GetServerSidePropsContext'] },
 ];
 
 /**
@@ -38,6 +40,7 @@ const getExternalImports = (): GroupedImports[] => [
 const getInternalImports = (): GroupedImports[] => [
   { path: `'./socket'`, def: 'socket', named: ['MethodCall', 'SocketMessage'] },
   { path: `'./isClient'`, def: 'isClient' },
+  { path: `'./getHeaders'`, def: 'getHeaders' },
 ];
 
 /**
@@ -91,6 +94,7 @@ export const build = async (
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
   const authFilePath = path.resolve(proxyTargetPath, 'auth.ts');
   const isClientFilePath = path.resolve(proxyTargetPath, 'isClient.ts');
+  const getHeadersPath = path.resolve(proxyTargetPath, 'getHeaders.ts');
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
     files.map((file) => getModuleInfo(file, apiSourcePath)),
@@ -140,6 +144,7 @@ export const build = async (
 
   await writeFile(socketFilePath, getSocketProvider());
   await writeFile(isClientFilePath, getIsClientContent());
+  await writeFile(getHeadersPath, getHeadersProvider());
   await writeFile(
     proxyIndexPath,
     [
