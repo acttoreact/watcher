@@ -46,13 +46,15 @@ export const logout = async (): Promise<void> =>
   new Promise((resolve) => {
     const cookies = new Cookies();
     const id = generateId();
+    const token = cookies.get('${userTokenKey}');
     socket.on(id, (userToken: string): void => {
       socket.off(id);
-      cookies.remove('${userTokenKey}', { path: '/' });
+      if (!token || token === userToken) {
+        cookies.remove('${userTokenKey}', { path: '/' });
+      }
       resolve();
     });
 
-    const token = cookies.get('${userTokenKey}');
     socket.emit('a2r_logout', id, token);
   });
 `;
