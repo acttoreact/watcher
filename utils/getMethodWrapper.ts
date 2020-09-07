@@ -7,7 +7,7 @@ const getMethodWrapper = (port = defaultPort): string => {
     const apiPath = method.split('.').join('/');
     const params = args.slice();
     const ctx = params.pop();
-    const url = \`http://localhost:${port}/api/\${apiPath}\`;
+    const url = \`http://localhost:${port}/a2r/\${apiPath}\`;
     // console.log('on server side, calling REST API method', url);
     return new Promise<any>((resolve, reject): void => {
       axios({
