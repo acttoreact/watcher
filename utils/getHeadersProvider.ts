@@ -5,12 +5,10 @@ import Cookies from 'universal-cookie';
 
 const getHeaders = (ctx?: GetServerSidePropsContext): { Cookie?: string } => {
   if (!ctx || !ctx.req || !ctx.res) {
-    console.error('Next.js Context not provided when using A2R API on server side.');
     return {};
   }
   const header = ctx?.req?.headers?.cookie;
   if (!header) {
-    console.warn('No cookie header found in request');
     return {};
   }
   const cookies = new Cookies(header);
