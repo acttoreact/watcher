@@ -15,12 +15,12 @@ const onModelValidation: OnValidation = async (
   targetPath: string,
 ): Promise<void> => {
   if (!isJest()) {
-    Promise.all(
+    await Promise.all(
       proxies.map((proxy) =>
         emptyFolder(path.resolve(targetPath, proxy, modelPath)),
       ),
     );
-    Promise.all(
+    await Promise.all(
       proxies.map((proxy) =>
         copyContents(serverPath, path.resolve(targetPath, proxy, modelPath)),
       ),

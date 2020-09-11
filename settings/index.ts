@@ -29,6 +29,16 @@ export const proxyPath = '.a2r';
 export const proxies = process.env.PROXIES.split(',');
 
 /**
+ * Session cookie key
+ */
+export const cookieKey = process.env.COOKIE_KEY || 'a2r_sessionId';
+
+/**
+ * User token cookie key
+ */
+export const userTokenKey = process.env.USER_TOKEN_KEY || 'a2r_userToken';
+
+/**
  * Default socket path
  */
 export const socketPath = '/ws';

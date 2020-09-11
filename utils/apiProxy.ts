@@ -7,7 +7,8 @@ import {
   APIStructure,
   ModuleInfo,
   ApiNamespace,
-  GroupedModelImports,
+  GroupedImports,
+  ImportClause,
 } from '../model/api';
 
 import { defaultApiSourcePath, defaultProxyTargetPath } from '../settings';
@@ -19,32 +20,35 @@ import getApiObjectText from './getApiObject';
 import getMethodWrapper from './getMethodWrapper';
 import getSocketProvider from './getSocketProvider';
 import getIsClientContent from './getIsClientContent';
+import getAuthHandler from './getAuthHandler';
+import getHeadersProvider from './getHeadersProvider';
 
 export const api: APIStructure = {};
 
 /**
  * Gets external needed imports
  */
-const getExternalImports = (): string =>
-  [`import generateId from 'shortid';`, `import axios from 'axios';`].join(
-    '\n',
-  );
+const getExternalImports = (): GroupedImports[] => [
+  { path: `'axios'`, def: 'axios' },
+  { path: `'shortid'`, def: 'generateId' },
+  { path: `'next'`, named: ['GetServerSidePropsContext'] },
+];
 
 /**
  * Gets internal needed imports
  */
-const getInternalImports = (): string =>
-  [
-    `import socket, { MethodCall, SocketMessage } from './socket';`,
-    `import isClient from './isClient';`,
-  ].join('\n');
+const getInternalImports = (): GroupedImports[] => [
+  { path: `'./socket'`, def: 'socket', named: ['MethodCall', 'SocketMessage'] },
+  { path: `'./isClient'`, def: 'isClient' },
+  { path: `'./getHeaders'`, def: 'getHeaders' },
+];
 
 /**
  * Gets model imports text
  * @param groupedModelImports Grouped model imports (by path)
  */
-const getInternalModelImports = (
-  groupedModelImports: GroupedModelImports[],
+const getImports = (
+  groupedModelImports: GroupedImports[],
 ): string =>
   groupedModelImports
     .map(
@@ -88,7 +92,9 @@ export const build = async (
   const files = await getFilesRecursively(apiSourcePath, ['.ts']);
   const proxyIndexPath = path.resolve(proxyTargetPath, 'index.ts');
   const socketFilePath = path.resolve(proxyTargetPath, 'socket.ts');
+  const authFilePath = path.resolve(proxyTargetPath, 'auth.ts');
   const isClientFilePath = path.resolve(proxyTargetPath, 'isClient.ts');
+  const getHeadersPath = path.resolve(proxyTargetPath, 'getHeaders.ts');
 
   const modulesInfo: ModuleInfo[] = await Promise.all(
     files.map((file) => getModuleInfo(file, apiSourcePath)),
@@ -100,8 +106,9 @@ export const build = async (
     methods: [],
   };
 
-  const imports = [];
-  const methods = [];
+  const imports: ImportClause[] = [];
+  const allUsedTypes: string[] = [];
+  const methods: string[] = [];
   const methodsNames: { [key: string]: boolean } = {};
 
   for (let i = 0, l = modulesInfo.length; i < l; i++) {
@@ -111,6 +118,7 @@ export const build = async (
       mainMethodParamNodes,
       mainMethodReturnTypeInfo,
       modelImports,
+      usedTypes,
       keys,
     } = modulesInfo[i];
     const doc = getDocs(mainMethodDocs.jsDoc as ts.JSDoc[]);
@@ -123,20 +131,24 @@ export const build = async (
       mainMethodReturnTypeInfo,
     );
     imports.push(...modelImports);
+    allUsedTypes.push(...usedTypes);
     methods.push([doc, method].join('\n'));
     apiObject = updateApiObject(apiObject, keys, methodName);
   }
 
-  const groupedImports = getGroupedModelImports(imports);
+  const initialImports: GroupedImports[] = [
+    ...getExternalImports(),
+    ...getInternalImports(),
+  ];
+  const groupedImports = getGroupedModelImports(initialImports, imports, allUsedTypes);
 
   await writeFile(socketFilePath, getSocketProvider());
   await writeFile(isClientFilePath, getIsClientContent());
+  await writeFile(getHeadersPath, getHeadersProvider());
   await writeFile(
     proxyIndexPath,
     [
-      getExternalImports(),
-      getInternalImports(),
-      getInternalModelImports(groupedImports),
+      getImports(groupedImports),
       getMethodWrapper(),
       ...methods,
       getApiObjectText(apiObject),
@@ -145,5 +157,6 @@ export const build = async (
       .filter((s) => !!s)
       .join('\n\n'),
   );
+  await writeFile(authFilePath, getAuthHandler());
   out.verbose('API Proxy built');
 };

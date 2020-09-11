@@ -20,19 +20,19 @@ export interface ReturnTypeInfo {
   /**
    * Return identifier
    * @type {string}
-   * @memberof CompilerFileInfo
+   * @memberof ReturnTypeInfo
    */
   identifier: string;
   /**
    * Return type
    * @type {string}
-   * @memberof CompilerFileInfo
+   * @memberof ReturnTypeInfo
    */
   type: string;
   /**
    * Return type
    * @type {string}
-   * @memberof CompilerFileInfo
+   * @memberof ReturnTypeInfo
    */
   typeNode: ts.TypeNode | null;
 }
@@ -40,7 +40,7 @@ export interface ReturnTypeInfo {
 /**
  * Model imports information
  */
-export interface ModelImport {
+export interface ImportClause {
   /**
    * Import clause
    */
@@ -58,7 +58,7 @@ export interface ModelImport {
 /**
  * Model imports information
  */
-export interface GroupedModelImports {
+export interface GroupedImports {
   /**
    * Default import
    */
@@ -107,10 +107,20 @@ export interface ModuleInfo {
   mainMethodReturnTypeInfo: Required<ReturnTypeInfo>;
   /**
    * Module model imports
+   * @type {ImportClause[]}
+   * @memberof ModuleInfo
    */
-  modelImports: ModelImport[];
+  modelImports: ImportClause[];
+  /**
+   * Used types in parameters and return
+   * @type {string[]}
+   * @memberof ModuleInfo
+   */
+  usedTypes: string[];
   /**
    * Keys based on file path (for proxy API object)
+   * @type {string[]}
+   * @memberof ModuleInfo
    */
   keys: string[];
 }

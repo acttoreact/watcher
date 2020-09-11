@@ -8,20 +8,17 @@ const getProxyMethod = (
   paramNodes: ts.ParameterDeclaration[],
   returnTypeInfo: ReturnTypeInfo,
 ): string => {
-  return `const ${methodName} = (${paramNodes
-    .map(n => n.getFullText().trim())
-    .join(', ')}): Promise<${returnTypeInfo.type}> => methodWrapper('${key}'${
-    paramNodes.length
-      ? `, ${paramNodes
-          .map(n =>
-            n
-              .getChildAt(0)
-              .getFullText()
-              .trim(),
-          )
-          .join(', ')}`
-      : ''
-  });`;
+  const params = [
+    ...paramNodes.map((n) => n.getFullText().trim()),
+    'ctx?: GetServerSidePropsContext',
+  ];
+  const wrapperParams = [
+    ...paramNodes.map((n) => n.getChildAt(0).getFullText().trim()),
+    'ctx',
+  ];
+  return `const ${methodName} = (${params.join(', ')}): Promise<${
+    returnTypeInfo.type
+  }> => methodWrapper('${key}', ${wrapperParams.join(', ')});`;
 };
 
 export default getProxyMethod;

@@ -1,9 +1,9 @@
 import ts from 'typescript';
 
-import { ModelImport } from '../model/api';
+import { ImportClause } from '../model/api';
 
-const getModelImports = (fileNodes: ts.Node[], sourceFile?: ts.SourceFile): ModelImport[] => {
-  const res: ModelImport[] = [];
+const getModelImports = (fileNodes: ts.Node[], usedTypes: string[], sourceFile?: ts.SourceFile): ImportClause[] => {
+  const res: ImportClause[] = [];
   for (let i = 0, l = fileNodes.length; i < l; i++) {
     const node = fileNodes[i];
     const children = node.getChildren(sourceFile);
@@ -16,12 +16,17 @@ const getModelImports = (fileNodes: ts.Node[], sourceFile?: ts.SourceFile): Mode
           clause = child;
         }
         if (ts.isStringLiteral(child)) {
-          path = child.getFullText(sourceFile);
+          path = child.getFullText(sourceFile).trim();
         }
       }
-      res.push({ clause, path, sourceFile });
+      if (clause) {
+        const clauseText = clause.getFullText(sourceFile);
+        if (usedTypes.some(t => clauseText.indexOf(t) !== -1)) {
+          res.push({ clause, path, sourceFile });
+        }
+      }
     } else if (children.length) {
-      res.push(...getModelImports(children, sourceFile));
+      res.push(...getModelImports(children, usedTypes, sourceFile));
     }
   }
   return res;
