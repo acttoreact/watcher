@@ -64,6 +64,9 @@ test('Filter needed imports', async (): Promise<void> => {
   expect(paramsTypeInfo).toContain('WithOptional');
   expect(paramsTypeInfo).toContain('ComplexData');
   expect(paramsTypeInfo).toContain('ts.TransformationResult');
+  expect(paramsTypeInfo).toContain('CustomResponse');
+  expect(paramsTypeInfo).toContain('MoreComplex');
+  expect(paramsTypeInfo).toContain('SearchResponse');
 });
 
 /**
