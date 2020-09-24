@@ -2,7 +2,7 @@ import ts from 'typescript';
 import path from 'path';
 import { readFile } from '@a2r/fs';
 
-// import getModelImports from '../../../utils/getModelImports';
+import getModelImports from '../../../utils/getModelImports';
 import getMainMethodName from '../../../utils/getMainMethodName';
 import getMainMethodNode from '../../../utils/getMainMethodNode';
 import getFunctionReturnTypeInfo from '../../../utils/getFunctionReturnTypeInfo';
@@ -69,6 +69,37 @@ test('Filter needed imports', async (): Promise<void> => {
   expect(paramsTypeInfo).toContain('SearchResponse');
 });
 
+/**
+ * Test used for an important fix on proxy needed imports
+ * (it was importing `from '../../utils/drm/getLicenses'`)
+ */
+test('Should not include methods imports', async (): Promise<void> => {
+  const filePath = path.resolve(mainPath, 'api', 'model-imports-3.ts');
+  const content = await readFile(filePath, 'utf8');
+  const mainMethodParamNodes: ts.ParameterDeclaration[] = [];
+  const sourceFile = ts.createSourceFile(
+    filePath,
+    content,
+    ts.ScriptTarget.Latest,
+    true,
+  );
+  const fileNodes = sourceFile.getChildren();
+  const mainMethodName = getMainMethodName(fileNodes);
+  const mainMethodNode = getMainMethodNode(fileNodes, mainMethodName);
+  mainMethodNode.forEachChild((child): void => {
+    if (ts.isParameter(child)) {
+      mainMethodParamNodes.push(child);
+    }
+  });
+  const mainMethodReturnTypeInfo = getFunctionReturnTypeInfo(mainMethodNode);
+  const usedTypes = mainMethodParamNodes.reduce(
+    (t, n) => [...t, ...getParamsTypes(n.getChildren(sourceFile), sourceFile)],
+    [],
+  );
+  usedTypes.push(...getParamsTypes([mainMethodReturnTypeInfo.typeNode]));
+  const modelImports = getModelImports(fileNodes, usedTypes, sourceFile);
+  expect(modelImports.length).toBe(2);
+});
 /**
  * Should group model imports from same path
  */

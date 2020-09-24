@@ -2,7 +2,11 @@ import ts from 'typescript';
 
 import { ImportClause } from '../model/api';
 
-const getModelImports = (fileNodes: ts.Node[], usedTypes: string[], sourceFile?: ts.SourceFile): ImportClause[] => {
+const getModelImports = (
+  fileNodes: ts.Node[],
+  usedTypes: string[],
+  sourceFile?: ts.SourceFile,
+): ImportClause[] => {
   const res: ImportClause[] = [];
   for (let i = 0, l = fileNodes.length; i < l; i++) {
     const node = fileNodes[i];
@@ -20,8 +24,15 @@ const getModelImports = (fileNodes: ts.Node[], usedTypes: string[], sourceFile?:
         }
       }
       if (clause) {
-        const clauseText = clause.getFullText(sourceFile);
-        if (usedTypes.some(t => clauseText.indexOf(t) !== -1)) {
+        const clauseText = clause.getFullText(sourceFile).trim();
+        const imports = clauseText
+          .replace('{', '')
+          .replace('}', '')
+          .trim()
+          .split(',')
+          .map((s) => s.trim())
+          .filter((s) => s);
+        if (usedTypes.some((t) => imports.indexOf(t) !== -1)) {
           res.push({ clause, path, sourceFile });
         }
       }
