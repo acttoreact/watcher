@@ -14,9 +14,7 @@ const getParamsTypes = (
         if (ts.isIdentifier(child) || ts.isQualifiedName(child)) {
           res.push(child.getText().trim());
         } else if (child.kind === ts.SyntaxKind.SyntaxList) {
-          const typeNode = child.getChildAt(0) as ts.TypeNode;
-          res.push(typeNode.getText().trim());
-          const typeChildren = typeNode.getChildren(sourceFile);
+          const typeChildren = child.getChildren(sourceFile);
           if (typeChildren.length) {
             res.push(...getParamsTypes(typeChildren, sourceFile));
           }
