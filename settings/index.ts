@@ -39,6 +39,11 @@ export const cookieKey = process.env.COOKIE_KEY || 'a2r_sessionId';
 export const userTokenKey = process.env.USER_TOKEN_KEY || 'a2r_userToken';
 
 /**
+ * User token cookie key
+ */
+export const refererKey = process.env.REFERER_KEY || 'a2r_referer';
+
+/**
  * Default socket path
  */
 export const socketPath = '/ws';
