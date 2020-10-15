@@ -1,7 +1,7 @@
-import { socketPath, defaultPort } from '../settings';
+import { socketPath, serverUrl } from '../settings';
 
-const getSocketProvider = (port = defaultPort): string => {
-  const url = `ws://localhost:${port}`;
+const getSocketProvider = (url = serverUrl, build?: boolean): string => {
+  const socketUrl = `ws${build ? 's' : ''}://${url}`;
 
   return `import io from "socket.io-client";
 
@@ -61,7 +61,7 @@ export interface SocketMessage {
   d: any;
 };
 
-const socket = io('${url}', {
+const socket = io('${socketUrl}', {
   transports: ['websocket'],
   autoConnect: isClient(),
   path: '${socketPath}',

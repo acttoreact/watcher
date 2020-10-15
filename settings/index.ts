@@ -29,6 +29,11 @@ export const proxyPath = '.a2r';
 export const proxies = process.env.PROXIES.split(',');
 
 /**
+ * Server URL
+ */
+export const serverUrl = process.env.SEVER_URL || 'localhost:4000';
+
+/**
  * Session cookie key
  */
 export const cookieKey = process.env.COOKIE_KEY || 'a2r_sessionId';
@@ -47,11 +52,6 @@ export const refererKey = process.env.REFERER_KEY || 'a2r_referer';
  * Default socket path
  */
 export const socketPath = '/ws';
-
-/**
- * Default socket port
- */
-export const defaultPort = 4000;
 
 /**
  * Default API source path
