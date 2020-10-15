@@ -1,13 +1,13 @@
-import { defaultPort } from '../settings';
+import { serverUrl } from '../settings';
 
-const getMethodWrapper = (port = defaultPort): string => {
+const getMethodWrapper = (url = serverUrl, build?: boolean): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   // console.log('methodWrapper', method, [...args]);
   if (!isClient()) {
     const apiPath = method.split('.').join('/');
     const params = args.slice();
     const ctx = params.pop();
-    const url = \`http://localhost:${port}/a2r/\${apiPath}\`;
+    const url = \`http${build ? 's' : ''}://${url}/a2r/\${apiPath}\`;
     // console.log('on server side, calling REST API method', url);
     return new Promise<any>((resolve, reject): void => {
       axios({
