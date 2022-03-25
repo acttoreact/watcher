@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.22.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,1515 @@ patch:
         patched: '2020-04-30T17:10:55.970Z'
     - '@a2r/telemetry > winston > async > lodash':
         patched: '2020-05-04T17:21:45.941Z'
+    - '@a2r/telemetry > eslint > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > inquirer > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > eslint > @eslint/eslintrc > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > eslint > table > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jsdoc > catharsis > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jsdoc > requizzle > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > inquirer > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > vue-docgen-api > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-gradle-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-go-plugin > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-nodejs-lockfile-parser > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-gradle-plugin > @snyk/java-call-graph-builder > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-resolve-dependencies > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-resolve-dependencies > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-resolve-dependencies > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > vue-docgen-api > pug > pug-code-gen > constantinople > babel-types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > vue-docgen-api > pug > pug-filters > constantinople > babel-types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-resolve-dependencies > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > vue-docgen-api > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > better-docs > react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > jest-snapshot > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @types/babel__core > @types/babel__traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
+    - '@a2r/telemetry > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2022-03-25T17:57:38.179Z'
