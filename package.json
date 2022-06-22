@@ -46,7 +46,7 @@
     "snyk": "^1.413.3",
     "socket.io": "^2.3.0",
     "typescript": "^4.0.3",
-    "winston": "^3.3.3",
+    "winston": "^3.7.2",
     "winston-transport": "^4.4.0"
   },
   "devDependencies": {
