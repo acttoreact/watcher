@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.25.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,95 @@ patch:
         patched: '2020-04-30T17:10:55.970Z'
     - '@a2r/telemetry > winston > async > lodash':
         patched: '2020-05-04T17:21:45.941Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib >
+          lodash
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash
+    - snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash
+    - '@a2r/telemetry > babel-jest > babel-preset-jest > babel-plugin-jest-hoist > @babel/types > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > babel-jest > babel-preset-jest >
+          babel-plugin-jest-hoist > @babel/types > lodash
+    - '@a2r/telemetry > jest > @jest/core > jest-snapshot > @babel/types > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > jest > @jest/core > jest-snapshot > @babel/types >
+          lodash
+    - '@a2r/telemetry > babel-jest > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > babel-jest > babel-plugin-istanbul >
+          istanbul-lib-instrument > @babel/core > lodash
+    - '@a2r/telemetry > jest > @jest/core > jest-config > @babel/core > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > jest > @jest/core > jest-config > @babel/core >
+          lodash
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          snyk > @snyk/snyk-cocoapods-plugin > @snyk/cli-interface >
+          @snyk/dep-graph > graphlib > lodash
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph >
+          graphlib > lodash
+    - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph >
+          graphlib > lodash
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > babel-jest > @jest/transform > @babel/core >
+          @babel/helpers > @babel/traverse > lodash
+    - '@a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 > @babel/traverse > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > jest > @jest/core > jest-config > jest-jasmine2 >
+          @babel/traverse > lodash
+    - '@a2r/telemetry > jest > @jest/core > @jest/reporters > istanbul-lib-instrument > @babel/core > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > jest > @jest/core > @jest/reporters >
+          istanbul-lib-instrument > @babel/core > lodash
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > babel-jest > @jest/transform > @babel/core >
+          @babel/helper-module-transforms > @babel/helper-replace-supers >
+          @babel/traverse > lodash
+    - '@a2r/telemetry > babel-jest > @jest/transform > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash':
+        patched: '2023-11-28T14:27:06.542Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          @a2r/telemetry > babel-jest > @jest/transform > @babel/core >
+          @babel/helper-module-transforms > @babel/helper-simple-access >
+          @babel/template > @babel/types > lodash
